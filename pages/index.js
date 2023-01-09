@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <main>
+        <Navbar/>
         <p>Portfolio home page</p>
       </main>
     </>
