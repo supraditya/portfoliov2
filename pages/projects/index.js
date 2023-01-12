@@ -1,5 +1,12 @@
+import Navbar from "../../components/Navbar";
+
 export default function Projects()
 {
-    return <p>Projects Page</p>
+    return (
+        <div>
+            <Navbar/>
+            <p>Projects Page</p>
+        </div>
+    )
 }
 
