@@ -6,7 +6,7 @@
 
 @keyframes cursor-blink {
   0%{
-    border-right: 2px;
+    border-right: 3px;
   }
 
 }

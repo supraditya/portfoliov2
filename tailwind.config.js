@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     colors:{
       figmaBlue: '#0C8CE9',
+      white: '#FFFFFF',
     },
     fontFamily:{
       primary: ["Orbitron", "sans-serif"],
