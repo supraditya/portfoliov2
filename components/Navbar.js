@@ -24,7 +24,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="z-50 bg-white border border-black py-4 px-16 flex justify-between">
+    <nav className="sticky top-0 z-50 py-6 px-16 flex justify-between font-primary">
       <Link href="/">
         <Image
           src={navLogo}

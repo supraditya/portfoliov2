@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito+Sans&family=Orbitron:wght@400;600;800&family=Shadows+Into+Light&display=swap');
 
-body
+@keyframes cursor-blink {
+  0%{
+    border-right: 2px;
+  }
+
+}
+.blink
 {
-  font-family: 'Orbitron', sans-serif;
+  animation: cursor-blink 1.5s steps(2) infinite;
 }

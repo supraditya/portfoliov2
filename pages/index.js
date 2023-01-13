@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import Navbar from '../components/Navbar'
+import Head from "next/head";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
@@ -11,9 +11,25 @@ export default function Home() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <main>
-        <Navbar/>
-        <p>Portfolio home page</p>
+        <Navbar />
+        <div className="px-32 h-[83.5vh] flex flex-col pt-2 items-start">
+          <p className="font-secondary text-4xl leading-snug ml-1">
+            I realise ideas
+          </p>
+          <p className="font-secondary text-7xl leading-snug">From</p>
+          <div className="leading-snug">
+            <span className="font-writing text-7xl">Pen and Paper</span>
+            <span className="font-secondary text-7xl">&nbsp;to</span>
+          </div>
+          <p className="font-primary text-7xl leading-snug border-2 border-figmaBlue">
+            Prototype
+          </p>
+          <p className="font-secondary text-7xl leading-snug">and</p>
+          <p className="font-coding text-7xl leading-snug pb-3 blink">
+            &lt;p&gt;Product&lt;/p&gt;
+          </p>
+        </div>
       </main>
     </>
-  )
+  );
 }
