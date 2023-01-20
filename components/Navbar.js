@@ -29,7 +29,7 @@ export default function Navbar() {
         <Image
           src={navLogo}
           alt="Aditya Menon's personal logo"
-          className="w-16"
+          className="w-16 min-w-[3rem]"
         ></Image>
       </Link>
       <ul className="list-none flex items-center">
