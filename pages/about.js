@@ -16,19 +16,19 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
       </Head>
+      <Navbar />
       <div className="overflow-x-hidden">
-        <Navbar />
         <Image
           src={verticalLine}
           alt="dotted line vertical"
-          className="absolute right-[23rem] h-2/5 top-0"
+          className="absolute right-[23rem] h-2/5 top-0 max-xl:hidden"
         ></Image>
         <Image
           src={verticalLine}
           alt="dotted line horizontal"
-          className="absolute rotate-90 top-36 right-0"
+          className="absolute rotate-90 top-36 right-0 max-xl:hidden"
         ></Image>
-        <div className="px-32 flex justify-between items-start h-[83.5vh] flex-wrap ">
+        <div className="px-32 flex justify-between items-start flex-wrap max-xl:flex-col-reverse max-xl:justify-center max-xl:items-center">
           <div className="w-2/5 h-full">
             <p className="text-7xl font-primary mb-4">About Me</p>
             <p className="text-xl font-secondary text-justify">
@@ -45,17 +45,17 @@ export default function About() {
               laborum nulla do.
             </p>
           </div>
-          <div className="relative w-2/5 h-full">
+          <div className="relative w-2/5 mt-1 min-w-[300px] xl:w-[500px]">
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-20"></div>
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-20 right-0"></div>
             <Image
               src={me}
               alt="My profile photo"
-              className="border-2 border-figmaBlue z-10 bg-white w-full"
+              className="border-2 border-figmaBlue z-10 bg-white mx-auto"
             ></Image>
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-20 right-0"></div>
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-20"></div>
-            <div className="bg-figmaBlue rounded-md py-0.5 px-2 text-white absolute z-20 text-sm left-48 ml-1.5 mt-2 mx-auto">
+            <div className="bg-figmaBlue rounded-md py-0.5 px-2 mt-2 text-white z-20 w-fit text-sm mx-auto">
               That's me!
             </div>
           </div>
