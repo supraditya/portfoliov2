@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Head from "next/head";
+import Footer from "../../components/Footer";
 
 export default function Projects() {
   return (
@@ -17,6 +18,7 @@ export default function Projects() {
       <div>
         <p>Projects Page</p>
       </div>
+      <Footer/>
     </>
   );
 }

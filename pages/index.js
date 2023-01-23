@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 import verticalLine from "../public/line.svg";
 import ctaArrow from "../public/cta.svg";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const prototypeBox = useRef();
@@ -71,8 +72,9 @@ export default function Home() {
           <p className="font-coding text-6xl leading-tight pb-3 blink">
             &lt;p&gt;Product&lt;/p&gt;
           </p>
-          <Image src={ctaArrow} className="w-30 mx-auto mt-6 motion-safe:animate-bounce"></Image>
+          <Image src={ctaArrow} className="w-30 mx-auto mt-8 slow-bounce"></Image>
         </div>
+        <Footer/>
       </main>
     </>
   );

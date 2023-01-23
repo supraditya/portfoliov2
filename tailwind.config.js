@@ -8,6 +8,8 @@ module.exports = {
     colors:{
       figmaBlue: '#0C8CE9',
       white: '#FFFFFF',
+      customGray: '#7F7F7F',
+      black:'#000000',
     },
     fontFamily:{
       primary: ["Orbitron", "sans-serif"],
@@ -15,7 +17,11 @@ module.exports = {
       writing: ["Shadows Into Light", "cursive"],
       code: ["Inconsolata", "monospace"],
     },
-    extend: {},
+    extend: {
+      animation:{
+        'bounce-slow':'bounce 3s linear 3s infinite'
+      }
+    },
   },
   screens: {
     "max-2xl": { max: "1535px" },
