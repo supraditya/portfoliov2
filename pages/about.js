@@ -37,7 +37,7 @@ export default function About() {
           alt="dotted line horizontal"
           className="absolute rotate-90 top-36 right-0 max-xl:hidden"
         ></Image>
-        <div className="px-32 mb-14 flex justify-between items-start flex-wrap max-xl:flex-col-reverse max-xl:justify-center max-xl:items-center">
+        <div className="px-32 mb-14 min-h-[80vh] flex justify-between items-start flex-wrap max-xl:flex-col-reverse max-xl:justify-center max-xl:items-center">
           <div className="w-2/5 flex flex-col justify-between">
             <p className="text-7xl font-primary mb-4">About Me</p>
             <div className="flex justify-between mb-4">

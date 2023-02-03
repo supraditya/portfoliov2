@@ -44,7 +44,7 @@ export default function Home() {
         className="absolute rotate-90 top-[7.6rem]"
       ></Image>
       <main className="relative">
-        <div className="px-32 h-[83.5vh] flex flex-col pt-2 items-start relative">
+        <div className="px-32 h-[85vh] flex flex-col pt-2 items-start relative">
           <p className="font-secondary text-4xl leading-snug ml-1">
             I realise ideas
           </p>
