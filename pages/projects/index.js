@@ -22,7 +22,7 @@ export default function Projects() {
       </Head>
       <Navbar />
       <div className="px-32 mb-10">
-        <p className="text-7xl font-primary mb-5">Projects</p>
+        <p className="text-7xl font-primary mb-5">My Projects</p>
         <div className="w-1/2 flex justify-between font-secondary text-xl">
           <button
             className={`${
@@ -36,10 +36,10 @@ export default function Projects() {
           </button>
           <button
             className={`${
-              projectTab === "Case Studies" ? "bg-black text-white" : ""
+              projectTab === "Case Study" ? "bg-black text-white" : ""
             } px-1.5 py-1 rounded-md`}
             onClick={() => {
-              handleTabChange("Case Studies");
+              handleTabChange("Case Study");
             }}
           >
             Case Studies
@@ -76,7 +76,7 @@ export default function Projects() {
           </button>
         </div>
         <div className="mt-1 flex flex-wrap justify-start">
-          <ProjectCard currentTab={projectTab} domains={["All", "Case Studies", "Design"]}/>
+          <ProjectCard currentTab={projectTab} domains={["All", "Case Study", "Design"]}/>
           <ProjectCard currentTab={projectTab} domains={["All", "Development"]}/>
           <ProjectCard currentTab={projectTab} domains={["All", "Design"]}/>
           <ProjectCard currentTab={projectTab} domains={["All", "Others"]}/>

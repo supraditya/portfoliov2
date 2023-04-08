@@ -17,7 +17,7 @@ export default function Footer() {
       <Image src={footerLogo} className="w-1/3 pr-24" alt="Footer logo"></Image>
       <div className="flex flex-col justify-center items-center w-1/3">
         <Link
-          href="https://drive.google.com/file/d/1IcQPRXmV32R_FycBMqSuYf4R7x6aU72Q/view"
+          href="https://drive.google.com/file/d/11XnqtkKnhzxNxRn-B_r3iJNNx2LAH_zm/view"
           target="_blank"
           rel="noreferrer"
           className="mx-4 text-lg flex items-center hover:border-b-2 border-white"

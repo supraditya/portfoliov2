@@ -5,6 +5,7 @@ import Image from "next/image";
 import verticalLine from "../public/line.svg";
 import ctaArrow from "../public/cta.svg";
 import Footer from "../components/Footer";
+import FeaturedProject from "../components/FeaturedProject";
 
 export default function Home() {
   const prototypeBox = useRef();
@@ -44,7 +45,7 @@ export default function Home() {
         className="absolute rotate-90 top-[7.6rem]"
       ></Image>
       <main className="relative">
-        <div className="px-32 h-[85vh] flex flex-col pt-2 items-start relative">
+        <div className="px-32 flex flex-col pt-2 items-start relative">
           <p className="font-secondary text-4xl leading-snug ml-1">
             I realise ideas
           </p>
@@ -72,9 +73,18 @@ export default function Home() {
           <p className="font-coding text-6xl leading-tight pb-3 blink">
             &lt;p&gt;Product&lt;/p&gt;
           </p>
-          <Image src={ctaArrow} className="w-30 mx-auto mt-8 slow-bounce"></Image>
+          <Image
+            src={ctaArrow}
+            className="w-30 mx-auto mt-8 slow-bounce mb-28"
+          ></Image>
+          <p className="text-7xl font-primary mb-5">Highlights</p>
+          <div className="flex flex-col w-full mb-14">
+            <FeaturedProject domains={["All", "Case Study", "Design"]} flow="left" />
+            <FeaturedProject domains={["All", "Development"]} flow="right" />
+            <FeaturedProject domains={["All", "Design"]} flow="left" />
+          </div>
         </div>
-        <Footer/>
+        <Footer />
       </main>
     </>
   );

@@ -20,7 +20,7 @@ module.exports = {
     extend: {
       animation:{
         'bounce-slow':'bounce 3s linear 3s infinite'
-      }
+      },
     },
   },
   screens: {
