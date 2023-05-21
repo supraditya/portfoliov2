@@ -11,6 +11,18 @@ export default function Navbar() {
     '/projects':false,
     '/about':false,
   });
+  // State to make navbar opaque, and to resize logo on scrolling
+  const [navStyleState, setnavStyleState] = useState({});
+
+  // Object containing styling for nav when webpage is scrolled
+  const navScrollStyles={
+    transition: 'all 0.1s ease-in-out',
+    width: '50%',
+    backgroundColor: '#fff',
+    boxShadow: '0 1px 1px 1px #aaa',
+    transform: 'scale(0.85)',
+
+  }
   const router = useRouter();
   useEffect(() => {
     let temp={...activeLink};
@@ -21,10 +33,14 @@ export default function Navbar() {
         temp[key]=false;
     });
     setactiveLink(temp);
+    document.addEventListener("scroll", () => {
+      const navStyle = window.scrollY < 50 ? {} : navScrollStyles;
+      setnavStyleState(navStyle);
+    });
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 py-6 px-16 flex justify-between font-primary">
+    <nav style={navStyleState} className="sticky w-full mx-auto transition-all duration-100 ease-in-out rounded-full top-0 z-50 py-6 px-16 flex justify-between font-primary">
       <Link href="/">
         <Image
           src={navLogo}
