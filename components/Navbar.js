@@ -11,41 +11,42 @@ export default function Navbar() {
     '/projects':false,
     '/about':false,
   });
-  // State to make navbar opaque, and to resize logo on scrolling
-  const [navStyleState, setnavStyleState] = useState({});
+  // State to keep track of whether webpage is being scrolled through or at top level
+  const [scrollState, setscrollState] = useState(false)
 
   // Object containing styling for nav when webpage is scrolled
   const navScrollStyles={
     transition: 'all 0.1s ease-in-out',
-    width: '50%',
+    // width: '50%',
     backgroundColor: '#fff',
-    boxShadow: '0 1px 1px 1px #aaa',
-    transform: 'scale(0.85)',
-
+    // boxShadow: '0 1px 1px 1px #ccc',
+    // borderBottom: 'solid 1px #000'
+    // transform: 'scale(0.85)',
   }
   const router = useRouter();
   useEffect(() => {
-    let temp={...activeLink};
-    Object.keys(temp).forEach((key)=>{
+    let activeLinkTemp={...activeLink};
+    Object.keys(activeLinkTemp).forEach((key)=>{
       if(key===router.pathname)
-        temp[key]=true;
+        activeLinkTemp[key]=true;
       else
-        temp[key]=false;
+        activeLinkTemp[key]=false;
     });
-    setactiveLink(temp);
+    setactiveLink(activeLinkTemp);
     document.addEventListener("scroll", () => {
-      const navStyle = window.scrollY < 50 ? {} : navScrollStyles;
-      setnavStyleState(navStyle);
+      // Returns true if the window is scrolled, else returns false
+      const scrollStateTemp = window.scrollY >= 50;
+      setscrollState(scrollStateTemp);
     });
   }, []);
 
   return (
-    <nav style={navStyleState} className="sticky w-full mx-auto transition-all duration-100 ease-in-out rounded-full top-0 z-50 py-6 px-16 flex justify-between font-primary">
+    <nav style={scrollState ? navScrollStyles: {}} className="sticky w-full mx-auto transition-all duration-100 ease-in-out top-0 z-50 py-6 px-16 flex justify-between font-primary">
       <Link href="/">
         <Image
           src={navLogo}
           alt="Aditya Menon's personal logo"
-          className="w-16 min-w-[3rem]"
+          className={`${scrollState ? 'w-10':'w-16'} min-w-[3rem] transition-all duration-200`}
         ></Image>
       </Link>
       <ul className="list-none flex items-center">
