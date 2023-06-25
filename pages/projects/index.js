@@ -3,6 +3,7 @@ import Head from "next/head";
 import Footer from "../../components/Footer";
 import { useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
+import FeaturedProject from "../../components/FeaturedProject";
 
 export default function Projects() {
   const [projectTab, setprojectTab] = useState("All");
@@ -22,7 +23,20 @@ export default function Projects() {
       </Head>
       <Navbar />
       <div className="px-32 mb-10">
-        <p className="text-7xl font-primary mb-5">My Projects</p>
+        {/* <p className="text-7xl font-primary mb-5">My Projects</p> */}
+        <div className="flex flex-col w-full mb-8">
+        <div className="mb-10"></div>
+          <FeaturedProject
+            domains={["All", "Case Study", "Design"]}
+            flow="left"
+          />
+          <div className="mb-10"></div>
+          <FeaturedProject domains={["All", "Development"]} flow="right" />
+          <div className="mb-10"></div>
+          <FeaturedProject domains={["All", "Design"]} flow="left" />
+          <div className="mb-10"></div>
+        </div>
+        <p className="text-7xl font-primary mb-5">All Projects</p>
         <div className="w-1/2 flex justify-between font-secondary text-xl">
           <button
             className={`${
@@ -75,13 +89,22 @@ export default function Projects() {
             Others
           </button>
         </div>
-        <div className="mt-1 flex flex-wrap justify-start">
-          <ProjectCard currentTab={projectTab} domains={["All", "Case Study", "Design"]}/>
-          <ProjectCard currentTab={projectTab} domains={["All", "Development"]}/>
-          <ProjectCard currentTab={projectTab} domains={["All", "Design"]}/>
-          <ProjectCard currentTab={projectTab} domains={["All", "Others"]}/>
-          <ProjectCard currentTab={projectTab} domains={["All", "Development"]}/>
-          <ProjectCard currentTab={projectTab} domains={["All", "Others"]}/>
+        <div className="mt-4 grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-x-8 justify-start">
+          <ProjectCard
+            currentTab={projectTab}
+            domains={["All", "Case Study", "Design"]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
+            domains={["All", "Development"]}
+          />
+          <ProjectCard currentTab={projectTab} domains={["All", "Design"]} />
+          <ProjectCard currentTab={projectTab} domains={["All", "Others"]} />
+          <ProjectCard
+            currentTab={projectTab}
+            domains={["All", "Development"]}
+          />
+          <ProjectCard currentTab={projectTab} domains={["All", "Others"]} />
         </div>
       </div>
 

@@ -77,7 +77,7 @@ export default function Home() {
             src={ctaArrow}
             className="w-30 mx-auto mt-8 slow-bounce mb-28"
           ></Image>
-          <p className="text-7xl font-primary mb-5">Highlights</p>
+          <p className="text-7xl font-primary mb-5">My Projects</p>
           <div className="flex flex-col w-full mb-14">
             <FeaturedProject domains={["All", "Case Study", "Design"]} flow="left" />
             <FeaturedProject domains={["All", "Development"]} flow="right" />

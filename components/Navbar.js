@@ -46,7 +46,7 @@ export default function Navbar() {
         <Image
           src={navLogo}
           alt="Aditya Menon's personal logo"
-          className={`${scrollState ? 'w-10':'w-16'} min-w-[3rem] transition-all duration-200`}
+          className={`${scrollState ? 'w-10':'w-14  '} min-w-[3rem] transition-all duration-200`}
         ></Image>
       </Link>
       <ul className="list-none flex items-center">

@@ -1,6 +1,6 @@
 export default function ProjectCard(props) {
   return (
-    <div className={`w-[31%] min-w-[300px] mr-6 mt-4 ${props.domains.includes(props.currentTab) ? '':'hidden'}`}>
+    <div className={`min-w-sm max-w-lg mt-4 ${props.domains.includes(props.currentTab) ? '':'hidden'}`}>
       <div className="h-72 bg-customGray rounded-sm">Image Placeholder</div>
       <div className="p-4 flex justify-between items-center bg-[#eeeeee]">
         <div className="rounded-sm">
