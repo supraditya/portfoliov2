@@ -78,11 +78,26 @@ export default function Home() {
             className="w-30 mx-auto mt-8 slow-bounce mb-28"
           ></Image>
           <p className="text-7xl font-primary mb-5">My Projects</p>
-          <div className="flex flex-col w-full mb-14">
-            <FeaturedProject domains={["All", "Case Study", "Design"]} flow="left" />
-            <FeaturedProject domains={["All", "Development"]} flow="right" />
-            <FeaturedProject domains={["All", "Design"]} flow="left" />
-          </div>
+          <div className="flex flex-col w-full mb-8">
+          <FeaturedProject
+            title="Forgetful Foodie"
+            id="forgetful-foodie"
+            domains={["All", "Case Study", "Design"]}
+            flow="left"
+          />
+          <FeaturedProject
+            title="Forgetful Foodie"
+            id="forgetful-foodie"
+            domains={["All", "Case Study", "Design"]}
+            flow="right"
+          />
+          <FeaturedProject
+            title="Forgetful Foodie"
+            id="forgetful-foodie"
+            domains={["All", "Case Study", "Design"]}
+            flow="left"
+          />
+        </div>
         </div>
         <Footer />
       </main>

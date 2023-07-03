@@ -4,8 +4,18 @@ import Footer from "../../components/Footer";
 import { useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
 import FeaturedProject from "../../components/FeaturedProject";
+import { getSortedPostsData } from "../../lib/posts";
 
-export default function Projects() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Projects({ allPostsData }) {
   const [projectTab, setprojectTab] = useState("All");
   const handleTabChange = (newTab) => {
     setprojectTab(newTab);
@@ -25,15 +35,27 @@ export default function Projects() {
       <div className="px-32 mb-10">
         {/* <p className="text-7xl font-primary mb-5">My Projects</p> */}
         <div className="flex flex-col w-full mb-8">
-        <div className="mb-10"></div>
+          <div className="mb-10"></div>
           <FeaturedProject
+            title="Forgetful Foodie"
+            id="forgetful-foodie"
             domains={["All", "Case Study", "Design"]}
             flow="left"
           />
           <div className="mb-10"></div>
-          <FeaturedProject domains={["All", "Development"]} flow="right" />
+          <FeaturedProject
+            title="Forgetful Foodie"
+            id="forgetful-foodie"
+            domains={["All", "Case Study", "Design"]}
+            flow="right"
+          />
           <div className="mb-10"></div>
-          <FeaturedProject domains={["All", "Design"]} flow="left" />
+          <FeaturedProject
+            title="Forgetful Foodie"
+            id="forgetful-foodie"
+            domains={["All", "Case Study", "Design"]}
+            flow="left"
+          />
           <div className="mb-10"></div>
         </div>
         <p className="text-7xl font-primary mb-5">All Projects</p>
@@ -90,21 +112,14 @@ export default function Projects() {
           </button>
         </div>
         <div className="mt-4 grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-x-8 justify-start">
-          <ProjectCard
-            currentTab={projectTab}
-            domains={["All", "Case Study", "Design"]}
-          />
-          <ProjectCard
-            currentTab={projectTab}
-            domains={["All", "Development"]}
-          />
-          <ProjectCard currentTab={projectTab} domains={["All", "Design"]} />
-          <ProjectCard currentTab={projectTab} domains={["All", "Others"]} />
-          <ProjectCard
-            currentTab={projectTab}
-            domains={["All", "Development"]}
-          />
-          <ProjectCard currentTab={projectTab} domains={["All", "Others"]} />
+          {allPostsData.map(({ id, date, title, domains }) => (
+            <ProjectCard
+              currentTab={projectTab}
+              id={id}
+              title={title}
+              domains={domains}
+            />
+          ))}
         </div>
       </div>
 

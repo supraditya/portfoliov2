@@ -1,5 +1,6 @@
 import Image from "next/image";
 import placeholder from "../public/placeholder.png";
+import Link from "next/link";
 
 export default function FeaturedProject(props) {
   return (
@@ -14,7 +15,7 @@ export default function FeaturedProject(props) {
         } py-6 h-full`}
       >
         <div className={`w-4/5 ${props.flow==="right"? 'float-right':''}`}>
-          <p className="font-primary text-5xl mb-2">Forgetful Foodie</p>
+          <p className="font-primary text-5xl mb-2">{props.title}</p>
           <div className="font-secondary text-lg mb-2">
             {props.domains.slice(1).map((domain, i) => {
               return i !== props.domains.length - 2 ? (
@@ -24,9 +25,11 @@ export default function FeaturedProject(props) {
               );
             })}
           </div>
-          <button className="font-primary text-base border rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out">
+            <Link href={`/projects/${props.id}`}>
+            <button className="font-primary text-base border rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out">
             View
           </button>
+            </Link>
         </div>
       </div>
       <Image src={placeholder} alt="placeholder" className="w-5/12" />
