@@ -9,7 +9,7 @@ export default function FeaturedProject(props) {
       } flex justify-between items-center bg-transparent w-full mt-4 mb-8 min-h-[50vh]`}
     >
       <div
-        className={`rounded-sm w-[48%] ${
+        className={`w-[48%] ${
           props.flow === "right" ? "border-l" : "border-r"
         } py-6 h-full`}
       >
