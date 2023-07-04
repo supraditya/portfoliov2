@@ -4,18 +4,18 @@ import Footer from "../../components/Footer";
 import { useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
 import FeaturedProject from "../../components/FeaturedProject";
-import { getSortedPostsData } from "../../lib/posts";
+import { getSortedProjectsData } from "../../lib/projects";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allProjectsData = getSortedProjectsData();
   return {
     props: {
-      allPostsData,
+      allProjectsData,
     },
   };
 }
 
-export default function Projects({ allPostsData }) {
+export default function Projects({ allProjectsData }) {
   const [projectTab, setprojectTab] = useState("All");
   const handleTabChange = (newTab) => {
     setprojectTab(newTab);
@@ -112,7 +112,7 @@ export default function Projects({ allPostsData }) {
           </button>
         </div>
         <div className="mt-4 grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-x-8 justify-start">
-          {allPostsData.map(({ id, date, title, domains }) => (
+          {allProjectsData.map(({ id, date, title, domains }) => (
             <ProjectCard
               currentTab={projectTab}
               id={id}
