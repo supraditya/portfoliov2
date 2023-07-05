@@ -17,11 +17,7 @@ export default function Navbar() {
   // Object containing styling for nav when webpage is scrolled
   const navScrollStyles={
     transition: 'all 0.1s ease-in-out',
-    // width: '50%',
     backgroundColor: '#fff',
-    // boxShadow: '0 1px 1px 1px #ccc',
-    // borderBottom: 'solid 1px #000'
-    // transform: 'scale(0.85)',
   }
   const router = useRouter();
   useEffect(() => {

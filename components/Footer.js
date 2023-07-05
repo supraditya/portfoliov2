@@ -13,7 +13,7 @@ import { BiLinkExternal } from "react-icons/bi";
 
 export default function Footer() {
   return (
-    <footer className="bg-customGray h-52 text-white m-0 font-primary flex justify-between px-16">
+    <footer className="bg-footerGray h-52 text-white m-0 font-primary flex justify-between px-16">
       <Image src={footerLogo} className="w-1/3 pr-24" alt="Footer logo"></Image>
       <div className="flex flex-col justify-center items-center w-1/3">
         <Link
