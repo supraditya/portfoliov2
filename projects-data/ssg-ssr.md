@@ -1,6 +1,7 @@
 ---
 title: 'When to Use Static Generation v.s. Server-side Rendering'
-date: '2020-01-02'
+subtitle: 'This is a subtitle'
+timeline: '2020-01-02'
 domains: ["All", "Development"]
 ---
 

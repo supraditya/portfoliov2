@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function ProjectCard(props) {
   return (
     <div className={`min-w-sm max-w-lg mt-4 ${props.domains.includes(props.currentTab) ? '':'hidden'}`}>
-      <div className="h-72 bg-customGray rounded-sm">Image Placeholder</div>
+      <div className="h-72 bg-footerGray rounded-sm">Image Placeholder</div>
       <div className="p-4 flex justify-between items-center bg-[#eeeeee]">
         <div className="rounded-sm">
           <p className="font-primary font-semibold text-xl">{props.title}</p>

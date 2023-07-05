@@ -1,6 +1,7 @@
 ---
 title: 'Two Forms of Pre-rendering'
-date: '2020-01-01'
+subtitle: 'This is a subtitle'
+timeline: '2020-01-01'
 domains: ["All", "Case Study", "Design"]
 ---
 

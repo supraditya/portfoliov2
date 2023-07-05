@@ -8,13 +8,14 @@ module.exports = {
     colors:{
       figmaBlue: '#0C8CE9',
       white: '#FFFFFF',
-      customGray: '#7F7F7F',
+      footerGray: '#7F7F7F',
+      subtitleGray: '#686767',
       black:'#000000',
     },
     fontFamily:{
       primary: ["Orbitron", "sans-serif"],
       secondary: ["Nunito Sans", "sans-serif"],
-      writing: ["Shadows Into Light", "cursive"],
+      writing: ["Shadows Into Light Two", "cursive"],
       code: ["Inconsolata", "monospace"],
     },
     extend: {
