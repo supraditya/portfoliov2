@@ -25,15 +25,24 @@ export default function Projects() {
       <div className="px-32 mb-10">
         {/* <p className="text-7xl font-primary mb-5">My Projects</p> */}
         <div className="flex flex-col w-full mb-8">
-        <div className="mb-10"></div>
+          <div className="mb-10"></div>
           <FeaturedProject
             domains={["All", "Case Study", "Design"]}
             flow="left"
+            link="forgetful-foodie"
           />
           <div className="mb-10"></div>
-          <FeaturedProject domains={["All", "Development"]} flow="right" />
+          <FeaturedProject
+            domains={["All", "Development"]}
+            flow="right"
+            link="forgetful-foodie"
+          />
           <div className="mb-10"></div>
-          <FeaturedProject domains={["All", "Design"]} flow="left" />
+          <FeaturedProject
+            domains={["All", "Design"]}
+            flow="left"
+            link="forgetful-foodie"
+          />
           <div className="mb-10"></div>
         </div>
         <p className="text-7xl font-primary mb-5">All Projects</p>

@@ -19,7 +19,7 @@ export default function ProjectCard(props) {
             }
           </div>
         </div>
-        <button className="font-primary text-base border rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out">
+        <button className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out">
             View
         </button>
       </div>
