@@ -1,3 +1,5 @@
+import ListRenderer from "./ListRenderer";
+
 export default function ProjectCard(props) {
   return (
     <div className={`min-w-sm max-w-lg mt-4 ${props.domains.includes(props.currentTab) ? '':'hidden'}`}>
@@ -6,17 +8,7 @@ export default function ProjectCard(props) {
         <div className="rounded-sm">
           <p className="font-primary font-semibold text-2xl">Project Title</p>
           <div className="font-secondary text-base">
-            {
-                props.domains.slice(1).map((domain, i) => {
-                    return(
-                        i!==props.domains.length-2 ?(
-                            <span key={i}>{domain}, </span>
-                        ):(
-                            <span key={i}>{domain}</span>
-                        )
-                    )
-                })
-            }
+          <ListRenderer list={props.domains} removeFirst={true}/>
           </div>
         </div>
         <button className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out">
