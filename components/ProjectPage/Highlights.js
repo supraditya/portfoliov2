@@ -2,12 +2,12 @@ import ListRenderer from "../ListRenderer";
 
 export default function Highlights(props) {
   return (
-    <div className="flex items-center justify-between my-3">
-      <div className="text-justify w-1/2 pr-4 border-r">
-        <h3 className="font-primary text-xl">Summary</h3>
-        <p className="font-secondary text-base font-light">{props.summary}</p>
+    <div className="flex flex-col items-center justify-between mt-5 mb-8 md:flex-row flex-wrap">
+      <div className="text-justify md:w-1/2 pr-4 md:border-r">
+        <h3 className="font-primary text-xl mb-1">Summary</h3>
+        <p className="font-secondary text-lg font-light">{props.summary}</p>
       </div>
-      <div className="grid grid-cols-2 pl-4 w-1/2 ">
+      <div className="md:grid md:grid-cols-2 md:gap-3 pl-4 md:w-1/2">
         <p>
           <span className="font-strong">My Roles:&nbsp;</span>
           <span className="font-light">

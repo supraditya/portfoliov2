@@ -13,7 +13,7 @@ module.exports = {
       white: '#FFFFFF',
       footerGray: '#7F7F7F',
       black:'#000000',
-      subtitleGray: '#686767'
+      subtitleGray: '#686767',
     },
     fontFamily:{
       primary: ["Orbitron", "sans-serif"],
