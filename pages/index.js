@@ -79,9 +79,27 @@ export default function Home() {
           ></Image>
           <p className="text-7xl font-primary mb-5">My Projects</p>
           <div className="flex flex-col w-full mb-14">
-            <FeaturedProject domains={["All", "Case Study", "Design"]} flow="left" link="forgetful-foodie"/>
-            <FeaturedProject domains={["All", "Development"]} flow="right" link="forgetful-foodie"/>
-            <FeaturedProject domains={["All", "Design"]} flow="left" link="forgetful-foodie"/>
+          <FeaturedProject
+            title="Forgetful Foodie"
+            domains={["All", "Case Study", "Design"]}
+            flow="left"
+            link="forgetful-foodie"
+            image="forgetful-foodie"
+          />
+          <FeaturedProject
+            title="Dr. Menon's Palliative Care"
+            domains={["All","Case Study","Graphic Design"]}
+            flow="right"
+            link="palliative-care"
+            image="palliative-care"
+          />
+          <FeaturedProject
+            title="Forgetful Foodie"
+            domains={["All", "Design"]}
+            flow="left"
+            link="forgetful-foodie"
+            image="forgetful-foodie"
+          />
           </div>
         </div>
         <Footer />

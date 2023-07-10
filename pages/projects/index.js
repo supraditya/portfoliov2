@@ -27,21 +27,27 @@ export default function Projects() {
         <div className="flex flex-col w-full mb-8">
           <div className="mb-10"></div>
           <FeaturedProject
+            title="Forgetful Foodie"
             domains={["All", "Case Study", "Design"]}
             flow="left"
             link="forgetful-foodie"
+            image="forgetful-foodie"
           />
           <div className="mb-10"></div>
           <FeaturedProject
-            domains={["All", "Development"]}
+            title="Dr. Menon's Palliative Care"
+            domains={["All","Case Study","Graphic Design"]}
             flow="right"
-            link="forgetful-foodie"
+            link="palliative-care"
+            image="palliative-care"
           />
           <div className="mb-10"></div>
           <FeaturedProject
+            title="Forgetful Foodie"
             domains={["All", "Design"]}
             flow="left"
             link="forgetful-foodie"
+            image="forgetful-foodie"
           />
           <div className="mb-10"></div>
         </div>

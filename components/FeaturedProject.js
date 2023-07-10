@@ -1,5 +1,4 @@
 import Image from "next/image";
-import placeholder from "../public/placeholder.png";
 import Link from "next/link";
 import ListRenderer from "./ListRenderer";
 
@@ -16,7 +15,7 @@ export default function FeaturedProject(props) {
         } py-6 h-full`}
       >
         <div className={`w-4/5 ${props.flow === "right" ? "float-right" : ""}`}>
-          <p className="font-primary text-5xl mb-2">Forgetful Foodie</p>
+          <p className="font-primary text-5xl mb-2">{props.title}</p>
           <div className="font-secondary text-lg mb-2">
             <ListRenderer list={props.domains} removeFirst={true}/>
           </div>
@@ -27,7 +26,7 @@ export default function FeaturedProject(props) {
           </Link>
         </div>
       </div>
-      <Image src={placeholder} alt="placeholder" className="w-5/12" />
+      <Image src={require(`../public/assets/${props.image}.png`)} alt="project image" className="w-5/12" />
     </div>
   );
 }
