@@ -26,7 +26,7 @@ export default function FeaturedProject(props) {
           </Link>
         </div>
       </div>
-      <Image src={require(`../public/assets/${props.image}.png`)} alt="project image" className="w-5/12" />
+      <Image src={require(`../public/assets/${props.image}/${props.image}.png`)} alt="project image" className="w-5/12" />
     </div>
   );
 }

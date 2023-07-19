@@ -1,7 +1,8 @@
 import Header from "../../components/ProjectPage/Header";
 import Wrapper from "../../components/ProjectPage/Wrapper";
 import Image from "next/image";
-import projectImg from "../../public/assets/forgetful-foodie.png";
+import projectImg from "../../public/assets/forgetful-foodie/forgetful-foodie.png";
+import poster from "../../public/assets/forgetful-foodie/poster.png";
 import Highlights from "../../components/ProjectPage/Highlights";
 import Head from "next/head";
 
@@ -46,14 +47,37 @@ export default function forgetfulFoodie() {
           effort required in keeping track of household food inventory so that
           everything is used up before it expires and the amount of time and
           effort it takes to meal-plan and determine the dish that tastes good,
-          is easy to prepare, and uses an adequate amount of ingredients. <br></br> Thus,
-          we wondered:
+          is easy to prepare, and uses an adequate amount of ingredients.{" "}
+          <br></br> Thus, we wondered:
         </p>
-        <p className="font-secondary text-xl text-subtitleGray font-light px-20 py-4 text-center italic">
-        How we might help people to safely consume all the highly
-          perishable foods in their pantry without wastage, while simultaneously
+        <p className="font-secondary text-xl text-yellow-600 font-base px-20 py-4 text-center italic">
+          How we might help people to safely consume all the highly perishable
+          foods in their pantry without wastage, while simultaneously
           alleviating some of the mental burden of managing a household?
         </p>
+        <h3 className="font-primary text-xl mb-1">Our Solution</h3>
+        <p className="font-secondary text-lg font-light text-justify">
+          This conundrum led us to come up with Forgetful Foodie: a smartphone
+          application designed to help users consume all their perishable food
+          items before they go bad through:
+        </p>
+        <ul className="list-disc font-secondary text-lg font-light pl-8 text-justify">
+          <li>Individual item age and quantity tracking</li>
+          <li>By suggesting appropriate recipes to tactfully use at-risk ingredients!</li>
+          <li>By focusing on user-curated recipes to increase user engagement, and encourage 'home-cooked' recipes as opposed to complex and hard-to-follow preparations </li>
+        </ul>
+        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+        <Image
+            src={poster}
+            alt="poster"
+            className="mx-auto"
+          ></Image>
+        </div>
+ 
+          <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+            Promotional Poster for Forgetful Foodie
+          </p>
+
       </Wrapper>
     </>
   );

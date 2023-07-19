@@ -18,12 +18,16 @@ export default function Highlights(props) {
           <span className="font-strong">Timeline:&nbsp;</span>
           <span className="font-light">{props.timeline}</span>
         </p>
-        <p>
-          <span className="font-strong">Team Members:&nbsp;</span>
-          <span className="font-light">
-            <ListRenderer list={props.team} removeFirst={false} />
-          </span>
-        </p>
+        {props.team.length !== 0 ? (
+          <p>
+            <span className="font-strong">Team Members:&nbsp;</span>
+            <span className="font-light">
+              <ListRenderer list={props.team} removeFirst={false} />
+            </span>
+          </p>
+        ) : (
+          <span></span>
+        )}
         <p>
           <span className="font-strong">Tools Used:&nbsp;</span>
           <span className="font-light">
