@@ -5,7 +5,7 @@ export default function Wrapper({ children }) {
   return (
     <>
       <Navbar />
-      <div className="px-32">{children}</div>
+      <div className="px-32 leading-snug">{children}</div>
       <Footer />
     </>
   );

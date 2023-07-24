@@ -55,7 +55,7 @@ export default function forgetfulFoodie() {
           foods in their pantry without wastage, while simultaneously
           alleviating some of the mental burden of managing a household?
         </p>
-        <h3 className="font-primary text-xl mb-1">Our Solution</h3>
+        <h3 className="font-primary text-xl mb-1">Our Initial Solution</h3>
         <p className="font-secondary text-lg font-light text-justify">
           This conundrum led us to come up with Forgetful Foodie: a smartphone
           application designed to help users consume all their perishable food
@@ -63,21 +63,94 @@ export default function forgetfulFoodie() {
         </p>
         <ul className="list-disc font-secondary text-lg font-light pl-8 text-justify">
           <li>Individual item age and quantity tracking</li>
-          <li>By suggesting appropriate recipes to tactfully use at-risk ingredients!</li>
-          <li>By focusing on user-curated recipes to increase user engagement, and encourage 'home-cooked' recipes as opposed to complex and hard-to-follow preparations </li>
+          <li>
+            By suggesting appropriate recipes to tactfully use at-risk
+            ingredients!
+          </li>
         </ul>
         <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
-        <Image
-            src={poster}
-            alt="poster"
-            className="mx-auto"
-          ></Image>
+          <Image src={poster} alt="poster" className="mx-auto"></Image>
         </div>
- 
-          <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
-            Promotional Poster for Forgetful Foodie
-          </p>
 
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Promotional Poster for Forgetful Foodie
+        </p>
+        <h3 className="font-primary text-xl mb-1">Discovery and Research</h3>
+        <p className="font-secondary text-lg font-light text-justify">
+          We aimed to design primarily for adult grocery shoppers who shop on
+          behalf of a household, either just for themselves or also for other
+          loved ones. So, we interviewed a few of these potential users, from
+          various age demographics, cultures, and ethnicities. Here are some
+          interesting excerpts from the process:
+        </p>
+        <ul className="font-secondary text-lg font-light flex items-baseline text-justify justify-between mt-4">
+          <li className="w-1/3 pr-10">
+            <p className="italic mb-2">
+              Q. How do you keep track of your groceries?
+            </p>
+            <p>
+              "I visually inspect my pantry and fridge, and make mental notes of
+              what I have and what I might soon run out of."
+            </p>
+          </li>
+          <li className="w-1/3 px-10">
+            <p className="italic mb-2">
+              Q. Have you ever used technology to manage your pantry inventory
+              or eating habits?
+            </p>
+            <p className="mb-3">
+              "I have often ordered groceries online, but tracking my pantry
+              inventory and eating habits has been a chore to track digitally."
+            </p>
+            <p className="mb-3">
+              "I feel like micromanaging what I eat could lead to me developing
+              an eating disorder."
+            </p>
+            <p className="mb-3">
+              "I feel like individually and painstakingly logging every single
+              item I eat throughout the day is too much of a chore for me."
+            </p>
+          </li>
+          <li className="w-1/3 pl-10">
+            <p className="italic mb-2">
+              Q. How do you feel about personal food wastage?
+            </p>
+            <p>
+              "I feel extremely guilty. I hate wasting leftovers, so having to
+              throw out ingredients as they expire before I can use them is a
+              particularly frustrating process for me."
+            </p>
+          </li>
+        </ul>
+        <h3 className="font-primary text-xl mb-1">Insights Gathered</h3>
+        <p className="font-secondary text-lg font-light text-justify">
+          All in all, people rarely used dedicated applications to manage their
+          pantry. They either took notes, or kept a mental note of what they had
+          and needed soon.
+        </p>
+        <ul className="list-decimal pl-8 pr-6 text-justify text-lg mt-2">
+          <li className="font-semibold mt-4">
+            People were observed to keep track of pantry items through visual
+            inspection and memory, which was found to be unreliable
+          </li>
+          <p className="font-light">
+            The interviewees primarily relied on visually examining their pantry
+            contents and memorizing them, resulting in forgetfulness and food
+            wastage. Doubt about the freshness of items and double-buying were
+            common issues, indicating that this method is inadequate for
+            tracking pantry inventory, as expressed by all participants.
+          </p>
+          <li className="font-semibold mt-4">
+            Existing apps meant to track inventory and eating habits were
+            perceived to be 'too impractical to be convenient'
+          </li>
+          <p className="font-light">
+            While some interviewees found inputting every meal and minute
+            details frequently into an app frustrating, another interviewee was
+            concerned about developing eating disorders by tracking their eating
+            habits too closely.
+          </p>
+        </ul>
       </Wrapper>
     </>
   );
