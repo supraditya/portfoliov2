@@ -1,7 +1,7 @@
 import Header from "../../components/ProjectPage/Header";
 import Wrapper from "../../components/ProjectPage/Wrapper";
 import Image from "next/image";
-import projectImg from "../../public/assets/palliative-care.png";
+import projectImg from "../../public/assets/palliative-care/palliative-care.png";
 import Highlights from "../../components/ProjectPage/Highlights";
 import Head from "next/head";
 export default function PalliativeCare() {

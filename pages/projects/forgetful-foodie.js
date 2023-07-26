@@ -3,6 +3,8 @@ import Wrapper from "../../components/ProjectPage/Wrapper";
 import Image from "next/image";
 import projectImg from "../../public/assets/forgetful-foodie/forgetful-foodie.png";
 import poster from "../../public/assets/forgetful-foodie/poster.png";
+import storyboard1 from "../../public/assets/forgetful-foodie/storyboard-1.png";
+import storyboard2 from "../../public/assets/forgetful-foodie/storyboard-2.png";
 import Highlights from "../../components/ProjectPage/Highlights";
 import Head from "next/head";
 
@@ -71,11 +73,12 @@ export default function forgetfulFoodie() {
         <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
           <Image src={poster} alt="poster" className="mx-auto"></Image>
         </div>
-
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Promotional Poster for Forgetful Foodie
         </p>
-        <h3 className="font-primary text-xl mb-1">Discovery and Research</h3>
+        <h3 className="font-primary text-3xl mb-1 font-medium">
+          Phase 1: Discovery and Research
+        </h3>
         <p className="font-secondary text-lg font-light text-justify">
           We aimed to design primarily for adult grocery shoppers who shop on
           behalf of a household, either just for themselves or also for other
@@ -128,8 +131,8 @@ export default function forgetfulFoodie() {
           pantry. They either took notes, or kept a mental note of what they had
           and needed soon.
         </p>
-        <ul className="list-decimal pl-8 pr-6 text-justify text-lg mt-2">
-          <li className="font-semibold mt-4">
+        <ul className="list-decimal pl-8 pr-6 text-justify text-lg mt-1 font-secondary">
+          <li className="font-semibold mt-2">
             People were observed to keep track of pantry items through visual
             inspection and memory, which was found to be unreliable
           </li>
@@ -150,6 +153,131 @@ export default function forgetfulFoodie() {
             concerned about developing eating disorders by tracking their eating
             habits too closely.
           </p>
+        </ul>
+        <h3 className="font-primary text-3xl mt-3 mb-2 font-medium">
+          Phase 2: Design
+        </h3>
+        <p className="font-secondary font-light text-lg text-justify my-2">
+          After outlining the problem, and gathering insights, we began painting
+          a picture with the information gathered. This led us to plotting out
+          user scenarios, finalizing application features and flow, and
+          collecting and reviewing peer and user feedback.
+        </p>
+        <h3 className="font-primary text-xl mb-1">Storyboards</h3>
+        <p className="font-secondary font-light text-lg">
+          After interviewing our target demographic, we were able to get a
+          better picture of why it tended to be so hard to avoid food wastage in
+          our fast-paced daily lives. We began sketching out our findings, and
+          ended up with the following scenarios:
+        </p>
+        <div className="p-8 my-4 rounded-md text-center bg-gray-100">
+          <Image
+            src={storyboard1}
+            alt="poster"
+            className="mx-auto w-5/6"
+          ></Image>
+        </div>
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Scenario 1: Abby's Bananas
+        </p>
+        <div className="p-8 my-4 rounded-md text-center bg-gray-100">
+          <Image
+            src={storyboard2}
+            alt="poster"
+            className="mx-auto w-5/6"
+          ></Image>
+        </div>
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Scenario 2: Nathan's Dilemma
+        </p>
+        <p className="font-secondary font-light text-lg">
+          These illustrations were based off of a combination of insights
+          gathered from our users, and from personal experiences handling and
+          managing our own households. This gave us some definite problems to
+          work towards solving, thus acting as a catalyst for ideation.<br></br>
+          Our primary goals were:
+        </p>
+        <ul className="list-disc font-secondary text-lg font-light pl-8 text-justify">
+          <li>
+            To intuitively visualize how much of something a user has, and when
+            it will go bad
+          </li>
+          <li>
+            To help users make tasty and nutritious meals out of whatever they
+            have in the pantry at any given time, to ensure that nothing goes to
+            waste!
+          </li>
+        </ul>
+        <h3 className="font-primary text-xl mb-1">Pain Points</h3>
+        <p className="font-secondary font-light text-lg">
+          Based on the feedback we had received from the initial target users,
+          we were determined to make forgetful foodie as convenient to use and
+          update as possible. Our 'Pantry Health' feature, intended to allow
+          users to quickly glance through what and how much of something they
+          have at any given time, was the product of this thinking. <br></br>A
+          few pain points that arose were:
+        </p>
+        <ul className="list-disc font-secondary text-lg font-light pl-8 text-justify">
+          <li>
+            The tedium of updating one's inventory every time new things are
+            bought and ready to be stored.
+          </li>
+          <li>
+            The logging of individual items' expiry dates and their accuracy
+          </li>
+          <li>
+            Sometimes recipes call for extremely specific ingredients, and can
+            be either too difficult or time consuming to prepare for the
+            everyday user.
+          </li>
+        </ul>
+        <p className="font-secondary font-light text-lg mt-1">
+          We attempted to solve these problems through brainstorming appropriate
+          features, which led to coming up with:
+        </p>
+        <ul className="font-secondary text-lg font-light  text-justify mt-1">
+          <li>
+            <p className="italic mb-2 font-secondary font-medium">
+              Alternative methods to update inventory such as receipt scanning,
+              barcode scanning, item recognition
+            </p>
+            <p>
+              By using technologies such as object detection and OCR, we could
+              make receipt scanning a viable option for users who’ve just bought
+              groceries and are turned off by having to manually add each item
+              into forgetful foodie before they even get to stocking it.
+            </p>
+          </li>
+          <li className="mt-2">
+            <p className="italic mb-2 font-secondary font-medium">
+              User-curated recipes that only display recipes to a user if they
+              have most or all of the ingredients listed
+            </p>
+            <p>
+              We realized that by adding the user-curated spin to recipes, we
+              can:
+            </p>
+            <ul className="pl-8 list-disc text-md">
+              <li>
+                Make recipe dishes realistic to prepare, and also gauge
+                difficulty.
+              </li>
+              <li>
+                Ensure that users are able to cook dishes that match the
+                regional and cultural staples around them, and ensure that users
+                are exposed to healthier ‘home-cooked’ options which are
+                sustainable in the long term.
+              </li>
+              <li>
+                We could also auto-deduct items for a user’s inventory, thus
+                eliminating an update step and improving the overall UX.
+              </li>
+            </ul>
+            <p>
+              This led us to develop the initial user flow, and to illustrate
+              the a lofi prototype of the UI through paper prototyping.
+            </p>
+          </li>
         </ul>
       </Wrapper>
     </>
