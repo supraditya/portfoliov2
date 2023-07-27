@@ -1,14 +1,36 @@
 import Header from "../../components/ProjectPage/Header";
 import Wrapper from "../../components/ProjectPage/Wrapper";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import ReactPlayer from "react-player/vimeo";
 import projectImg from "../../public/assets/forgetful-foodie/forgetful-foodie.png";
 import poster from "../../public/assets/forgetful-foodie/poster.png";
 import storyboard1 from "../../public/assets/forgetful-foodie/storyboard-1.png";
 import storyboard2 from "../../public/assets/forgetful-foodie/storyboard-2.png";
+import paperproto1 from "../../public/assets/forgetful-foodie/paper-prototype-1.png";
+import paperproto2 from "../../public/assets/forgetful-foodie/paper-prototype-2.png";
+import paperproto3 from "../../public/assets/forgetful-foodie/paper-prototype-3.png";
+import paperproto4 from "../../public/assets/forgetful-foodie/paper-prototype-4.png";
+import proto1 from "../../public/assets/forgetful-foodie/prototype-1.png";
+import proto2 from "../../public/assets/forgetful-foodie/prototype-2.png";
+import proto3 from "../../public/assets/forgetful-foodie/prototype-3.png";
+import barcode1 from "../../public/assets/forgetful-foodie/barcode-1.png";
+import barcode2 from "../../public/assets/forgetful-foodie/barcode-2.png";
+import itemRecog1 from "../../public/assets/forgetful-foodie/item-recog-1.png";
+import itemRecog2 from "../../public/assets/forgetful-foodie/item-recog-2.png";
+import recipe1 from "../../public/assets/forgetful-foodie/recipe-1.png";
+import recipe2 from "../../public/assets/forgetful-foodie/recipe-2.png";
+import recipe3 from "../../public/assets/forgetful-foodie/recipe-3.png";
 import Highlights from "../../components/ProjectPage/Highlights";
 import Head from "next/head";
 
 export default function forgetfulFoodie() {
+  const [hasWindow, setHasWindow] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setHasWindow(true);
+    }
+  }, []);
   return (
     <>
       {/* TODO: Make ProjectPage components for every type of content arrangement as depicted on figma */}
@@ -243,7 +265,7 @@ export default function forgetfulFoodie() {
             </p>
             <p>
               By using technologies such as object detection and OCR, we could
-              make receipt scanning a viable option for users who’ve just bought
+              make receipt scanning a viable option for users who've just bought
               groceries and are turned off by having to manually add each item
               into forgetful foodie before they even get to stocking it.
             </p>
@@ -265,11 +287,11 @@ export default function forgetfulFoodie() {
               <li>
                 Ensure that users are able to cook dishes that match the
                 regional and cultural staples around them, and ensure that users
-                are exposed to healthier ‘home-cooked’ options which are
+                are exposed to healthier 'home-cooked' options which are
                 sustainable in the long term.
               </li>
               <li>
-                We could also auto-deduct items for a user’s inventory, thus
+                We could also auto-deduct items for a user's inventory, thus
                 eliminating an update step and improving the overall UX.
               </li>
             </ul>
@@ -279,6 +301,160 @@ export default function forgetfulFoodie() {
             </p>
           </li>
         </ul>
+        <h3 className="font-primary text-xl mb-1">Paper Prototypes</h3>
+        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+          <Image
+            src={paperproto1}
+            alt="paper prototype 1"
+            className="mx-auto w-1/3"
+          ></Image>
+          <Image
+            src={paperproto2}
+            alt="paper prototype 2"
+            className="mx-auto w-1/3"
+          ></Image>
+        </div>
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Flow 1: Pantry Health
+        </p>
+        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+          <Image
+            src={paperproto3}
+            alt="paper prototype 3"
+            className="mx-auto w-4/5"
+          ></Image>
+        </div>
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Flow 2: Receipt Scanning
+        </p>
+        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+          <Image
+            src={paperproto4}
+            alt="paper prototype 4"
+            className="mx-auto w-4/5"
+          ></Image>
+        </div>
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Flow 3: "Try a Recipe!"
+        </p>
+        <p className="mb-2 font-secondary text-lg">
+          We used these sketches as a guideline to base our digital wireframes'
+          layout on.
+        </p>
+        <p className="font-secondary text-lg">
+          We decided that showing the quantity of a pantry item left, along with
+          a countdown to its expiration date would require at least two graphs
+          side-by-side. <br></br> Additionally, clicking on a particular item
+          should let the user fetch detailed information about it, along with
+          edit/delete options.
+        </p>
+        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+          <Image
+            src={proto1}
+            alt="prototype 1"
+            className="mx-auto w-1/4"
+          ></Image>
+          <Image
+            src={proto2}
+            alt="prototype 2"
+            className="mx-auto w-1/4"
+          ></Image>
+        </div>
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Flow 1: Pantry Health
+        </p>
+        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+          <Image
+            src={proto3}
+            alt="prototype 3"
+            className="mx-auto w-4/5"
+          ></Image>
+        </div>
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Flow 2: Receipt Scanning
+        </p>
+        <p className="font-secondary font-light text-lg text-justify">
+          We decided that the application would have 3 menus:
+        </p>
+        <ul className="pl-8 list-disc text-lg font-secondary font-light">
+          <li>
+            The home tab would show the user pantry health and some quick recipe
+            options
+          </li>
+          <li>
+            The inventory tab would provide the user with alternative methods to
+            update their pantry items, such as:
+          </li>
+        </ul>
+        <p className="font-secondary font-light text-lg text-justify">
+          Barcode Scanning
+        </p>
+        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+          <Image
+            src={barcode1}
+            alt="barcode 1"
+            className="mx-auto w-1/4"
+          ></Image>
+          <Image
+            src={barcode2}
+            alt="barcode 2"
+            className="mx-auto w-1/4"
+          ></Image>
+        </div>
+        <p className="font-secondary font-light text-lg text-justify">
+          and Item Recognition
+        </p>
+        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+          <Image
+            src={itemRecog1}
+            alt="item recognition 1"
+            className="mx-auto w-1/4"
+          ></Image>
+          <Image
+            src={itemRecog2}
+            alt="item recognition 2"
+            className="mx-auto w-1/4"
+          ></Image>
+        </div>
+        <p className="font-secondary font-light text-lg text-justify">
+          and finally, we also fleshed out the "Try a Recipe!" flow, providing
+          the user the option to browse recipes based on their inventory, or
+          just look up 'All Recipes.' As the name suggests, will allow the user
+          to create, share and browse through user-recipes from the community.
+        </p>
+        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+          <Image
+            src={recipe1}
+            alt="recipe prototype 1"
+            className="mx-auto w-1/4"
+          ></Image>
+          <Image
+            src={recipe2}
+            alt="recipe prototype 2"
+            className="mx-auto w-1/4"
+          ></Image>
+          <Image
+            src={recipe3}
+            alt="recipe prototype 3"
+            className="mx-auto w-1/4"
+          ></Image>
+        </div>
+        <p className="font-secondary font-light text-lg text-justify">
+          These lofi frames were then given a splash of color, which gave us the
+          opportunity to experiment with some color palettes and help us see
+          what works best, which resulted in the following prototype
+        </p>
+        {hasWindow && (
+          <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+            <ReactPlayer
+              url="https://vimeo.com/772048766"
+              loop={true}
+              playing={true}
+              controls={true}
+              className="mx-auto rounded-md"
+            />
+          </div>
+        )}
       </Wrapper>
     </>
   );
