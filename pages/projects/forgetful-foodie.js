@@ -1,6 +1,8 @@
 import Header from "../../components/ProjectPage/Header";
 import Wrapper from "../../components/ProjectPage/Wrapper";
 import Image from "next/image";
+import Link from "next/link";
+import Head from "next/head";
 import { useState, useEffect } from "react";
 import ReactPlayer from "react-player/vimeo";
 import projectImg from "../../public/assets/forgetful-foodie/forgetful-foodie.png";
@@ -21,10 +23,11 @@ import itemRecog2 from "../../public/assets/forgetful-foodie/item-recog-2.png";
 import recipe1 from "../../public/assets/forgetful-foodie/recipe-1.png";
 import recipe2 from "../../public/assets/forgetful-foodie/recipe-2.png";
 import recipe3 from "../../public/assets/forgetful-foodie/recipe-3.png";
+import finalproto from "../../public/assets/forgetful-foodie/final-prototype.gif";
 import Highlights from "../../components/ProjectPage/Highlights";
-import Head from "next/head";
 
 export default function forgetfulFoodie() {
+  // State to render ReactPlayer after window is loaded, to avoid HydrationError
   const [hasWindow, setHasWindow] = useState(false);
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -445,7 +448,7 @@ export default function forgetfulFoodie() {
           what works best, which resulted in the following prototype
         </p>
         {hasWindow && (
-          <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+          <div className="py-2 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
             <ReactPlayer
               url="https://vimeo.com/772048766"
               loop={true}
@@ -455,6 +458,141 @@ export default function forgetfulFoodie() {
             />
           </div>
         )}
+        <h3 className="font-primary text-3xl mb-1 font-medium">
+          Phase 3: Feedback and Revisions
+        </h3>
+        <h3 className="font-primary text-xl mb-1">
+          Feedback on Initial Prototype
+        </h3>
+        <p className="font-secondary font-light text-lg text-justify">
+          Upon subjecting the above-developed prototypes to peer evaluation, we
+          received a tremendous amount of insight:
+        </p>
+        <ul className="list-decimal pl-8 pr-6 text-justify text-lg mt-1 font-secondary">
+          <li className="font-semibold mt-2">
+            Users were confused by too many colors and graph bars
+          </li>
+          <p className="font-light">
+            The colors used for the different bar charts were found to be
+            overwhelming to test users. They mentioned that they had to spend a
+            considerable amount of time deciphering the pantry health
+            visualization, which we realized was impeding the 'at a glance'
+            philosophy and was making the initial learning curve steeper for the
+            user.
+          </p>
+          <li className="font-semibold mt-4">
+            Not sure what the 'store the following in' (a.k.a Storage Practices)
+            page's function was
+          </li>
+          <p className="font-light">
+            Several users were hesitant about what to do next when directly
+            presented with the Storage Practices screen after they input their
+            new pantry items.
+          </p>
+          <ul className="pl-8 list-disc text-lg font-secondary font-light">
+            <li>
+              The screen's original intention was to give the users a preview of
+              what they'd entered, and to also give them storage recommendations
+              for items.
+            </li>
+            <li>
+              Users required an explanation in order to fully understand our
+              intent, after which they found the feature to be useful.
+            </li>
+          </ul>
+          <li className="font-semibold mt-4">
+            Too many menus and options to explore
+          </li>
+          <p className="font-light">
+            The home page, inventory and recipes tabs were a lot for users to
+            take in all at once. It was also observed that users were unsure of
+            the difference between the home tab and the inventory tab, since
+            both of them displayed the pantry health visualization first,
+            followed by different elements underneath that.
+          </p>
+        </ul>
+        <h3 className="font-primary text-xl mb-1">Revisions</h3>
+        <ul className="pl-8 list-disc text-lg font-secondary font-light">
+          <li>
+            To address the problem 1, we went through two iterations to reach a
+            solution:
+          </li>
+          <ul className="pl-8 list-disc text-lg font-secondary font-light">
+            <li>
+              Initially, we tightened up the color palette to only use primary
+              and secondary colors at most. Graph bar colors were switched out
+              for more subtle and color blind-friendly alternatives. [Before and
+              after screenshots]
+            </li>
+            <li>
+              The second iteration led us to remove the{" "}
+              <span className="italic">'days left'</span> graph bar altogether,
+              instead substituting it with a textual{" "}
+              <span className="italic">'days left'</span> element on top of a
+              single graph, whose sole purpose was to depict the item quantity.
+              This helped us solve the problem of having to figure out
+              expiration dates and periods, and leave it up to the user's
+              judgment, and made our visualization more intuitive. [Before and
+              after - changed colors to one bar]
+            </li>
+          </ul>
+          <li>
+            We then addressed the user flow confusion that arose from the
+            Storage Practices page, by adding an additional window specifically
+            for users to review their item entries and make edits, following
+            which we took them to the recommended storage methods window. This
+            seemed to clear up any ambiguity experienced by users during tests
+            after the change. [show previous flow vs new flow gifs]
+          </li>
+        </ul>
+        <h3 className="font-primary text-3xl mb-1 font-medium">
+          Final Prototype
+        </h3>
+        <p className="font-secondary font-light text-lg text-justify mb-2">
+          After incorporating everything discussed above into our redesign, we
+          were ready with our final prototype.
+        </p>
+        <Link
+          href="https://www.figma.com/proto/HUxf0bhkT3OOsViPuXPg1J/SI-582%3A-Forgetful-Foodie?type=design&node-id=136-227&t=eXB63GMsipzQalAM-0&scaling=scale-down&page-id=133%3A21&starting-point-node-id=136%3A474"
+          className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out"
+          target="_blank"
+          alt="Link to prototype"
+        >
+          Link to Prototype
+        </Link>
+        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+          <Image
+            src={finalproto}
+            alt="final prototype"
+            className="mx-auto h-2/4 w-auto"
+          ></Image>
+        </div>
+        <h3 className="font-primary text-xl mb-1">Future Scope</h3>
+        <p className="font-secondary font-light text-lg text-justify mb-1.5">
+          If we get the opportunity to further develop this prototype, we would
+          love to focus more on the specifics of recipe submission and curation,
+          and any new features that could improve the user's experience in that
+          sphere.
+        </p>
+        <h3 className="font-primary text-xl mb-1">Reflections</h3>
+        <p className="font-secondary font-light text-lg text-justify mb-1.5">
+          This is one of my first complete Interaction design projects, and
+          thanks to the course structure, we were able to delve into the entire
+          process week-by-week, and understand the importance of iterative
+          design based on feedback. The one learning lesson I took from this
+          project was to inculcate a habit of documenting my activities as and
+          when they occur, which would have helped me compile this study quicker
+          and extract deeper insights overall.
+        </p>
+        <div className="flex justify-center pb-4">
+          <Link
+            href="forgetful-foodie"
+            className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out mx-auto"
+            alt="Back to top"
+          >
+            Back to Top
+          </Link>
+        </div>
       </Wrapper>
     </>
   );
