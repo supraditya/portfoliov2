@@ -23,6 +23,11 @@ import itemRecog2 from "../../public/assets/forgetful-foodie/item-recog-2.png";
 import recipe1 from "../../public/assets/forgetful-foodie/recipe-1.png";
 import recipe2 from "../../public/assets/forgetful-foodie/recipe-2.png";
 import recipe3 from "../../public/assets/forgetful-foodie/recipe-3.png";
+import revision1 from "../../public/assets/forgetful-foodie/revision-1.png";
+import revision2 from "../../public/assets/forgetful-foodie/revision-2.png";
+import revision3 from "../../public/assets/forgetful-foodie/revision-3.png";
+import revision4 from "../../public/assets/forgetful-foodie/revision-4.png";
+import revision5 from "../../public/assets/forgetful-foodie/revision-5.png";
 import finalproto from "../../public/assets/forgetful-foodie/final-prototype.gif";
 import Highlights from "../../components/ProjectPage/Highlights";
 
@@ -517,13 +522,27 @@ export default function forgetfulFoodie() {
             To address the problem 1, we went through two iterations to reach a
             solution:
           </li>
-          <ul className="pl-8 list-disc text-lg font-secondary font-light">
+          <ul className="pl-8 list-disc text-lg font-secondary font-light text-justify">
             <li>
               Initially, we tightened up the color palette to only use primary
               and secondary colors at most. Graph bar colors were switched out
-              for more subtle and color blind-friendly alternatives. [Before and
-              after screenshots]
+              for more subtle and color blind-friendly alternatives.
             </li>
+            <div className="py-4 px-4 my-4 rounded-md text-center bg-gray-100">
+              <Image
+                src={revision1}
+                alt="revision 1"
+                className="mx-auto w-1/2 my-4"
+              ></Image>
+              <Image
+                src={revision2}
+                alt="revision 2"
+                className="mx-auto w-1/2 my-4"
+              ></Image>
+            </div>
+            <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+              Revision 1: Home Screen and Pantry Health Visualization
+            </p>
             <li>
               The second iteration led us to remove the{" "}
               <span className="italic">'days left'</span> graph bar altogether,
@@ -532,9 +551,23 @@ export default function forgetfulFoodie() {
               single graph, whose sole purpose was to depict the item quantity.
               This helped us solve the problem of having to figure out
               expiration dates and periods, and leave it up to the user's
-              judgment, and made our visualization more intuitive. [Before and
-              after - changed colors to one bar]
+              judgment, and made our visualization more intuitive.
             </li>
+            <div className="py-4 px-4 my-4 rounded-md text-center bg-gray-100">
+              <Image
+                src={revision3}
+                alt="revision 3"
+                className="mx-auto w-1/2 my-4"
+              ></Image>
+              <Image
+                src={revision4}
+                alt="revision 4"
+                className="mx-auto w-1/2 my-4"
+              ></Image>
+            </div>
+            <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+              Revision 2: Home Screen and Pantry Health Visualization
+            </p>
           </ul>
           <li>
             We then addressed the user flow confusion that arose from the
@@ -542,8 +575,15 @@ export default function forgetfulFoodie() {
             for users to review their item entries and make edits, following
             which we took them to the recommended storage methods window. This
             seemed to clear up any ambiguity experienced by users during tests
-            after the change. [show previous flow vs new flow gifs]
+            after the change.
           </li>
+          <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+            <Image
+              src={revision5}
+              alt="revision 5"
+              className="mx-auto h-2/4 w-auto"
+            ></Image>
+          </div>
         </ul>
         <h3 className="font-primary text-3xl mb-1 font-medium">
           Final Prototype
@@ -584,7 +624,7 @@ export default function forgetfulFoodie() {
           when they occur, which would have helped me compile this study quicker
           and extract deeper insights overall.
         </p>
-        <div className="flex justify-center pb-4">
+        <div className="flex justify-center py-4">
           <Link
             href="forgetful-foodie"
             className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out mx-auto"
