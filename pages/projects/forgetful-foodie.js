@@ -28,7 +28,6 @@ import revision2 from "../../public/assets/forgetful-foodie/revision-2.png";
 import revision3 from "../../public/assets/forgetful-foodie/revision-3.png";
 import revision4 from "../../public/assets/forgetful-foodie/revision-4.png";
 import revision5 from "../../public/assets/forgetful-foodie/revision-5.png";
-import finalproto from "../../public/assets/forgetful-foodie/final-prototype.gif";
 import Highlights from "../../components/ProjectPage/Highlights";
 
 export default function forgetfulFoodie() {
@@ -600,13 +599,24 @@ export default function forgetfulFoodie() {
         >
           Link to Prototype
         </Link>
-        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+        {/* <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
           <Image
             src={finalproto}
             alt="final prototype"
             className="mx-auto h-2/4 w-auto"
           ></Image>
-        </div>
+        </div> */}
+        {hasWindow && (
+          <div className="py-2 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+            <ReactPlayer
+              url="https://vimeo.com/851012658"
+              loop={true}
+              playing={true}
+              controls={true}
+              className="mx-auto rounded-md"
+            />
+          </div>
+        )}
         <h3 className="font-primary text-xl mb-1">Future Scope</h3>
         <p className="font-secondary font-light text-lg text-justify mb-1.5">
           If we get the opportunity to further develop this prototype, we would
