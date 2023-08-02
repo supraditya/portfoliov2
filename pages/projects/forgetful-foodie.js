@@ -6,6 +6,7 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import ReactPlayer from "react-player/vimeo";
 import projectImg from "../../public/assets/forgetful-foodie/forgetful-foodie.png";
+import fontncolor from "../../public/assets/forgetful-foodie/font-and-colors.png";
 import poster from "../../public/assets/forgetful-foodie/poster.png";
 import storyboard1 from "../../public/assets/forgetful-foodie/storyboard-1.png";
 import storyboard2 from "../../public/assets/forgetful-foodie/storyboard-2.png";
@@ -42,7 +43,7 @@ export default function forgetfulFoodie() {
     <>
       {/* TODO: Make ProjectPage components for every type of content arrangement as depicted on figma */}
       <Head>
-        <title>Forgetful Foodie | Projects</title>
+        <title>Forgetful Foodie - Projects | Aditya Menon</title>
         <meta
           name="description"
           content="I am a UX Designer and Web Developer, and this is my portfolio."
@@ -55,11 +56,16 @@ export default function forgetfulFoodie() {
           title="Forgetful Foodie"
           subtitle="Always know what you have in the kitchen, and what dishes you can make using them."
         />
-        <div className="py-4 my-4 rounded-md text-center bg-blue-300">
+        <div className="py-4 my-4 rounded-md text-center bg-blue-200 flex justify-around">
           <Image
             src={projectImg}
             alt="forgetful foodie header"
-            className="w-2/5 mx-auto mt-5"
+            className="w-2/5 mt-5"
+          ></Image>
+          <Image
+            src={fontncolor}
+            alt="font and colors used"
+            className="w-1/3 object-contain mt-5"
           ></Image>
         </div>
         <Highlights
@@ -599,13 +605,6 @@ export default function forgetfulFoodie() {
         >
           Link to Prototype
         </Link>
-        {/* <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
-          <Image
-            src={finalproto}
-            alt="final prototype"
-            className="mx-auto h-2/4 w-auto"
-          ></Image>
-        </div> */}
         {hasWindow && (
           <div className="py-2 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
             <ReactPlayer
