@@ -13,9 +13,9 @@ import { BiLinkExternal } from "react-icons/bi";
 
 export default function Footer() {
   return (
-    <footer className="bg-footerGray h-52 text-white m-0 font-primary flex justify-between px-16">
-      <Image src={footerLogo} className="w-1/3 pr-24" alt="Footer logo"></Image>
-      <div className="flex flex-col justify-center items-center w-1/3">
+    <footer className="bg-footerGray h-52 text-white m-0 font-primary flex justify-between px-8 lg:px-16">
+      <Image src={footerLogo} className="hidden lg:block w-1/3 pr-24" alt="Footer logo"></Image>
+      <div className="flex flex-col justify-center items-center w-full lg:w-1/3">
         <Link
           href="https://drive.google.com/file/d/11XnqtkKnhzxNxRn-B_r3iJNNx2LAH_zm/view"
           target="_blank"
@@ -77,7 +77,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className="w-1/3 flex items-center justify-end">
+      <div className="w-1/3 hidden lg:flex items-center justify-end">
       <ul className="list-none flex items-center">
         <Link href="/" className={`mx-4 text-lg hover:border-b-2 border-white`}>
           Home
