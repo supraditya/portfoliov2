@@ -6,18 +6,24 @@ export default function FeaturedProject(props) {
   return (
     <div
       className={`py-4 ${
-        props.flow === "right" ? "flex-row-reverse" : ""
-      } flex justify-between items-center bg-transparent w-full mt-4 mb-8 min-h-[50vh]`}
+        props.flow === "right" ? "md:flex-row-reverse" : ""
+      } flex max-md:flex-col-reverse justify-between md:items-center bg-transparent w-full md:mt-4 md:mb-8 min-h-[50vh]`}
     >
       <div
-        className={`w-[48%] border-black ${
-          props.flow === "right" ? "border-l" : "border-r"
+        className={`md:w-[48%] border-black ${
+          props.flow === "right" ? "md:border-l" : "md:border-r"
         } py-6 h-full`}
       >
-        <div className={`w-4/5 ${props.flow === "right" ? "float-right" : ""}`}>
-          <p className="font-primary text-5xl mb-2">{props.title}</p>
+        <div
+          className={`md:w-4/5 ${
+            props.flow === "right" ? "md:float-right" : ""
+          }`}
+        >
+          <p className="font-primary text-2xl md:text-5xl mb-2">
+            {props.title}
+          </p>
           <div className="font-secondary text-lg mb-2">
-            <ListRenderer list={props.domains} removeFirst={true}/>
+            <ListRenderer list={props.domains} removeFirst={true} />
           </div>
           <Link href={`projects/${props.link}`} alt="Link to project">
             <button className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out">
@@ -26,7 +32,11 @@ export default function FeaturedProject(props) {
           </Link>
         </div>
       </div>
-      <Image src={require(`../public/assets/${props.image}/${props.image}.png`)} alt="project image" className="w-5/12" />
+      <Image
+        src={require(`../public/assets/${props.image}/${props.image}.png`)}
+        alt="project image"
+        className="md:w-5/12"
+      />
     </div>
   );
 }

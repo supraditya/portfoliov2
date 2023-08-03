@@ -37,69 +37,79 @@ export default function Home() {
       <Image
         src={verticalLine}
         alt="dotted line vertical"
-        className="absolute left-[19rem] h-1/2 top-0"
+        className="hidden md:block absolute left-[19rem] h-1/2 top-0"
       ></Image>
       <Image
         src={verticalLine}
         alt="dotted line horizontal"
-        className="absolute rotate-90 top-[7.6rem]"
+        className="hidden md:block absolute rotate-90 top-[6.8rem]"
       ></Image>
       <main className="relative">
-        <div className="px-32 flex flex-col pt-2 items-start relative">
-          <p className="font-secondary text-4xl leading-snug ml-1">
-            I realise ideas
-          </p>
-          <p className="font-secondary text-6xl leading-snug">From</p>
-          <div className="leading-snug">
-            <span className="font-writing text-6xl">Pen and Paper</span>
-            <span className="font-secondary text-6xl">&nbsp;to</span>
-          </div>
-          <div className="p-2 relative">
-            <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-20"></div>
-            <div className="border border-figmaBlue bg-white h-3 w-3 absolute mr-1 -mt-1 z-20 right-0"></div>
-            <p
-              ref={prototypeBox}
-              className="font-primary text-6xl leading-snug border-2 border-figmaBlue z-10 bg-white"
-            >
-              Prototype
+        <div className="px-8 md:px-32 flex flex-col max-md:justify-center pt-2 items-start relative">
+          <div className="max-md:min-h-[65vh] max-md:flex max-md:flex-col max-md:justify-center">
+            <p className="font-secondary text-2xl md:text-4xl leading-normal md:leading-snug ml-0.5 md:ml-1">
+              I realise ideas
             </p>
-            <div className="border border-figmaBlue bg-white h-3 w-3 absolute mr-1 -mt-1 z-20 right-0"></div>
-            <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-20"></div>
-            <div className="bg-figmaBlue rounded-md py-0.5 px-2 text-white w-fit z-20 top-full text-sm mt-1.5 mx-auto">
-              {dimensions.width} x {dimensions.height}
+            <p className="font-secondary text-4xl leading-normal md:leading-snug md:text-6xl">
+              From
+            </p>
+            <div className="leading-normal md:leading-snug">
+              <span className="font-writing text-4xl md:text-6xl">
+                Pen and Paper
+              </span>
+              <span className="font-secondary text-4xl md:text-6xl">
+                &nbsp;to
+              </span>
             </div>
+            <div className="p-1 md:p-2 w-fit relative">
+              <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute -ml-1 -mt-1 z-20"></div>
+              <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
+              <p
+                ref={prototypeBox}
+                className="font-primary text-4xl leading-normal md:leading-snug md:text-6xl border-2 border-figmaBlue z-10 bg-white"
+              >
+                Prototype
+              </p>
+              <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
+              <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute -ml-1 -mt-1 z-20"></div>
+              <div className="bg-figmaBlue rounded-md py-0.5 px-2 text-white w-fit z-20 top-full text-[0.5rem] md:text-sm mt-1.5 mx-auto">
+                {dimensions.width} x {dimensions.height}
+              </div>
+            </div>
+            <p className="font-secondary text-4xl leading-snug md:leading-tight md:text-6xl -mt-6">
+              and
+            </p>
+            <p className="font-coding text-4xl leading-snug md:leading-tight md:text-6xl pb-3 blink">
+              &lt;p&gt;Product&lt;/p&gt;
+            </p>
           </div>
-          <p className="font-secondary text-6xl leading-tight -mt-6">and</p>
-          <p className="font-coding text-6xl leading-tight pb-3 blink">
-            &lt;p&gt;Product&lt;/p&gt;
-          </p>
           <Image
             src={ctaArrow}
-            className="w-30 mx-auto mt-8 slow-bounce mb-28"
+            className="w-30 mx-auto mt-14 md:mt-8 slow-bounce mb-20 md:mb-28"
           ></Image>
-          <p className="text-7xl font-primary mb-5">My Projects</p>
-          <div className="flex flex-col w-full mb-14">
-          <FeaturedProject
-            title="Forgetful Foodie"
-            domains={["All", "Case Study", "Design"]}
-            flow="left"
-            link="forgetful-foodie"
-            image="forgetful-foodie"
-          />
-          <FeaturedProject
-            title="Dr. Menon's Palliative Care"
-            domains={["All","Case Study","Graphic Design"]}
-            flow="right"
-            link="palliative-care"
-            image="palliative-care"
-          />
-          <FeaturedProject
-            title="Forgetful Foodie"
-            domains={["All", "Design"]}
-            flow="left"
-            link="forgetful-foodie"
-            image="forgetful-foodie"
-          />
+          <p className="text-4xl md:text-7xl font-primary mb-5">My Projects</p>
+          <div className="flex flex-col w-fit md:w-full mb-14">
+            <FeaturedProject
+              title="Forgetful Foodie"
+              domains={["All", "Case Study", "Design"]}
+              flow="left"
+              link="forgetful-foodie"
+              image="forgetful-foodie"
+            />
+            <FeaturedProject
+              title="Dr. Menon's Palliative Care"
+              domains={["All", "Case Study", "Graphic Design"]}
+              flow="right"
+              link="palliative-care"
+              image="palliative-care"
+            />
+            <FeaturedProject
+              title="Forgetful Foodie"
+              domains={["All", "Design"]}
+              flow="left"
+              link="forgetful-foodie"
+              image="forgetful-foodie"
+            />
           </div>
         </div>
         <Footer />
