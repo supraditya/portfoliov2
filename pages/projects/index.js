@@ -22,10 +22,9 @@ export default function Projects() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <Navbar />
-      <div className="px-32 mb-10">
+      <div className="px-10 md:px-32 mb-10">
         {/* <p className="text-7xl font-primary mb-5">My Projects</p> */}
-        <div className="flex flex-col w-full mb-8">
-          <div className="mb-10"></div>
+        <div className="flex flex-col w-fit md:w-full mt-4 mb-4 md:mt-10 md:mb-14">
           <FeaturedProject
             title="Forgetful Foodie"
             domains={["All", "Case Study", "Design"]}
@@ -36,12 +35,13 @@ export default function Projects() {
           <div className="mb-10"></div>
           <FeaturedProject
             title="Dr. Menon's Palliative Care"
-            domains={["All","Case Study","Graphic Design"]}
+            domains={["All", "Case Study", "Graphic Design"]}
             flow="right"
             link="palliative-care"
             image="palliative-care"
           />
           <div className="mb-10"></div>
+
           <FeaturedProject
             title="Forgetful Foodie"
             domains={["All", "Design"]}
@@ -49,14 +49,13 @@ export default function Projects() {
             link="forgetful-foodie"
             image="forgetful-foodie"
           />
-          <div className="mb-10"></div>
         </div>
-        <p className="text-7xl font-primary mb-5">All Projects</p>
-        <div className="w-1/2 flex justify-between font-secondary text-xl">
+        <p className="text-4xl md:text-7xl font-primary mb-5">All Projects</p>
+        <div className="flex-wrap lg:w-4/5 xl:w-1/2 flex justify-start md:justify-between font-secondary text-xl">
           <button
             className={`${
               projectTab === "All" ? "bg-black text-white" : ""
-            } px-1.5 py-1 rounded-md`}
+            } mr-2 px-1.5 py-1 rounded-md`}
             onClick={() => {
               handleTabChange("All");
             }}
@@ -66,17 +65,17 @@ export default function Projects() {
           <button
             className={`${
               projectTab === "Case Study" ? "bg-black text-white" : ""
-            } px-1.5 py-1 rounded-md`}
+            } mx-2 px-1.5 py-1 rounded-md`}
             onClick={() => {
               handleTabChange("Case Study");
             }}
           >
-            Case Studies
+            Case&nbsp;Studies
           </button>
           <button
             className={`${
               projectTab === "Design" ? "bg-black text-white" : ""
-            } px-1.5 py-1 rounded-md`}
+            } mx-2 px-1.5 py-1 rounded-md`}
             onClick={() => {
               handleTabChange("Design");
             }}
@@ -86,7 +85,7 @@ export default function Projects() {
           <button
             className={`${
               projectTab === "Development" ? "bg-black text-white" : ""
-            } px-1.5 py-1 rounded-md`}
+            } mr-2 px-1.5 py-1 rounded-md`}
             onClick={() => {
               handleTabChange("Development");
             }}
@@ -96,7 +95,7 @@ export default function Projects() {
           <button
             className={`${
               projectTab === "Others" ? "bg-black text-white" : ""
-            } px-1.5 py-1 rounded-md`}
+            } mx-2 px-1.5 py-1 rounded-md`}
             onClick={() => {
               handleTabChange("Others");
             }}
@@ -104,7 +103,7 @@ export default function Projects() {
             Others
           </button>
         </div>
-        <div className="mt-4 grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-x-8 justify-start">
+        <div className="mt-4 sm:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 justify-start">
           <ProjectCard
             currentTab={projectTab}
             domains={["All", "Case Study", "Design"]}

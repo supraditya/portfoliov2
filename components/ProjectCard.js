@@ -2,7 +2,7 @@ import ListRenderer from "./ListRenderer";
 
 export default function ProjectCard(props) {
   return (
-    <div className={`min-w-sm max-w-lg mt-4 ${props.domains.includes(props.currentTab) ? '':'hidden'}`}>
+    <div className={`min-w-sm w-full md:max-w-lg mt-4 ${props.domains.includes(props.currentTab) ? '':'hidden'}`}>
       <div className="h-72 bg-footerGray rounded-sm">Image Placeholder</div>
       <div className="p-4 flex justify-between items-center bg-[#eeeeee]">
         <div className="rounded-sm">
