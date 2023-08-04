@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useState, useEffect, useRef } from "react";
+import { Slide } from "react-awesome-reveal";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 import verticalLine from "../public/line.svg";
@@ -34,19 +35,23 @@ export default function Home() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <Navbar />
-      <Image
-        src={verticalLine}
-        alt="dotted line vertical"
-        className="hidden md:block absolute left-[19rem] h-1/2 top-0"
-      ></Image>
-      <Image
-        src={verticalLine}
-        alt="dotted line horizontal"
-        className="hidden md:block absolute rotate-90 top-[6.8rem]"
-      ></Image>
+
       <main className="relative">
         <div className="px-8 md:px-32 flex flex-col max-md:justify-center pt-2 items-start relative">
           <div className="max-md:min-h-[65vh] max-md:flex max-md:flex-col max-md:justify-center">
+            <Slide triggerOnce>
+              <Image
+                src={verticalLine}
+                alt="dotted line vertical"
+                className="hidden md:block absolute left-[11rem] h-[30vh] top-[-3rem] scale-150"
+              ></Image>
+              <Image
+                src={verticalLine}
+                alt="dotted line horizontal"
+                className="hidden md:block absolute rotate-90 top-[0.2rem]"
+              ></Image>
+            </Slide>
+
             <p className="font-secondary text-2xl md:text-4xl leading-normal md:leading-snug ml-0.5 md:ml-1">
               I realise ideas
             </p>
@@ -61,21 +66,23 @@ export default function Home() {
                 &nbsp;to
               </span>
             </div>
-            <div className="p-1 md:p-2 w-fit relative">
-              <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute -ml-1 -mt-1 z-20"></div>
-              <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
-              <p
-                ref={prototypeBox}
-                className="font-primary text-4xl leading-normal md:leading-snug md:text-6xl border-2 border-figmaBlue z-10 bg-white"
-              >
-                Prototype
-              </p>
-              <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
-              <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute -ml-1 -mt-1 z-20"></div>
-              <div className="bg-figmaBlue rounded-md py-0.5 px-2 text-white w-fit z-20 top-full text-[0.5rem] md:text-sm mt-1.5 mx-auto">
-                {dimensions.width} x {dimensions.height}
+            <Slide triggerOnce>
+              <div className="p-1 md:p-2 w-fit relative">
+                <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute -ml-1 -mt-1 z-20"></div>
+                <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
+                <p
+                  ref={prototypeBox}
+                  className="font-primary text-4xl leading-normal md:leading-snug md:text-6xl border-2 border-figmaBlue z-10 bg-white"
+                >
+                  Prototype
+                </p>
+                <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
+                <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute -ml-1 -mt-1 z-20"></div>
+                <div className="bg-figmaBlue rounded-md py-0.5 px-2 text-white w-fit z-20 top-full text-[0.5rem] md:text-sm mt-1.5 mx-auto">
+                  {dimensions.width} x {dimensions.height}
+                </div>
               </div>
-            </div>
+            </Slide>
             <p className="font-secondary text-4xl leading-snug md:leading-tight md:text-6xl -mt-6">
               and
             </p>

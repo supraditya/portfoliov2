@@ -24,7 +24,7 @@ export default function Projects() {
       <Navbar />
       <div className="px-10 md:px-32 mb-10">
         {/* <p className="text-7xl font-primary mb-5">My Projects</p> */}
-        <div className="flex flex-col w-fit md:w-full mt-4 mb-4 md:mt-10 md:mb-14">
+        <div className="flex flex-col w-fit md:w-full mt-4 mb-4 md:my-14">
           <FeaturedProject
             title="Forgetful Foodie"
             domains={["All", "Case Study", "Design"]}
