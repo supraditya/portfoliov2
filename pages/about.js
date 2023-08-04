@@ -30,16 +30,16 @@ export default function About() {
         <Image
           src={verticalLine}
           alt="dotted line vertical"
-          className="absolute right-[23rem] h-2/5 top-0 max-xl:hidden"
+          className="hidden lg:block absolute right-[23rem] h-2/5 top-0 max-xl:hidden"
         ></Image>
         <Image
           src={verticalLine}
           alt="dotted line horizontal"
-          className="absolute rotate-90 top-36 right-0 max-xl:hidden"
+          className="hidden lg:block absolute rotate-90 top-36 right-0 max-xl:hidden"
         ></Image>
-        <div className="px-32 mb-14 min-h-[80vh] flex justify-between items-start flex-wrap max-xl:flex-col-reverse max-xl:justify-center max-xl:items-center">
-          <div className="w-2/5 flex flex-col justify-between">
-            <p className="text-7xl font-primary mb-4">About Me</p>
+        <div className="px-10 md:px-32 mb-14 min-h-[80vh] flex justify-between items-start flex-wrap max-lg:flex-col-reverse max-lg:justify-center max-lg:items-center">
+          <div className="lg:w-2/5 flex flex-col justify-between">
+            <p className="text-center mt-4 md:mt-0 md:text-left text-4xl md:text-7xl font-primary mb-4">About Me</p>
             <div className="flex justify-between mb-4">
               <a href="https://linkedin.com/in/supraditya" target="_blank" rel="noreferrer">
                 <span className="text-3xl">
@@ -78,7 +78,7 @@ export default function About() {
             <br></br><br></br>Apart from Web Development, I occasionally produce music, sketch comedy and standups since you either gotta be funny or good-looking (I'm neither)
             </p>
           </div>
-          <div className="relative w-2/5 mt-1 min-w-[300px] xl:w-[500px]">
+          <div className="relative w-2/5 mt-1 min-w-[250px] md:min-w-[300px] xl:w-[500px]">
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-20"></div>
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-20 right-0"></div>
             <Image

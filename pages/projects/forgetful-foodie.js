@@ -552,7 +552,7 @@ export default function forgetfulFoodie() {
               The second iteration led us to remove the{" "}
               <span className="italic">'days left'</span> graph bar altogether,
               instead substituting it with a textual{" "}
-              <span className="italic">'days left'</span> element on top of a
+              <span className="italic">'stocked x days ago'</span> element on top of a
               single graph, whose sole purpose was to depict the item quantity.
               This helped us solve the problem of having to figure out
               expiration dates and periods, and leave it up to the user's

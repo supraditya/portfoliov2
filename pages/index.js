@@ -79,7 +79,7 @@ export default function Home() {
             <p className="font-secondary text-4xl leading-snug md:leading-tight md:text-6xl -mt-6">
               and
             </p>
-            <p className="font-coding text-4xl leading-snug md:leading-tight md:text-6xl pb-3 blink">
+            <p className="font-coding text-4xl leading-snug md:leading-tight md:text-6xl pb-1 md:pb-3 blink">
               &lt;p&gt;Product&lt;/p&gt;
             </p>
           </div>
