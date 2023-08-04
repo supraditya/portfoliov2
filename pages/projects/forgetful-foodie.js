@@ -56,16 +56,16 @@ export default function forgetfulFoodie() {
           title="Forgetful Foodie"
           subtitle="Always know what you have in the kitchen, and what dishes you can make using them."
         />
-        <div className="py-4 my-4 rounded-md text-center bg-blue-200 flex justify-around">
+        <div className="py-4 my-2 md:my-4 rounded-md text-center bg-blue-200 flex flex-col max-md:items-center md:flex-row justify-around">
           <Image
             src={projectImg}
             alt="forgetful foodie header"
-            className="w-2/5 mt-5"
+            className="w-4/5 md:w-2/5 mt-5"
           ></Image>
           <Image
             src={fontncolor}
             alt="font and colors used"
-            className="w-1/3 object-contain mt-5"
+            className="w-4/5 md:w-1/3 object-contain mt-5"
           ></Image>
         </div>
         <Highlights
@@ -87,7 +87,7 @@ export default function forgetfulFoodie() {
           is easy to prepare, and uses an adequate amount of ingredients.{" "}
           <br></br> Thus, we wondered:
         </p>
-        <p className="font-secondary text-xl text-yellow-600 font-base px-20 py-4 text-center italic">
+        <p className="font-secondary text-xl text-yellow-600 font-base px-10 md:px-20 py-4 text-center italic">
           How we might help people to safely consume all the highly perishable
           foods in their pantry without wastage, while simultaneously
           alleviating some of the mental burden of managing a household?
@@ -121,8 +121,8 @@ export default function forgetfulFoodie() {
           various age demographics, cultures, and ethnicities. Here are some
           interesting excerpts from the process:
         </p>
-        <ul className="font-secondary text-lg font-light flex items-baseline text-justify justify-between mt-4">
-          <li className="w-1/3 pr-10">
+        <ul className="font-secondary text-lg font-light flex flex-col md:flex-row items-baseline text-justify justify-between mt-4">
+          <li className="md:w-1/3 md:pr-10">
             <p className="italic mb-2">
               Q. How do you keep track of your groceries?
             </p>
@@ -131,7 +131,7 @@ export default function forgetfulFoodie() {
               what I have and what I might soon run out of."
             </p>
           </li>
-          <li className="w-1/3 px-10">
+          <li className="md:w-1/3 md:px-10">
             <p className="italic mb-2">
               Q. Have you ever used technology to manage your pantry inventory
               or eating habits?
@@ -149,7 +149,7 @@ export default function forgetfulFoodie() {
               item I eat throughout the day is too much of a chore for me."
             </p>
           </li>
-          <li className="w-1/3 pl-10">
+          <li className="md:w-1/3 md:pl-10">
             <p className="italic mb-2">
               Q. How do you feel about personal food wastage?
             </p>
