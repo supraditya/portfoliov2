@@ -23,7 +23,6 @@ export default function Projects() {
       </Head>
       <Navbar />
       <div className="px-10 md:px-32 mb-10">
-        {/* <p className="text-7xl font-primary mb-5">My Projects</p> */}
         <div className="flex flex-col w-fit md:w-full mt-4 mb-4 md:my-14">
           <FeaturedProject
             title="Forgetful Foodie"
@@ -31,23 +30,25 @@ export default function Projects() {
             flow="left"
             link="forgetful-foodie"
             image="forgetful-foodie"
+            description="A kitchen pantry tracking and recipe-curation solution for the household."
+            className="mb-10"
           />
-          <div className="mb-10"></div>
           <FeaturedProject
             title="Dr. Menon's Palliative Care"
             domains={["All", "Case Study", "Graphic Design"]}
             flow="right"
             link="palliative-care"
             image="palliative-care"
+            description="An old age home with a focus on rehabilitation and holistic healing, rather than mere extension of life."
+            className="mb-10"
           />
-          <div className="mb-10"></div>
-
           <FeaturedProject
-            title="Forgetful Foodie"
-            domains={["All", "Design"]}
+            title="The Portfolio Journey"
+            domains={["All", "Case Study", "Design", "Development"]}
             flow="left"
-            link="forgetful-foodie"
-            image="forgetful-foodie"
+            link="portfolio-website"
+            image="portfolio-website"
+            description="The 2-year journey encompassing the vision, lessons learned, and execution over two iterations of my portfolio website."
           />
         </div>
         <p className="text-4xl md:text-7xl font-primary mb-5">All Projects</p>
@@ -106,19 +107,32 @@ export default function Projects() {
         <div className="mt-4 sm:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 justify-start">
           <ProjectCard
             currentTab={projectTab}
+            title="Forgetful Foodie"
+            image="forgetful-foodie"
+            link="forgetful-foodie"
             domains={["All", "Case Study", "Design"]}
           />
           <ProjectCard
             currentTab={projectTab}
-            domains={["All", "Development"]}
+            title="Dr. Menon's Palliative Care"
+            image="palliative-care"
+            link="palliative-care"
+            domains={["All", "Case Study", "Design"]}
           />
-          <ProjectCard currentTab={projectTab} domains={["All", "Design"]} />
-          <ProjectCard currentTab={projectTab} domains={["All", "Others"]} />
           <ProjectCard
             currentTab={projectTab}
-            domains={["All", "Development"]}
+            title="The Portfolio Journey"
+            image="portfolio-website"
+            link="portfolio-website"
+            domains={["All", "Case Study", "Design", "Development"]}
           />
-          <ProjectCard currentTab={projectTab} domains={["All", "Others"]} />
+          <ProjectCard
+            currentTab={projectTab}
+            title="Refugee One"
+            image="refugee-one"
+            link="refugee-one"
+            domains={["All", "Contextual Inquiry", "Consulting", "Others"]}
+          />
         </div>
       </div>
 

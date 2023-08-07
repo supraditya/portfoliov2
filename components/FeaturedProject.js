@@ -19,11 +19,14 @@ export default function FeaturedProject(props) {
             props.flow === "right" ? "md:float-right" : ""
           }`}
         >
-          <p className="font-primary text-2xl md:text-5xl mb-2">
+          <p className="font-primary text-2xl md:text-5xl mb-0.5 md:mb-2">
             {props.title}
           </p>
-          <div className="font-secondary text-lg mb-2">
-            <ListRenderer list={props.domains} removeFirst={true} />
+          <div className="font-secondary font-medium text-lg md:text-xl">
+            <ListRenderer list={props.domains} removeEnds={true} />
+          </div>
+          <div className="font-secondary font-light text-md mb-2 text-subtitleGray">
+          {props.description}
           </div>
           <Link href={`projects/${props.link}`} alt="Link to project">
             <button className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out">

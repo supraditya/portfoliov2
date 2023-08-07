@@ -11,7 +11,7 @@ export default function Highlights(props) {
         <p>
           <span className="font-strong">My Roles:&nbsp;</span>
           <span className="font-light">
-            <ListRenderer list={props.roles} removeFirst={false} />
+            <ListRenderer list={props.roles} removeEnds={false} />
           </span>
         </p>
         <p>
@@ -22,7 +22,7 @@ export default function Highlights(props) {
           <p>
             <span className="font-strong">Team Members:&nbsp;</span>
             <span className="font-light">
-              <ListRenderer list={props.team} removeFirst={false} />
+              <ListRenderer list={props.team} removeEnds={false} />
             </span>
           </p>
         ) : (
@@ -31,7 +31,7 @@ export default function Highlights(props) {
         <p>
           <span className="font-strong">Tools Used:&nbsp;</span>
           <span className="font-light">
-            <ListRenderer list={props.tools} removeFirst={false} />
+            <ListRenderer list={props.tools} removeEnds={false} />
           </span>
         </p>
       </div>
