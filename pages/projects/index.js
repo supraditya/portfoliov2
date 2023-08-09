@@ -104,13 +104,14 @@ export default function Projects() {
             Others
           </button>
         </div>
+        {/* Manually ordered in alphabetical order of title */}
         <div className="mt-4 sm:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 justify-start">
           <ProjectCard
             currentTab={projectTab}
-            title="Forgetful Foodie"
-            image="forgetful-foodie"
-            link="forgetful-foodie"
-            domains={["All", "Case Study", "Design"]}
+            title="Cryptogods: Anubis"
+            image="cryptogods-anubis"
+            link="cryptogods-anubis"
+            domains={["All", "Development", "Web3", "Others"]}
           />
           <ProjectCard
             currentTab={projectTab}
@@ -121,10 +122,24 @@ export default function Projects() {
           />
           <ProjectCard
             currentTab={projectTab}
-            title="The Portfolio Journey"
-            image="portfolio-website"
-            link="portfolio-website"
-            domains={["All", "Case Study", "Design", "Development"]}
+            title="Dusk Security"
+            image="dusk-security"
+            link="dusk-security"
+            domains={["All", "Design", "Development"]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
+            title="Forgetful Foodie"
+            image="forgetful-foodie"
+            link="forgetful-foodie"
+            domains={["All", "Case Study", "Design"]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
+            title="IEEE Computer Society - VIT"
+            image="ieee-cs-vit"
+            link="ieee-cs-vit"
+            domains={["All", "Development", "Project Management", "Others"]}
           />
           <ProjectCard
             currentTab={projectTab}
@@ -132,6 +147,13 @@ export default function Projects() {
             image="refugee-one"
             link="refugee-one"
             domains={["All", "Contextual Inquiry", "Consulting", "Others"]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
+            title="The Portfolio Journey"
+            image="portfolio-website"
+            link="portfolio-website"
+            domains={["All", "Case Study", "Design", "Development"]}
           />
         </div>
       </div>

@@ -8,7 +8,7 @@ export default function ProjectCard(props) {
       <Image
         src={require(`../public/assets/${props.image}/${props.image}.png`)}
         alt="project image"
-        className="md:w-fit m-auto"
+        className="md:w-fit rounded-sm m-auto"
       />
       <div className="flex justify-between items-center">
         <div className="rounded-sm mr-2">
