@@ -54,7 +54,7 @@ export default function Sidebar(props) {
             <Link
               onClick={() => props.updateSidebarState(false)}
               className="text-2xl hover:border-b-2 border-black font-primary flex items-center"
-              href="https://drive.google.com/file/d/11XnqtkKnhzxNxRn-B_r3iJNNx2LAH_zm/view"
+              href="https://drive.google.com/file/d/1C8n0HuKJgZNvm8MiCxan9uwsDCfwJDog/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >

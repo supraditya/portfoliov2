@@ -33,6 +33,26 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
+        <meta charSet="UTF-8" />
+        <meta property="og:url" content="https://www.supraditya.com/" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://www.supraditya.com/logo.svg"
+        />
+        <meta
+          name="description"
+          content="My name is Aditya Menon, and I'm a UX Grad Student and a self-taught Web Developer."
+        ></meta>
+        <meta
+          name="keywords"
+          content="Aditya, Menon, Aditya Menon, supraditya, Supraditya, Web Developer, Frontend Web Developer, IEEECS, IEEE-CS, IEEE Computer Society VIT, VIT, IEEE CS VIT, Frontend Web Development, UX, User Experience, Design, UX Design, User Experience Design, Case Study, Graphic Design, Interaction Design"
+        ></meta>
+        <meta property="og:title" content="Aditya Menon" />
+        <meta
+          property="og:description"
+          content="My name is Aditya Menon, and I'm a UX Grad Student and a self-taught Web Developer."
+        />
       </Head>
       <Navbar />
 
