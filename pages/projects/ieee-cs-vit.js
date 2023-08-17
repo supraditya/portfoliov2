@@ -1,9 +1,11 @@
 import Header from "../../components/ProjectPage/Header";
 import Wrapper from "../../components/ProjectPage/Wrapper";
+import ActionButton from "../../components/ActionButton";
 import Image from "next/image";
 import fontncolor from "../../public/assets/ieee-cs-vit/font-and-colors.png";
 import projectImg from "../../public/assets/ieee-cs-vit/ieee-cs-vit.png";
 import Highlights from "../../components/ProjectPage/Highlights";
+import { BsGlobe2 } from "react-icons/bs";
 import Head from "next/head";
 export default function IeeeCsVit() {
   return (
@@ -21,6 +23,11 @@ export default function IeeeCsVit() {
         <Header
           title="IEEE-CS-VIT Org Website"
           subtitle="The organizational landing page for a renowned student organization based in Vellore, India."
+        />
+        <ActionButton
+          link="https://ieeecsvit.com/"
+          icon={<BsGlobe2 />}
+          label="Website"
         />
         <div className="py-4 my-2 md:my-4 rounded-md text-center bg-blue-200 flex flex-col max-md:items-center md:flex-row justify-around">
           <Image

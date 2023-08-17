@@ -1,9 +1,11 @@
 import Header from "../../components/ProjectPage/Header";
 import Wrapper from "../../components/ProjectPage/Wrapper";
+import ActionButton from "../../components/ActionButton";
 import Image from "next/image";
 import fontncolor from "../../public/assets/palliative-care/font-and-colors.png";
 import projectImg from "../../public/assets/palliative-care/palliative-care.png";
 import Highlights from "../../components/ProjectPage/Highlights";
+import {FaFigma} from "react-icons/fa";
 import Head from "next/head";
 export default function PalliativeCare() {
   return (
@@ -22,6 +24,7 @@ export default function PalliativeCare() {
           title="Dr. Menon's Palliative Care"
           subtitle="An old age home that specializes in holistic healing and growth."
         />
+        <ActionButton link="https://www.figma.com/file/A6YfWv2cVPNOfp065cL2pU/Mom's-Website?node-id=0%3A1&t=3Yh17gzVfGuswQn2-3" label="Design" icon={<FaFigma/>}/>
         <div className="py-4 my-2 md:my-4 rounded-md text-center bg-blue-200 flex flex-col max-md:items-center md:flex-row justify-around">
           <Image
             src={projectImg}

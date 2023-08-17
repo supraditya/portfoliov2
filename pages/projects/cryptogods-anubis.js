@@ -4,6 +4,9 @@ import Image from "next/image";
 import fontncolor from "../../public/assets/cryptogods-anubis/font-and-colors.png";
 import projectImg from "../../public/assets/cryptogods-anubis/cryptogods-anubis.png";
 import Highlights from "../../components/ProjectPage/Highlights";
+import ActionButton from "../../components/ActionButton";
+import {BsGlobe2} from "react-icons/bs";
+
 import Head from "next/head";
 export default function CryptogodsAnubis() {
   return (
@@ -22,6 +25,7 @@ export default function CryptogodsAnubis() {
           title="Cryptogods: Anubis"
           subtitle="A Website and minting pipeline for an NFT Collection starring the Egyptian God of the Dead."
         />
+        <ActionButton link="https://cryptogodsanubis.netlify.app/" icon={<BsGlobe2/>} label="Website"/>
         <div className="py-4 my-2 md:my-4 rounded-md text-center bg-blue-200 flex flex-col max-md:items-center md:flex-row justify-around">
           <Image
             src={projectImg}

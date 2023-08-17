@@ -1,9 +1,12 @@
 import Header from "../../components/ProjectPage/Header";
 import Wrapper from "../../components/ProjectPage/Wrapper";
+import ActionButton from "../../components/ActionButton";
 import Image from "next/image";
 import fontncolor from "../../public/assets/dusk-security/font-and-colors.png";
 import projectImg from "../../public/assets/dusk-security/dusk-security.png";
 import Highlights from "../../components/ProjectPage/Highlights";
+import {BsGlobe2} from "react-icons/bs";
+import { FaFigma } from "react-icons/fa";
 import Head from "next/head";
 export default function DuskSecurity() {
   return (
@@ -21,6 +24,16 @@ export default function DuskSecurity() {
         <Header
           title="Dusk Security"
           subtitle="A logo, website and internal-use web portal for a budding cybersecurity consulting start-up based in Jammu."
+        />
+        <ActionButton
+          link="https://dusksecurity.com/"
+          icon={<BsGlobe2 />}
+          label="Website"
+        />
+        <ActionButton
+          link="https://www.figma.com/file/v5KjDGjjFHnPV9w22uRkVt/Dusk-Security-Landing-Page?node-id=302%3A1582"
+          icon={<FaFigma />}
+          label="Design"
         />
         <div className="py-4 my-2 md:my-4 rounded-md text-center bg-blue-200 flex flex-col max-md:items-center md:flex-row justify-around">
           <Image
