@@ -38,8 +38,8 @@ export default function CryptogodsAnubis() {
           summary="Cryptogods Anubis is an NFT project founded in 2022. They required a new landing page, along with a minting website for their token. Two websites, one database application to keep track of minted tokens, and several graphic assets were developed for the team during this project."
           roles={["Fullstack Developer", "Web3 Developer", "Graphic Designer", "UX Designer"]}
           team={[]}
-          timeline="Aug 2022 - Dec 2022"
-          tools={["Figma", "Adobe Illustrator"]}
+          timeline="Mar 2022 - May 2022"
+          tools={["Figma", "Adobe Illustrator", "React", "Netlify", "Matic (Polygon)"]}
         />
       </Wrapper>
     </>

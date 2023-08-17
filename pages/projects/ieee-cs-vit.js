@@ -9,7 +9,7 @@ export default function IeeeCsVit() {
   return (
     <>
       <Head>
-        <title>IEEE Computer Society - VIT | Projects</title>
+        <title>IEEE-CS-VIT Org Website | Projects</title>
         <meta
           name="description"
           content="I am a UX Designer and Web Developer, and this is my portfolio."
@@ -19,7 +19,7 @@ export default function IeeeCsVit() {
       </Head>
       <Wrapper>
         <Header
-          title="IEEE Computer Society - VIT"
+          title="IEEE-CS-VIT Org Website"
           subtitle="The organizational landing page for a renowned student organization based in Vellore, India."
         />
         <div className="py-4 my-2 md:my-4 rounded-md text-center bg-blue-200 flex flex-col max-md:items-center md:flex-row justify-around">
@@ -38,7 +38,7 @@ export default function IeeeCsVit() {
           summary="IEEE-CS VIT's previous landing page needed significant updates. Having been developed using JQuery and Embedded JavaScript, we sought to use this project as a learning opportunity for the team to explore newer technical stacks for web development, such as GatsbyJS and React."
           roles={["Web Developer", "Project Manager"]}
           team={[]}
-          timeline="Aug 2022 - Dec 2022"
+          timeline="Feb 2021 - Jun 2021"
           tools={["GatsbyJS", "React", "Netlify"]}
         />
         <h3 className="font-primary text-xl mb-1">My Contribution</h3>

@@ -41,7 +41,7 @@ export default function DuskSecurity() {
             "Lakhan Nad",
             "Web Development Team @ IEEE Computer Society-VIT ",
           ]}
-          timeline="Aug 2022 - Dec 2022"
+          timeline="Sep 2022 - Oct 2022"
           tools={["Figma", "Adobe Illustrator"]}
         />
         <h3 className="font-primary text-xl mb-1">My Contribution</h3>

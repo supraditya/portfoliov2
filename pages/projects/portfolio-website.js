@@ -45,7 +45,7 @@ export default function PortfolioWebsite() {
           summary="Initially developed as a way for me to showcase my work as a Frontend Web Developer, I soon realized that my requirements had far surpassed the capabilities of my original website and its underlying technology. This gave me a chance to return to the drawing board and create a new website from scratch, one that perfectly encapsulates what I can do: Design, Develop and everything in between."
           roles={["Web Developer", "UX Researcher", "Graphic Designer"]}
           team={[]}
-          timeline="Nov 2021 - Jun 2023"
+          timeline="Nov 2021 - Aug 2023"
           tools={["Figma", "Adobe Illustrator", "NextJS", "TailwindCSS", "Trello"]}
         />
         <p className="italic text-center text-lg text-gray-500 my-4">

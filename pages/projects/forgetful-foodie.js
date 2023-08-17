@@ -30,6 +30,8 @@ import revision3 from "../../public/assets/forgetful-foodie/revision-3.png";
 import revision4 from "../../public/assets/forgetful-foodie/revision-4.png";
 import revision5 from "../../public/assets/forgetful-foodie/revision-5.png";
 import Highlights from "../../components/ProjectPage/Highlights";
+import ActionButton from "../../components/ActionButton";
+import {FaFigma} from "react-icons/fa";
 
 export default function forgetfulFoodie() {
   // State to render ReactPlayer after window is loaded, to avoid HydrationError
@@ -56,6 +58,7 @@ export default function forgetfulFoodie() {
           title="Forgetful Foodie"
           subtitle="Always know what you have in the kitchen, and what dishes you can make using them."
         />
+        <ActionButton link="https://www.figma.com/proto/HUxf0bhkT3OOsViPuXPg1J/SI-582%3A-Forgetful-Foodie?node-id=133-21" icon={<FaFigma/>} label="Prototype" />
         <div className="py-4 my-2 md:my-4 rounded-md text-center bg-blue-200 flex flex-col max-md:items-center md:flex-row justify-around">
           <Image
             src={projectImg}
@@ -552,9 +555,9 @@ export default function forgetfulFoodie() {
               The second iteration led us to remove the{" "}
               <span className="italic">'days left'</span> graph bar altogether,
               instead substituting it with a textual{" "}
-              <span className="italic">'stocked x days ago'</span> element on top of a
-              single graph, whose sole purpose was to depict the item quantity.
-              This helped us solve the problem of having to figure out
+              <span className="italic">'stocked x days ago'</span> element on
+              top of a single graph, whose sole purpose was to depict the item
+              quantity. This helped us solve the problem of having to figure out
               expiration dates and periods, and leave it up to the user's
               judgment, and made our visualization more intuitive.
             </li>

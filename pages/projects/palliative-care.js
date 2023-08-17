@@ -38,7 +38,7 @@ export default function PalliativeCare() {
           summary="I was tasked with creating a brand image and relevant promotional and print content for Dr Menon's Palliative Care: a geriatric rehabilitation center based in Thane, India."
           roles={["Graphic Designer"]}
           team={[]}
-          timeline="Aug 2022 - Dec 2022"
+          timeline="Jun 2022 - Aug 2022"
           tools={["Figma", "Adobe Illustrator"]}
         />
         <p className="italic text-center text-lg text-gray-500 my-4">Full Case Study Coming Soon!</p>
