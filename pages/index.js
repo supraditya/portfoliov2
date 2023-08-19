@@ -38,7 +38,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://www.supraditya.com/logo.svg"
+          content="https://www.supraditya.com/meta-logo.png"
         />
         <meta
           name="description"
