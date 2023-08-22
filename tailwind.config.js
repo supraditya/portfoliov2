@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -6,11 +8,12 @@ module.exports = {
   ],
   theme: {
     colors:{
+      ...colors,
       figmaBlue: '#0C8CE9',
       white: '#FFFFFF',
       footerGray: '#7F7F7F',
-      subtitleGray: '#686767',
       black:'#000000',
+      subtitleGray: '#686767',
     },
     fontFamily:{
       primary: ["Orbitron", "sans-serif"],

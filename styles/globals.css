@@ -38,10 +38,3 @@ body {
 .slow-bounce {
   animation: bounceSlow 4s infinite;
 }
-
-.placeholderBg {
-  background-image: url("../public/placeholder.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 100%;
-}

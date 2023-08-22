@@ -30,18 +30,24 @@ export default function About() {
         <Image
           src={verticalLine}
           alt="dotted line vertical"
-          className="absolute right-[23rem] h-2/5 top-0 max-xl:hidden"
+          className="hidden lg:block absolute right-[23rem] h-2/5 top-0 max-xl:hidden"
         ></Image>
         <Image
           src={verticalLine}
           alt="dotted line horizontal"
-          className="absolute rotate-90 top-36 right-0 max-xl:hidden"
+          className="hidden lg:block absolute rotate-90 top-36 right-0 max-xl:hidden"
         ></Image>
-        <div className="px-32 mb-14 min-h-[80vh] flex justify-between items-start flex-wrap max-xl:flex-col-reverse max-xl:justify-center max-xl:items-center">
-          <div className="w-2/5 flex flex-col justify-between">
-            <p className="text-7xl font-primary mb-4">About Me</p>
+        <div className="px-10 md:px-32 mb-2 md:mb-14 min-h-[80vh] flex justify-between items-start flex-wrap max-lg:flex-col-reverse max-lg:justify-center max-lg:items-center">
+          <div className="lg:w-2/5 flex flex-col justify-between">
+            <p className="text-center mt-4 md:mt-0 md:text-left text-4xl md:text-7xl font-primary mb-4">
+              About Me
+            </p>
             <div className="flex justify-between mb-4">
-              <a href="https://linkedin.com/in/supraditya" target="_blank" rel="noreferrer">
+              <a
+                href="https://linkedin.com/in/supraditya"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="text-3xl">
                   <FaLinkedin />
                 </span>
@@ -51,34 +57,71 @@ export default function About() {
                   <MdEmail />
                 </span>
               </a>
-              <a href="https://github.com/supraditya" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/supraditya"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="text-3xl">
                   <FaGithub />
                 </span>
               </a>
-              <a href="https://instagram.com/menon_chala_gaya" target="_blank" rel="noreferrer">
+              <a
+                href="https://instagram.com/menon_chala_gaya"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="text-3xl">
-                <FaInstagram />
+                  <FaInstagram />
                 </span>
               </a>
-              <a href="https://www.youtube.com/channel/UC4J1TSccU4G_CriLC9eoAQw" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.youtube.com/channel/UC4J1TSccU4G_CriLC9eoAQw"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="text-3xl">
-                <FaYoutube />
+                  <FaYoutube />
                 </span>
               </a>
-              <a href="https://soundcloud.com/p-r-y-m-e-v-i-l" target="_blank" rel="noreferrer">
+              <a
+                href="https://soundcloud.com/p-r-y-m-e-v-i-l"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="text-3xl">
-                <FaSoundcloud />
+                  <FaSoundcloud />
                 </span>
               </a>
             </div>
-            <p className="text-lg font-secondary text-justify">
-            I, Aditya Menon, am a First Year Graduate student studying <strong>UI/UX Design</strong> and <strong>User-Centered Agile Development</strong> at the University of Michigan.
-            <br></br><br></br>I have been working as a self-taught Frontend Web Developer and Designer for over <strong>3 years</strong> and have completed several internships, along with some projects for my former Student Organisation: IEEE-CS VIT.
-            <br></br><br></br>Apart from Web Development, I occasionally produce music, sketch comedy and standups since you either gotta be funny or good-looking (I'm neither)
+            <p className="text-base font-secondary text-justify mb-1.5">
+              Heyyo! My name's Aditya Menon, and I'm currently a{" "}
+              <strong> second-year grad student </strong> at the University of
+              Michigan, studying UX and User-Centered Agile Development.
+            </p>
+            <p className="text-base font-secondary text-justify mb-1.5">
+              I <strong> majored in Computer Science </strong> back in my
+              undergrad in India, and I've been self-learning web development
+              for over 5 years now!
+            </p>
+            <p className="text-base font-secondary text-justify mb-1.5">
+              I'm a problem solver at heart, and I love picking up new skills,
+              be it technical, managerial, communicative etc. as I work towards
+              finding solutions! Owing to my background (and some wonderful
+              teachers and friends along the way), I find my strongest ability
+              to be able to{" "}
+              <strong>
+                execute my vision and turn it into something tangible{" "}
+              </strong>{" "}
+              (like this website, which I designed and developed from scratch
+              over the past year!)
+            </p>
+            <p className="text-base font-secondary text-justify">
+              Outside of work and school, I like to occasionally produce music,
+              make sketch comedy, cook or just mindlessly binge YouTube ¯\_(ツ)_/¯
             </p>
           </div>
-          <div className="relative w-2/5 mt-1 min-w-[300px] xl:w-[500px]">
+          <div className="relative w-2/5 mt-1 min-w-[250px] md:min-w-[300px] xl:w-[500px]">
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-20"></div>
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-20 right-0"></div>
             <Image
@@ -94,7 +137,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
