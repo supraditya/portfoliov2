@@ -112,6 +112,7 @@ export default function Home() {
           </div>
           <Image
             src={ctaArrow}
+            alt="Call to action arrow"
             className="w-30 mx-auto mt-14 md:mt-8 slow-bounce mb-20 md:mb-28"
           ></Image>
           <p className="text-4xl md:text-7xl font-primary mb-5">My Projects</p>

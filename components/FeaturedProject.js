@@ -29,7 +29,7 @@ export default function FeaturedProject(props) {
           {props.description}
           </div>
           <Link href={`projects/${props.link}`} alt="Link to project">
-            <button className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out">
+            <button aria-label="View Project" className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out">
               View
             </button>
           </Link>

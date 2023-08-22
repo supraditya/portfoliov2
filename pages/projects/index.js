@@ -54,6 +54,7 @@ export default function Projects() {
         <p className="text-4xl md:text-7xl font-primary mb-5">All Projects</p>
         <div className="flex-wrap lg:w-4/5 xl:w-1/2 flex justify-start md:justify-between font-secondary text-xl">
           <button
+          aria-label="Show all projects"
             className={`${
               projectTab === "All" ? "bg-black text-white" : ""
             } mr-2 px-1.5 py-1 rounded-md`}
@@ -64,6 +65,7 @@ export default function Projects() {
             All
           </button>
           <button
+          aria-label="Filter and only show case studies"
             className={`${
               projectTab === "Case Study" ? "bg-black text-white" : ""
             } mx-2 px-1.5 py-1 rounded-md`}
@@ -74,6 +76,7 @@ export default function Projects() {
             Case&nbsp;Studies
           </button>
           <button
+          aria-label="Filter and only show design projects"
             className={`${
               projectTab === "Design" ? "bg-black text-white" : ""
             } mx-2 px-1.5 py-1 rounded-md`}
@@ -84,6 +87,7 @@ export default function Projects() {
             Design
           </button>
           <button
+          aria-label="Filter and only show development projects"
             className={`${
               projectTab === "Development" ? "bg-black text-white" : ""
             } mr-2 px-1.5 py-1 rounded-md`}
@@ -94,6 +98,7 @@ export default function Projects() {
             Development
           </button>
           <button
+          aria-label="Filter and only show miscellanous projects"
             className={`${
               projectTab === "Others" ? "bg-black text-white" : ""
             } mx-2 px-1.5 py-1 rounded-md`}

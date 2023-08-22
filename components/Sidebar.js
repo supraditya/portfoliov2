@@ -11,7 +11,7 @@ export default function Sidebar(props) {
     >
       <div className="w-72 pr-4 h-1/2 flex flex-none flex-col justify-start">
         <ul className="flex flex-none items-end text-lg pl-4 flex-col">
-          <button onClick={() => props.updateSidebarState(false)}className="mb-6">
+          <button onClick={() => props.updateSidebarState(false)}className="mb-6" aria-label="Close sidebar">
             <IoCloseSharp
               className="text-black transition-all ease-in-out duration-100"
               size="40px"

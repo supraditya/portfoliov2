@@ -57,6 +57,7 @@ export default function Navbar() {
       {/* Mobile sidebar */}
       <div className="md:hidden flex items-center">
         <button
+        aria-label="Open sidebar"
           onClick={() => {
             setsidebarState(true);
           }}
