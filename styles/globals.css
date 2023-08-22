@@ -5,14 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito+Sans:wght@300;400&family=Orbitron:wght@400;600;800&family=Shadows+Into+Light+Two&display=swap');
 
 @keyframes cursor-blink {
-  0% {
+  0%{
     border-right: 3px;
   }
+
 }
-body {
+body
+{
   overflow-x: hidden;
 }
-.blink {
+.blink
+{
   animation: cursor-blink 1.5s steps(2) infinite;
 }
 
@@ -35,6 +38,7 @@ body {
   }
 }
 
-.slow-bounce {
+.slow-bounce
+{
   animation: bounceSlow 4s infinite;
 }
