@@ -4,18 +4,8 @@ import Footer from "../../components/Footer";
 import { useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
 import FeaturedProject from "../../components/FeaturedProject";
-import { getSortedProjectsData } from "../../lib/projects";
 
-export async function getStaticProps() {
-  const allProjectsData = getSortedProjectsData();
-  return {
-    props: {
-      allProjectsData,
-    },
-  };
-}
-
-export default function Projects({ allProjectsData }) {
+export default function Projects() {
   const [projectTab, setprojectTab] = useState("All");
   const handleTabChange = (newTab) => {
     setprojectTab(newTab);
@@ -32,20 +22,10 @@ export default function Projects({ allProjectsData }) {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <Navbar />
-<<<<<<< HEAD
-      <div className="px-32 mb-10">
-        {/* <p className="text-7xl font-primary mb-5">My Projects</p> */}
-        <div className="flex flex-col w-full mb-8">
-          <div className="mb-10"></div>
-          <FeaturedProject
-            title="Forgetful Foodie"
-            id="forgetful-foodie"
-=======
       <div className="px-10 md:px-32 mb-10">
         <div className="flex flex-col w-fit md:w-full mt-4 mb-4 md:my-14">
           <FeaturedProject
             title="Forgetful Foodie"
->>>>>>> prod
             domains={["All", "Case Study", "Design"]}
             flow="left"
             link="forgetful-foodie"
@@ -70,24 +50,6 @@ export default function Projects({ allProjectsData }) {
             image="portfolio-website"
             description="The 2-year journey encompassing the vision, lessons learned, and execution over two iterations of my portfolio website."
           />
-<<<<<<< HEAD
-          <div className="mb-10"></div>
-          <FeaturedProject
-            title="Forgetful Foodie"
-            id="forgetful-foodie"
-            domains={["All", "Case Study", "Design"]}
-            flow="right"
-          />
-          <div className="mb-10"></div>
-          <FeaturedProject
-            title="Forgetful Foodie"
-            id="forgetful-foodie"
-            domains={["All", "Case Study", "Design"]}
-            flow="left"
-          />
-          <div className="mb-10"></div>
-=======
->>>>>>> prod
         </div>
         <p className="text-4xl md:text-7xl font-primary mb-5">All Projects</p>
         <div className="flex-wrap lg:w-4/5 xl:w-1/2 flex justify-start md:justify-between font-secondary text-xl">
@@ -147,17 +109,6 @@ export default function Projects({ allProjectsData }) {
             Others
           </button>
         </div>
-<<<<<<< HEAD
-        <div className="mt-4 grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-x-8 justify-start">
-          {allProjectsData.map(({ id, date, title, domains }) => (
-            <ProjectCard
-              currentTab={projectTab}
-              id={id}
-              title={title}
-              domains={domains}
-            />
-          ))}
-=======
         {/* Manually ordered in alphabetical order of title */}
         <div className="mt-4 sm:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 justify-start">
           <ProjectCard
@@ -209,7 +160,6 @@ export default function Projects({ allProjectsData }) {
             link="portfolio-website"
             domains={["All", "Case Study", "Design", "Development"]}
           />
->>>>>>> prod
         </div>
       </div>
 
