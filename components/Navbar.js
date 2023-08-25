@@ -43,7 +43,7 @@ export default function Navbar() {
   return (
     <nav
       style={scrollState ? navScrollStyles : {}}
-      className="sticky w-full mx-auto transition-all duration-100 ease-in-out top-0 z-50 py-6 px-8 lg:px-16 flex justify-between font-primary"
+      className="sticky w-full mx-auto transition-all duration-100 ease-in-out top-0 z-50 py-6 px-8 md:px-32 flex justify-between font-primary"
     >
       <Link href="/">
         <Image
