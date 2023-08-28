@@ -100,7 +100,7 @@ export default function Navbar() {
           href="https://drive.google.com/file/d/1C8n0HuKJgZNvm8MiCxan9uwsDCfwJDog/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
-          className="mx-4 text-lg flex items-center hover:border-b-2 border-black"
+          className="ml-4 text-lg flex items-center hover:border-b-2 border-black"
         >
           Resume <BiLinkExternal className="mt-0.5 ml-1" />
         </Link>
