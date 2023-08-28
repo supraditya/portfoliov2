@@ -126,7 +126,7 @@ export default function About() {
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-20 right-0"></div>
             <Image
               src={me}
-              alt="My profile photo"
+                alt="My profile photo"
               className="border-2 border-figmaBlue z-10 bg-white mx-auto"
             ></Image>
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-20 right-0"></div>
