@@ -31,16 +31,33 @@ import revision4 from "../../public/assets/forgetful-foodie/revision-4.png";
 import revision5 from "../../public/assets/forgetful-foodie/revision-5.png";
 import Highlights from "../../components/ProjectPage/Highlights";
 import ActionButton from "../../components/ActionButton";
-import {FaFigma} from "react-icons/fa";
+import { FaFigma } from "react-icons/fa";
+import {BsArrowUp} from "react-icons/bs";
 
 export default function forgetfulFoodie() {
   // State to render ReactPlayer after window is loaded, to avoid HydrationError
   const [hasWindow, setHasWindow] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHasWindow(true);
     }
+    document.addEventListener("scroll", () => {
+      // Returns true if the window is scrolled, else returns false
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    });
   }, []);
+  // Scroll to the top when the button is clicked
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling animation
+    });
+  };
   return (
     <>
       {/* TODO: Make ProjectPage components for every type of content arrangement as depicted on figma */}
@@ -58,7 +75,11 @@ export default function forgetfulFoodie() {
           title="Forgetful Foodie"
           subtitle="Always know what you have in the kitchen, and what dishes you can make using them."
         />
-        <ActionButton link="https://www.figma.com/proto/HUxf0bhkT3OOsViPuXPg1J/SI-582%3A-Forgetful-Foodie?node-id=133-21" icon={<FaFigma/>} label="Prototype" />
+        <ActionButton
+          link="https://www.figma.com/proto/HUxf0bhkT3OOsViPuXPg1J/SI-582%3A-Forgetful-Foodie?node-id=133-21"
+          icon={<FaFigma />}
+          label="Prototype"
+        />
         <div className="py-4 my-2 md:my-4 rounded-md text-center bg-blue-200 flex flex-col max-md:items-center md:flex-row justify-around">
           <Image
             src={projectImg}
@@ -108,7 +129,7 @@ export default function forgetfulFoodie() {
             ingredients!
           </li>
         </ul>
-        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+        <div className=" my-4 rounded-md text-center">
           <Image src={poster} alt="poster" className="mx-auto"></Image>
         </div>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
@@ -208,17 +229,13 @@ export default function forgetfulFoodie() {
           our fast-paced daily lives. We began sketching out our findings, and
           ended up with the following scenarios:
         </p>
-        <div className="p-8 my-4 rounded-md text-center bg-gray-100">
-          <Image
-            src={storyboard1}
-            alt="poster"
-            className="mx-auto w-5/6"
-          ></Image>
+        <div className=" my-4 rounded-md text-center ">
+          <Image src={storyboard1} alt="poster" className="mx-auto"></Image>
         </div>
-        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+        <p className="font-secondary font-light text-md text-center italic mb-6 text-subtitleGray">
           Scenario 1: Abby's Bananas
         </p>
-        <div className="p-8 my-4 rounded-md text-center bg-gray-100">
+        <div className=" my-4 rounded-md text-center ">
           <Image
             src={storyboard2}
             alt="poster"
@@ -318,36 +335,36 @@ export default function forgetfulFoodie() {
           </li>
         </ul>
         <h3 className="font-primary text-xl mb-1">Paper Prototypes</h3>
-        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+        <div className=" my-4 rounded-md text-center flex flex-wrap justify-around">
           <Image
             src={paperproto1}
             alt="paper prototype 1"
-            className="mx-auto w-1/3"
+            className="mx-auto w-2/3 sm:w-1/4"
           ></Image>
           <Image
             src={paperproto2}
             alt="paper prototype 2"
-            className="mx-auto w-1/3"
+            className="mx-auto w-2/3 sm:w-1/4"
           ></Image>
         </div>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Flow 1: Pantry Health
         </p>
-        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+        <div className="  my-4 rounded-md text-center ">
           <Image
             src={paperproto3}
             alt="paper prototype 3"
-            className="mx-auto w-4/5"
+            className="mx-auto sm:w-3/5"
           ></Image>
         </div>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Flow 2: Receipt Scanning
         </p>
-        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+        <div className="  my-4 rounded-md text-center ">
           <Image
             src={paperproto4}
             alt="paper prototype 4"
-            className="mx-auto w-4/5"
+            className="mx-auto sm:w-3/5"
           ></Image>
         </div>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
@@ -364,7 +381,7 @@ export default function forgetfulFoodie() {
           should let the user fetch detailed information about it, along with
           edit/delete options.
         </p>
-        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+        <div className="  my-4 rounded-md text-center  flex justify-around">
           <Image
             src={proto1}
             alt="prototype 1"
@@ -379,7 +396,7 @@ export default function forgetfulFoodie() {
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Flow 1: Pantry Health
         </p>
-        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+        <div className="  my-4 rounded-md text-center ">
           <Image
             src={proto3}
             alt="prototype 3"
@@ -405,7 +422,7 @@ export default function forgetfulFoodie() {
         <p className="font-secondary font-light text-lg text-justify">
           Barcode Scanning
         </p>
-        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+        <div className="  my-4 rounded-md text-center  flex justify-around">
           <Image
             src={barcode1}
             alt="barcode 1"
@@ -420,7 +437,7 @@ export default function forgetfulFoodie() {
         <p className="font-secondary font-light text-lg text-justify">
           and Item Recognition
         </p>
-        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+        <div className="  my-4 rounded-md text-center  flex justify-around">
           <Image
             src={itemRecog1}
             alt="item recognition 1"
@@ -438,7 +455,7 @@ export default function forgetfulFoodie() {
           just look up 'All Recipes.' As the name suggests, will allow the user
           to create, share and browse through user-recipes from the community.
         </p>
-        <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+        <div className="  my-4 rounded-md text-center  flex justify-around">
           <Image
             src={recipe1}
             alt="recipe prototype 1"
@@ -461,7 +478,7 @@ export default function forgetfulFoodie() {
           what works best, which resulted in the following prototype
         </p>
         {hasWindow && (
-          <div className="py-2 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+          <div className="py-2  my-4 rounded-md text-center  flex justify-around">
             <ReactPlayer
               url="https://vimeo.com/772048766"
               loop={true}
@@ -536,7 +553,7 @@ export default function forgetfulFoodie() {
               and secondary colors at most. Graph bar colors were switched out
               for more subtle and color blind-friendly alternatives.
             </li>
-            <div className="py-4 px-4 my-4 rounded-md text-center bg-gray-100">
+            <div className="py-4 px-4 my-4 rounded-md text-center ">
               <Image
                 src={revision1}
                 alt="revision 1"
@@ -561,7 +578,7 @@ export default function forgetfulFoodie() {
               expiration dates and periods, and leave it up to the user's
               judgment, and made our visualization more intuitive.
             </li>
-            <div className="py-4 px-4 my-4 rounded-md text-center bg-gray-100">
+            <div className="py-4 px-4 my-4 rounded-md text-center ">
               <Image
                 src={revision3}
                 alt="revision 3"
@@ -585,7 +602,7 @@ export default function forgetfulFoodie() {
             seemed to clear up any ambiguity experienced by users during tests
             after the change.
           </li>
-          <div className="py-8 px-8 my-4 rounded-md text-center bg-gray-100">
+          <div className="  my-4 rounded-md text-center ">
             <Image
               src={revision5}
               alt="revision 5"
@@ -609,7 +626,7 @@ export default function forgetfulFoodie() {
           Link to Prototype
         </Link>
         {hasWindow && (
-          <div className="py-2 px-8 my-4 rounded-md text-center bg-gray-100 flex justify-around">
+          <div className="py-2  my-4 rounded-md text-center  flex justify-around">
             <ReactPlayer
               url="https://vimeo.com/851012658"
               loop={true}
@@ -637,13 +654,15 @@ export default function forgetfulFoodie() {
           and extract deeper insights overall.
         </p>
         <div className="flex justify-center py-4">
-          <Link
-            href="forgetful-foodie"
-            className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out mx-auto"
+          <button
+            className={`${
+              isVisible ? "visible fixed bottom-5 right-8" : "invisible"
+            } font-primary text-base border shadow-md border-black rounded-sm px-3 py-2 hover:bg-black bg-white hover:text-white ease-in-out mx-auto`}
             alt="Back to top"
+            onClick={scrollToTop}
           >
-            Back to Top
-          </Link>
+            <BsArrowUp size={24}/>
+          </button>
         </div>
       </Wrapper>
     </>
