@@ -4,8 +4,8 @@
 export default function ListRenderer({ list, removeEnds }) {
   let slicedList = [];
   if (removeEnds) {
-    if (list[list.length - 1] === "Others") {
-      slicedList.push(...list.slice(1, -1));
+    if (list[0] === "Featured") {
+      slicedList.push(...list.slice(2));
     } else {
       slicedList.push(...list.slice(1));
     }

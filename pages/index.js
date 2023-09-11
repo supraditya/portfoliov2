@@ -3,8 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { Slide } from "react-awesome-reveal";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
-import lineSvg from "../public/line.svg";
-import verticalLine from "../public/vertical-line.svg";
+import Link from "next/link";
 import ctaArrow from "../public/cta.svg";
 import Footer from "../components/Footer";
 import FeaturedProject from "../components/FeaturedProject";
@@ -106,8 +105,10 @@ export default function Home() {
             alt="Call to action arrow"
             className="w-30 mx-auto mt-14 md:mt-8 slow-bounce mb-20 md:mb-28"
           ></Image>
-          <p className="text-4xl md:text-7xl font-primary mb-5">My Projects</p>
-          <div className="flex flex-col w-fit md:w-full mb-14">
+          <p className="text-4xl md:text-7xl font-primary mb-5">
+            Featured Projects
+          </p>
+          <div className="flex flex-col w-fit md:w-full mb-2">
             <FeaturedProject
               title="Forgetful Foodie"
               domains={["All", "Case Study", "Design"]}
@@ -132,6 +133,21 @@ export default function Home() {
               image="portfolio-website"
               description="The 2-year journey encompassing the vision, lessons learned, and execution over two iterations of my portfolio website."
             />
+            <p className="font-secondary text-center mx-auto text-lg">
+              Want to see more?
+            </p>
+            <Link
+              href="projects"
+              alt="Link to projects Page"
+              className="mx-auto pb-4"
+            >
+              <button
+                aria-label="View Projects Page"
+                className="font-primary text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out"
+              >
+                Visit My Projects Page
+              </button>
+            </Link>
           </div>
         </div>
         <Footer />
