@@ -645,7 +645,7 @@ export default function forgetfulFoodie() {
         </p>
         <h3 className="font-primary text-xl mb-1">Reflections</h3>
         <p className="font-secondary font-light text-lg text-justify mb-1.5">
-          This is one of my first complete Interaction design projects, and
+          This is one of my first complete Interaction Design projects, and
           thanks to the course structure, we were able to delve into the entire
           process week-by-week, and understand the importance of iterative
           design based on feedback. The one learning lesson I took from this

@@ -3,7 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import { Slide } from "react-awesome-reveal";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
-import verticalLine from "../public/line.svg";
+import lineSvg from "../public/line.svg";
+import verticalLine from "../public/vertical-line.svg";
 import ctaArrow from "../public/cta.svg";
 import Footer from "../components/Footer";
 import FeaturedProject from "../components/FeaturedProject";
@@ -61,14 +62,14 @@ export default function Home() {
           <div className="max-md:min-h-[65vh] max-md:flex max-md:flex-col max-md:justify-center">
             <Slide triggerOnce>
               <Image
-                src={verticalLine}
-                alt="dotted line vertical"
-                className="hidden md:block absolute left-[11rem] h-[30vh] top-[-3rem] scale-150"
+                src={lineSvg}
+                alt="dotted line horizontal"
+                className="hidden md:block absolute rotate-90 top-[0.2rem]"
               ></Image>
               <Image
                 src={verticalLine}
-                alt="dotted line horizontal"
-                className="hidden md:block absolute rotate-90 top-[0.2rem]"
+                alt="dotted line vertical"
+                className="hidden md:block absolute ml-44 -mt-28"
               ></Image>
             </Slide>
 
