@@ -59,31 +59,19 @@ export default function Home() {
 
       <main className="relative">
         <div className="px-8 md:px-32 flex flex-col max-md:justify-center pt-2 items-start relative">
-          <div className="max-md:min-h-[65vh] max-md:flex max-md:flex-col max-md:justify-center">
+          <div className="h-[67vh] md:h-[62vh] my-auto pt-16 flex flex-col justify-center">
             <Slide triggerOnce>
-              <Image
-                src={lineSvg}
-                alt="dotted line horizontal"
-                className="hidden md:block absolute rotate-90 top-[0.2rem]"
-              ></Image>
-              <Image
-                src={verticalLine}
-                alt="dotted line vertical"
-                className="hidden md:block absolute ml-44 -mt-28"
-              ></Image>
+              <div className="h-[600px] w-[600px] w-100 -translate-x-[82.5%] -translate-y-[80.5%] md:-translate-x-[70%] md:-translate-y-[66%] border-r-2 border-b-2 border-figmaBlue border-dotted absolute"></div>
             </Slide>
 
-            <p className="font-secondary text-2xl md:text-4xl leading-normal md:leading-snug ml-0.5 md:ml-1">
-              I realise ideas
+            <p className="font-secondary text-2xl md:text-4xl ml-0.5 md:ml-1 mb-2 md:mb-4">
+              I realise ideas from
             </p>
-            <p className="font-secondary text-4xl leading-normal md:leading-snug md:text-6xl">
-              From
-            </p>
-            <div className="leading-normal md:leading-snug">
+            <div className="mb-2 md:my-4">
               <span className="font-writing text-4xl md:text-6xl">
                 Pen and Paper
               </span>
-              <span className="font-secondary text-4xl md:text-6xl">
+              <span className="font-secondary text-2xl md:text-4xl">
                 &nbsp;to
               </span>
             </div>
@@ -93,7 +81,7 @@ export default function Home() {
                 <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
                 <p
                   ref={prototypeBox}
-                  className="font-primary text-4xl leading-normal md:leading-snug md:text-6xl border-2 border-figmaBlue z-10 bg-white"
+                  className="font-primary text-4xl  md:text-6xl border-2 md:leading-snug border-figmaBlue z-10 bg-white"
                 >
                   Prototype
                 </p>
@@ -104,12 +92,14 @@ export default function Home() {
                 </div>
               </div>
             </Slide>
-            <p className="font-secondary text-4xl leading-snug md:leading-tight md:text-6xl -mt-6">
-              and
-            </p>
-            <p className="font-coding text-4xl leading-snug md:leading-tight md:text-6xl pb-1 md:pb-3 blink">
-              &lt;p&gt;Product&lt;/p&gt;
-            </p>
+            <div className=" blink pb-2">
+              <span className="font-secondary text-2xl leading-snug md:leading-tight md:text-4xl -mt-6">
+                and&nbsp;
+              </span>
+              <span className="font-coding text-3xl leading-snug md:leading-tight md:text-6xl">
+                &lt;p&gt;Product&lt;/p&gt;
+              </span>
+            </div>
           </div>
           <Image
             src={ctaArrow}
