@@ -80,7 +80,7 @@ export default function Home() {
                 <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
                 <p
                   ref={prototypeBox}
-                  className="font-primary text-4xl  md:text-6xl border-2 md:leading-snug border-figmaBlue z-10 bg-white"
+                  className="font-primary text-4xl  md:text-6xl border-2 md:leading-snug border-figmaBlue z-10 bg-white pb-1"
                 >
                   Prototype
                 </p>
