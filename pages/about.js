@@ -2,7 +2,8 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Image from "next/image";
 import me from "../public/me.jpg";
-import verticalLine from "../public/line.svg";
+import { Slide } from "react-awesome-reveal";
+
 import {
   FaLinkedin,
   FaGithub,
@@ -26,17 +27,7 @@ export default function About() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <Navbar />
-      <div className="overflow-x-hidden">
-        <Image
-          src={verticalLine}
-          alt="dotted line vertical"
-          className="hidden lg:block absolute right-[23rem] h-2/5 top-0 max-xl:hidden"
-        ></Image>
-        <Image
-          src={verticalLine}
-          alt="dotted line horizontal"
-          className="hidden lg:block absolute rotate-90 top-36 right-0 max-xl:hidden"
-        ></Image>
+      <div>
         <div className="px-10 md:px-32 mb-2 md:mb-14 min-h-[80vh] flex justify-between items-start flex-wrap max-lg:flex-col-reverse max-lg:justify-center max-lg:items-center">
           <div className="lg:w-2/5 flex flex-col justify-between">
             <p className="text-center mt-4 md:mt-0 md:text-left text-4xl md:text-7xl font-primary mb-4">
@@ -118,23 +109,28 @@ export default function About() {
             </p>
             <p className="text-base font-secondary text-justify">
               Outside of work and school, I like to occasionally produce music,
-              make sketch comedy, cook or just mindlessly binge YouTube ¯\_(ツ)_/¯
+              make sketch comedy, cook or just mindlessly binge YouTube
+              ¯\_(ツ)_/¯
             </p>
           </div>
-          <div className="relative w-2/5 mt-1 min-w-[250px] md:min-w-[300px] xl:w-[500px]">
-            <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-20"></div>
-            <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-20 right-0"></div>
-            <Image
-              src={me}
+          <Slide triggerOnce direction="right">
+            <div className="relative w-2/5 mt-1 min-w-[250px] max-lg:mx-auto md:min-w-[300px] lg:w-[400px] xl:w-[500px]">
+              <div className="hidden z-10 lg:block h-[500px] w-[400px] w-100 lg:translate-x-[50%] lg:-translate-y-[60.5%] xl:translate-x-[62.5%] xl:-translate-y-[48%] border-l-2 border-b-2 border-figmaBlue border-dotted absolute"></div>
+
+              <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-30"></div>
+              <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-30 right-0"></div>
+              <Image
+                src={me}
                 alt="My profile photo"
-              className="border-2 border-figmaBlue z-10 bg-white mx-auto"
-            ></Image>
-            <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-20 right-0"></div>
-            <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-20"></div>
-            <div className="bg-figmaBlue rounded-md py-0.5 px-2 mt-2 text-white z-20 w-fit text-sm mx-auto">
-              That's me!
+                className="relative border-2 border-figmaBlue z-20 bg-white mx-auto"
+              ></Image>
+              <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-30 right-0"></div>
+              <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-30"></div>
+              <div className="bg-figmaBlue rounded-md py-0.5 px-2 mt-2 text-white z-20 w-fit text-sm mx-auto">
+                That's me!
+              </div>
             </div>
-          </div>
+          </Slide>
         </div>
       </div>
       <Footer />
