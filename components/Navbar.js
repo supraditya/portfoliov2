@@ -97,7 +97,7 @@ export default function Navbar() {
           About
         </Link>
         <Link
-          href="https://drive.google.com/file/d/1C8n0HuKJgZNvm8MiCxan9uwsDCfwJDog/view?usp=sharing"
+          href="https://drive.google.com/file/d/16r0k5ewm475RJU2MOhWzZPvKssZyfCN7/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
           className="ml-4 text-lg flex items-center hover:border-b-2 border-black"

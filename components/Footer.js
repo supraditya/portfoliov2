@@ -21,7 +21,7 @@ export default function Footer() {
       ></Image>
       <div className="flex flex-col justify-center items-center w-full lg:w-1/3">
         <Link
-          href="https://drive.google.com/file/d/1C8n0HuKJgZNvm8MiCxan9uwsDCfwJDog/view?usp=sharing"
+          href="https://drive.google.com/file/d/16r0k5ewm475RJU2MOhWzZPvKssZyfCN7/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
           aria-label="Link to Aditya Menon's resume"
