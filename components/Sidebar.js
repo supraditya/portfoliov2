@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { IoCloseSharp } from "react-icons/io5";
 import { BiLinkExternal } from "react-icons/bi";
+import { RESUME_LINK } from "../ResumeLink";
 
 export default function Sidebar(props) {
   return (
@@ -54,7 +55,7 @@ export default function Sidebar(props) {
             <Link
               onClick={() => props.updateSidebarState(false)}
               className="text-2xl hover:border-b-2 border-black font-primary flex items-center"
-              href="https://drive.google.com/file/d/1C8n0HuKJgZNvm8MiCxan9uwsDCfwJDog/view?usp=sharing"
+              href={RESUME_LINK}
               target="_blank"
               rel="noreferrer"
             >

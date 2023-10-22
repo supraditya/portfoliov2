@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BiLinkExternal } from "react-icons/bi";
+import { RESUME_LINK } from "../ResumeLink";
 
 export default function Footer() {
   return (
@@ -21,7 +22,7 @@ export default function Footer() {
       ></Image>
       <div className="flex flex-col justify-center items-center w-full lg:w-1/3">
         <Link
-          href="https://drive.google.com/file/d/1C8n0HuKJgZNvm8MiCxan9uwsDCfwJDog/view?usp=sharing"
+          href={RESUME_LINK}
           target="_blank"
           rel="noreferrer"
           aria-label="Link to Aditya Menon's resume"

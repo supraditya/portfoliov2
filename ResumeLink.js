@@ -1,0 +1,1 @@
+export const RESUME_LINK="https://drive.google.com/file/d/1C8n0HuKJgZNvm8MiCxan9uwsDCfwJDog/view?usp=sharing";

@@ -5,7 +5,8 @@ import Sidebar from "./Sidebar";
 import { useRouter } from "next/router";
 import navLogo from "../public/nav-logo.svg";
 import { BiLinkExternal } from "react-icons/bi";
-import {AiOutlinePause} from 'react-icons/ai'
+import {AiOutlinePause} from 'react-icons/ai';
+import { RESUME_LINK } from "../ResumeLink";
 
 export default function Navbar() {
   const [activeLink, setactiveLink] = useState({
@@ -97,7 +98,7 @@ export default function Navbar() {
           About
         </Link>
         <Link
-          href="https://drive.google.com/file/d/1C8n0HuKJgZNvm8MiCxan9uwsDCfwJDog/view?usp=sharing"
+          href={RESUME_LINK}
           target="_blank"
           rel="noreferrer"
           className="ml-4 text-lg flex items-center hover:border-b-2 border-black"

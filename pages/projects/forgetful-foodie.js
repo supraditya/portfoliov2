@@ -374,7 +374,7 @@ export default function forgetfulFoodie() {
           We used these sketches as a guideline to base our digital wireframes'
           layout on.
         </p>
-        <p className="font-secondary text-lg">
+        <p className="font-secondary text-lg text-justify">
           We decided that showing the quantity of a pantry item left, along with
           a countdown to its expiration date would require at least two graphs
           side-by-side. <br></br> Additionally, clicking on a particular item
@@ -409,7 +409,7 @@ export default function forgetfulFoodie() {
         <p className="font-secondary font-light text-lg text-justify">
           We decided that the application would have 3 menus:
         </p>
-        <ul className="pl-8 list-disc text-lg font-secondary font-light">
+        <ul className="pl-8 list-disc text-lg font-secondary font-light text-justify">
           <li>
             The home tab would show the user pantry health and some quick recipe
             options
@@ -542,7 +542,7 @@ export default function forgetfulFoodie() {
           </p>
         </ul>
         <h3 className="font-primary text-xl mb-1">Revisions</h3>
-        <ul className="pl-8 list-disc text-lg font-secondary font-light">
+        <ul className="pl-8 list-disc text-lg font-secondary font-light text-justify">
           <li>
             To address the problem 1, we went through two iterations to reach a
             solution:
