@@ -148,6 +148,13 @@ export default function Projects() {
             link="portfolio-website"
             domains={["Featured", "All", "Case Study", "Design", "Development"]}
           />
+          <ProjectCard
+            currentTab={projectTab}
+            title="UpTap"
+            image="uptap"
+            link="uptap"
+            domains={["All", "Development"]}
+          />
         </div>
       </div>
       <div className="flex flex-col justify-center">
