@@ -64,16 +64,13 @@ export default function Ariadne() {
         </h3>
         <ActionButton
           link="https://ariadne-ar.notion.site/ariadne-ar/ARiadne-Library-Navigation-System-25beb64a323d4a29828f8cb4f8a5ad2f"
-          icon={<BsGlobe2 />}
+          // icon={<BsGlobe2 />}
           label="Link to Complete Case Study"
         />
         {hasWindow && (
           <div className="py-2  my-4 rounded-md text-center  flex justify-around">
             <ReactPlayer
               url="https://youtu.be/XtJWeGk6PSs"
-              //   loop={true}
-            //   width={912}
-            //   height={513}
               playing={false}
               controls={true}
               className="mx-auto rounded-md"
