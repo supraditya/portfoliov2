@@ -2,7 +2,10 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Image from "next/image";
 import me from "../public/me.jpg";
+import Link from "next/link";
 import { Slide } from "react-awesome-reveal";
+import { RESUME_LINK } from "../ResumeLink";
+import { BiLinkExternal } from "react-icons/bi";
 
 import {
   FaLinkedin,
@@ -132,6 +135,25 @@ export default function About() {
             </div>
           </Slide>
         </div>
+      </div>
+      <div className="flex flex-col justify-center">
+        <p className="font-secondary text-center mx-auto text-lg">
+          Want to see my qualifications?
+        </p>
+        <Link
+          href={RESUME_LINK}
+          target="_blank"
+          rel="noreferrer"
+          alt="Link to resume"
+          className="mx-auto pb-4"
+        >
+          <button
+            aria-label="View resume"
+            className="font-primary flex items-center text-base border border-black rounded-sm px-3 py-2 hover:bg-black hover:text-white ease-in-out"
+          >
+            View my Resume <BiLinkExternal className=" ml-1" />
+          </button>
+        </Link>
       </div>
       <Footer />
     </>

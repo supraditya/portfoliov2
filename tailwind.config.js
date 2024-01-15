@@ -11,7 +11,7 @@ module.exports = {
       ...colors,
       figmaBlue: '#0C8CE9',
       white: '#FFFFFF',
-      footerGray: '#7F7F7F',
+      footerBlack: '#101010',
       black:'#000000',
       subtitleGray: '#686767',
     },

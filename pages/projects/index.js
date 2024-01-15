@@ -87,6 +87,13 @@ export default function Projects() {
         <div className="mt-4 sm:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 justify-start">
           <ProjectCard
             currentTab={projectTab}
+            title="ARiadne"
+            image="ariadne"
+            link="ariadne"
+            domains={["All", "Design", "Augmented Reality"]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
             title="Cryptogods: Anubis"
             image="cryptogods-anubis"
             link="cryptogods-anubis"
@@ -138,7 +145,7 @@ export default function Projects() {
       </div>
       <div className="flex flex-col justify-center">
         <p className="font-secondary text-center mx-auto text-lg">
-          Wanna know more about me?
+          Want to know more about me?
         </p>
         <Link href="about" alt="Link to about" className="mx-auto pb-4">
           <button
