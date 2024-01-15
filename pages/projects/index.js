@@ -90,7 +90,7 @@ export default function Projects() {
             title="ARiadne"
             image="ariadne"
             link="ariadne"
-            domains={["All", "Design", "Augmented Reality"]}
+            domains={["All", "Case Study", "Design", "Augmented Reality"]}
           />
           <ProjectCard
             currentTab={projectTab}
