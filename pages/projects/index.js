@@ -129,6 +129,13 @@ export default function Projects() {
           />
           <ProjectCard
             currentTab={projectTab}
+            title="LinkSpace"
+            image="linkspace"
+            link="linkspace"
+            domains={["All", "Development"]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
             title="Refugee One"
             image="refugee-one"
             link="refugee-one"
