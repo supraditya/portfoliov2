@@ -35,7 +35,7 @@ export default function Ariadne() {
         <ActionButton
           link="https://ariadne-ar.notion.site/ariadne-ar/ARiadne-Library-Navigation-System-25beb64a323d4a29828f8cb4f8a5ad2f"
           icon={<BsGlobe2 />}
-          label="Product Website"
+          label="Case Study"
         />
         <div className="py-2 my-2 md:my-4 rounded-md text-center flex flex-col max-md:items-center md:flex-row justify-around">
           <Image

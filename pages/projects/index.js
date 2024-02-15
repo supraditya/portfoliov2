@@ -6,7 +6,7 @@ import { useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
 
 export default function Projects() {
-  const [projectTab, setprojectTab] = useState("Featured");
+  const [projectTab, setprojectTab] = useState("All");
   const handleTabChange = (newTab) => {
     setprojectTab(newTab);
   };
@@ -25,6 +25,17 @@ export default function Projects() {
       <div className="px-10 md:px-32 mb-10">
         <p className="text-4xl md:text-7xl font-primary mb-5">My Projects</p>
         <div className="flex-wrap lg:w-4/5 xl:w-1/2 flex justify-start md:justify-between font-secondary text-xl">
+          <button
+            aria-label="Show all projects"
+            className={`${
+              projectTab === "All" ? "bg-black text-white" : ""
+            } mr-2 px-1.5 py-1 rounded-md`}
+            onClick={() => {
+              handleTabChange("All");
+            }}
+          >
+            All
+          </button>
           <button
             aria-label="Show featured projects"
             className={`${
@@ -70,21 +81,23 @@ export default function Projects() {
           >
             Case&nbsp;Studies
           </button>
-
-          <button
-            aria-label="Show all projects"
-            className={`${
-              projectTab === "All" ? "bg-black text-white" : ""
-            } mr-2 px-1.5 py-1 rounded-md`}
-            onClick={() => {
-              handleTabChange("All");
-            }}
-          >
-            All
-          </button>
         </div>
         {/* Manually ordered in alphabetical order of title */}
         <div className="mt-4 sm:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 justify-start">
+          <ProjectCard
+            currentTab={projectTab}
+            title="Forgetful Foodie"
+            image="forgetful-foodie"
+            link="forgetful-foodie"
+            domains={["Featured", "All", "Case Study", "Design"]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
+            title="UpTap"
+            image="uptap"
+            link="uptap"
+            domains={["All", "Development"]}
+          />
           <ProjectCard
             currentTab={projectTab}
             title="ARiadne"
@@ -92,6 +105,14 @@ export default function Projects() {
             link="ariadne"
             domains={["All", "Case Study", "Design", "Augmented Reality"]}
           />
+          <ProjectCard
+            currentTab={projectTab}
+            title="LinkSpace"
+            image="linkspace"
+            link="linkspace"
+            domains={["All", "Development"]}
+          />
+
           <ProjectCard
             currentTab={projectTab}
             title="Cryptogods: Anubis"
@@ -113,13 +134,7 @@ export default function Projects() {
             link="dusk-security"
             domains={["All", "Design", "Development"]}
           />
-          <ProjectCard
-            currentTab={projectTab}
-            title="Forgetful Foodie"
-            image="forgetful-foodie"
-            link="forgetful-foodie"
-            domains={["Featured", "All", "Case Study", "Design"]}
-          />
+
           <ProjectCard
             currentTab={projectTab}
             title="IEEE Computer Society - VIT"
@@ -127,13 +142,7 @@ export default function Projects() {
             link="ieee-cs-vit"
             domains={["All", "Development", "Project Management"]}
           />
-          <ProjectCard
-            currentTab={projectTab}
-            title="LinkSpace"
-            image="linkspace"
-            link="linkspace"
-            domains={["All", "Development"]}
-          />
+
           <ProjectCard
             currentTab={projectTab}
             title="Refugee One"
@@ -147,13 +156,6 @@ export default function Projects() {
             image="portfolio-website"
             link="portfolio-website"
             domains={["Featured", "All", "Case Study", "Design", "Development"]}
-          />
-          <ProjectCard
-            currentTab={projectTab}
-            title="UpTap"
-            image="uptap"
-            link="uptap"
-            domains={["All", "Development"]}
           />
         </div>
       </div>
