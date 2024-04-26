@@ -116,22 +116,22 @@ export default function Home() {
               link="forgetful-foodie"
               image="forgetful-foodie"
               description="A kitchen pantry tracking and recipe-curation solution for the household."
-            />  
+            />
+            <FeaturedProject
+              title="ARiadne"
+              domains={["All", "Case Study", "Interaction Design", "Augmented Reality"]}
+              flow="right"
+              link="ariadne"
+              image="ariadne"
+              description="An Augmented Reality system to navigate even the most labyrinthine libraries."
+            />
             <FeaturedProject
               title="The Portfolio Journey"
               domains={["All", "Case Study", "Design", "Development"]}
-              flow="right"
+              flow="left"
               link="portfolio-website"
               image="portfolio-website"
               description="The 2-year journey encompassing the vision, lessons learned, and execution over two iterations of my portfolio website."
-            />
-            <FeaturedProject
-              title="Dr. Menon's Palliative Care"
-              domains={["All", "Case Study", "Graphic Design"]}
-              flow="left"
-              link="palliative-care"
-              image="palliative-care"
-              description="An old age home with a focus on rehabilitation and holistic healing, rather than mere extension of life."
             />
             <p className="font-secondary text-center mx-auto text-lg">
               Want to see more?

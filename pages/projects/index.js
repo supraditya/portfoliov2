@@ -103,7 +103,7 @@ export default function Projects() {
             title="ARiadne"
             image="ariadne"
             link="ariadne"
-            domains={["All", "Case Study", "Design", "Augmented Reality"]}
+            domains={["Featured", "All", "Case Study", "Design", "Augmented Reality"]}
           />
           <ProjectCard
             currentTab={projectTab}
@@ -125,7 +125,7 @@ export default function Projects() {
             title="Dr. Menon's Palliative Care"
             image="palliative-care"
             link="palliative-care"
-            domains={["Featured", "All", "Case Study", "Design"]}
+            domains={["All", "Case Study", "Design"]}
           />
           <ProjectCard
             currentTab={projectTab}
