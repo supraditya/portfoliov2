@@ -100,6 +100,13 @@ export default function Projects() {
           />
           <ProjectCard
             currentTab={projectTab}
+            title="Automotive Interaction Design"
+            image="uptap"
+            link="auto-ux"
+            domains={["All", "Design",]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
             title="ARiadne"
             image="ariadne"
             link="ariadne"
