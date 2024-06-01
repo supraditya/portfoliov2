@@ -9,13 +9,15 @@ import { BsGlobe2 } from "react-icons/bs";
 import { FaFigma } from "react-icons/fa";
 import problem from "../../public/assets/auto-ux/problem.png";
 import dogmode from "../../public/assets/auto-ux/dog-mode.png";
+import teslaDogMode from "../../public/assets/auto-ux/tesla-dog-mode.gif";
+import rivianDogMode from "../../public/assets/auto-ux/rivian-dog-mode.gif";
 
 import Head from "next/head";
 export default function AutoUX() {
   return (
     <>
       <Head>
-        <title>Making Mass-Market EVs More Approachable | Projects</title>
+        <title>Auto UX - General Motors | Projects</title>
         <meta
           name="description"
           content="I am a UX Designer and Web Developer, and this is my portfolio."
@@ -25,7 +27,7 @@ export default function AutoUX() {
       </Head>
       <Wrapper>
         <Header
-          title="Automotive UI Concept for General Motors"
+          title="Auto UX Concept for General Motors"
           subtitle="Making mass-market Electric Vehicles (EVs) more approachable through intuitive animations, considerate interactions and a reimagined 'Dog Mode'"
         />
         <ActionButton
@@ -81,8 +83,10 @@ export default function AutoUX() {
           solutions devised by tech giants such as Apple and Google, and GM
           themselves, and came up with the ideas depicted below.
         </p>
-        <h3 className="font-primary text-3xl mb-1 font-medium">
-          But first, what <i>is</i> 'Dog Mode'?
+        <h3 className="font-primary text-3xl mb-3 font-medium">Our Ideas</h3>
+        <h3 className="font-primary text-xl mb-1 font-medium">1. Dog Mode</h3>
+        <h3 className="font-secondary text-lg mb-1 font-medium">
+          Wait, what even <i>is</i> 'Dog Mode'?
         </h3>
         <p className="font-secondary text-lg font-light text-justify">
           Initially introduced by Tesla inspired by an X (Twitter) user's
@@ -93,10 +97,71 @@ export default function AutoUX() {
           <Image src={dogmode} alt="dog mode slide" className="mx-auto"></Image>
         </div>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
-          What is Dog Mode? Courtesy: General
-          Motors
+          What is Dog Mode? Courtesy: General Motors
         </p>
-
+        <h3 className="font-secondary text-lg my-1 font-medium">Our Goals</h3>
+        <p className="font-secondary text-lg font-light text-justify">
+          Through Dog Mode, we intended to:
+        </p>
+        <ul className="list-disc font-secondary text-lg font-light pl-8 text-justify">
+          <li>
+            Allow users to be able to safely leave their pets inside vehicles
+            for short periods of time
+          </li>
+          <li>
+            Notify bystanders that the pet is safe within the car and the
+            climate control is up and running.<br></br>This is also to prevent
+            any well-intentioned rescue attempts that might result in damage or
+            harm to the car, the pet or the bystander.
+          </li>
+        </ul>
+        <h3 className="font-secondary text-lg my-1 font-medium">
+          Competitive Analysis
+        </h3>
+        <p className="font-secondary text-lg font-light text-justify">
+          Since this is a relatively new feature more commonly seen in Electric
+          Vehicles, we drew inspiration from some of the biggest current names
+          in North American EV manufacturers: Tesla and Rivian.
+        </p>
+        <div className="mt-2 font-secondary flex justify-between">
+          <div className="w-1/2 pr-8">
+            <h3 className="font-secondary text-lg my-1 font-medium">
+              Tesla's Take
+            </h3>
+            <Image
+              src={teslaDogMode}
+              alt="tesla dog mode demo"
+              className="h-80 w-auto"
+            ></Image>
+            <p className="font-secondary font-light text-md italic my-3 text-subtitleGray">
+              Via Pinterest
+            </p>
+            <ul className="list-disc font-secondary text-md font-light pl-4 text-justify">
+              <li>Simple, clear message for bystanders</li>
+              <li>Shows current climate control temperature setting</li>
+            </ul>
+          </div>
+          <div className="w-1/2 pl-8">
+            <h3 className="font-secondary text-lg my-1 font-medium">
+              Rivians's Take
+            </h3>
+            <Image
+              src={rivianDogMode}
+              alt="rivian dog mode demo"
+              className="h-80 w-auto"
+            ></Image>
+            <p className="font-secondary font-light text-md italic my-3 text-subtitleGray">
+              Via Joshua Bravado Mascarenas on Youtube
+            </p>
+            <ul className="list-disc font-secondary text-md font-light pl-4 text-justify">
+              <li>Dog mode is termed as 'Pet Mode', which is more inclusive</li>
+              <li>
+                The display shows both the temperature at which the climate
+                control is set, and the actual in-cabin temperature.
+              </li>
+            </ul>
+          </div>
+        </div>
         {/* <iframe
           width="100%"
           height="600"
