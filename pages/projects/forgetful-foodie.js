@@ -32,7 +32,7 @@ import revision5 from "../../public/assets/forgetful-foodie/revision-5.png";
 import Highlights from "../../components/ProjectPage/Highlights";
 import ActionButton from "../../components/ActionButton";
 import { FaFigma } from "react-icons/fa";
-import {BsArrowUp} from "react-icons/bs";
+// import {BsArrowUp} from "react-icons/bs";
 
 export default function forgetfulFoodie() {
   // State to render ReactPlayer after window is loaded, to avoid HydrationError
