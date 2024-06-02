@@ -17,6 +17,7 @@ import samaritan1 from "../../public/assets/auto-ux/samaritan-1.png";
 import samaritan2 from "../../public/assets/auto-ux/samaritan-2.png";
 import samaritan3 from "../../public/assets/auto-ux/samaritan-3.png";
 import batteryLow from "../../public/assets/auto-ux/battery-low.png";
+import regenBraking from "../../public/assets/auto-ux/regen-braking.gif";
 
 import Head from "next/head";
 export default function AutoUX() {
@@ -249,6 +250,72 @@ export default function AutoUX() {
           alt="Low vehicle battery notification"
           className="mx-auto w-3/5"
         ></Image>
+        <h3 className="font-primary text-xl mb-1 font-medium">
+          2. Visualizing Regenerative Braking
+        </h3>
+        <p className="font-secondary text-lg font-light text-justify">
+          The world is slowly, but surely adopting EVs over traditional Internal
+          Combustion Engines (ICE) vehicles, but this shift is still in its
+          infancy. As a result, there are several concepts and terminologies
+          that owners transitioning from ICE to EVs aren't always familiar with.
+          Some examples include measuring a vehicle's fuel capacity in
+          Kilowatt-Hour instead of Gallons of fossil fuels, instant torque and a
+          lack of a traditional engine as electricity from the battery is
+          directly sent to individual motors that turn the vehicle's wheels, and
+          regenerative braking. <br></br>
+          We set our sights on the latter as we found it to be one of the most
+          obtuse concepts to grasp for traditional drivers, and aimed to make it
+          more visually intuitive through the vehicle's instrument cluster.
+        </p>
+        <h3 className="font-secondary text-lg my-1 font-medium">
+          What is Regenerative Braking?
+        </h3>
+        <p className="font-secondary text-lg font-light text-justify">
+          Ever notice in films that when cars come to a sudden stop, their brake
+          pads are often depicted as red hot? This is because the brakes
+          essentially apply friction to the wheels to slow them down and
+          eventually stop them, which releases a lot of heat energy. But in case
+          of EVs, electric motors attached to the wheel can be turned the other
+          way to essentially recover some of the kinetic energy lost in the form
+          of heat and be sent back to the vehicle battery to recharge it.
+          <br></br> Simply put, braking can charge your vehicle battery.
+        </p>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          So how do we visualize such a complex idea without words on an
+          instrument cluster?
+        </p>
+        <h3 className="font-secondary text-lg my-1 font-medium">
+          Our Solution
+        </h3>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          We came up with a J-shaped gauge that aimed to illustrate the power
+          that's being delivered from/to the vehicle by having the gauge run
+          from -25% to 100% on the right hand side. The -25% section essentially
+          depicts that there is a negative amount of power being delivered by
+          the vehicle i.e it is receiving power. Finally, we have the vehicle's
+          battery gauge with range information situated close to the regen
+          section, and an animation that illustrates a direct relationship
+          between braking and the vehicle's battery level increasing.
+        </p>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          This is what it would look like if someone applied brakes while
+          driving our concept EV:
+        </p>
+        <Image
+          src={regenBraking}
+          alt="Regenerative Braking Visualization"
+          className="mx-auto w-3/5"
+        ></Image>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          Through feedback from test users and GM experts, we were able to
+          validate that this visualization was at least somewhat intuitive. We
+          were also able to slightly gamify the process of regenerative braking,
+          as there is a way to maximize the amount of energy recovered through
+          gentle braking, which is an acquired skill.
+        </p>
+        <h3 className="font-primary text-xl mt-4 mb-1 font-medium">
+          3. Drag Interaction-based Climate Controls
+        </h3>
         {/* <iframe
           width="100%"
           height="600"
