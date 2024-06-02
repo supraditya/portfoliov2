@@ -11,6 +11,12 @@ import problem from "../../public/assets/auto-ux/problem.png";
 import dogmode from "../../public/assets/auto-ux/dog-mode.png";
 import teslaDogMode from "../../public/assets/auto-ux/tesla-dog-mode.gif";
 import rivianDogMode from "../../public/assets/auto-ux/rivian-dog-mode.gif";
+import ourDogMode from "../../public/assets/auto-ux/our-dog-mode.png";
+import ourDogModePrototype from "../../public/assets/auto-ux/our-dog-mode-proto.gif";
+import samaritan1 from "../../public/assets/auto-ux/samaritan-1.png";
+import samaritan2 from "../../public/assets/auto-ux/samaritan-2.png";
+import samaritan3 from "../../public/assets/auto-ux/samaritan-3.png";
+import batteryLow from "../../public/assets/auto-ux/battery-low.png";
 
 import Head from "next/head";
 export default function AutoUX() {
@@ -143,7 +149,7 @@ export default function AutoUX() {
           </div>
           <div className="w-1/2 pl-8">
             <h3 className="font-secondary text-lg my-1 font-medium">
-              Rivians's Take
+              Rivian's Take
             </h3>
             <Image
               src={rivianDogMode}
@@ -162,6 +168,87 @@ export default function AutoUX() {
             </ul>
           </div>
         </div>
+        <p className="font-secondary text-lg font-light text-justify my-4">
+          After combining ideas and principles from these implementations (and
+          adding an idea of our own) we came up our spin on the feature.
+        </p>
+        <Image
+          src={ourDogModePrototype}
+          alt="our dog mode demo"
+          className="mx-auto w-[94%]"
+        ></Image>
+        <Image
+          src={ourDogMode}
+          alt="our dog mode demo"
+          className="mx-auto"
+        ></Image>
+        <ul className="list-disc my-4 font-secondary text-lg font-light pl-8 text-justify">
+          <li>
+            In addition to the reassuring message, graphics and climate control
+            information, we made sure to reflect the message on both the center
+            display and instrument cluster so that the message is easily viewed
+            from either side of the vehicle exterior.
+          </li>
+          <li>
+            We also added a way for bystanders to have some degree of
+            interaction through a QR code, which when scanned will open a web
+            application that initiates what we call the{" "}
+            <strong>'Samaritan Mode'</strong>
+          </li>
+        </ul>
+        <h3 className="font-secondary text-xl my-1 font-medium">
+          Introducing: Samaritan Mode
+        </h3>
+        <p className="font-secondary text-lg font-light text-justify">
+          When a bystander thinks something needs the owner's immediate
+          attention, they can scan the QR code displayed on the Pet Mode Screen
+          and are redirected to a web application. They can either send an
+          anonymous 'nudge', or a custom message with photos.
+        </p>
+        <Image
+          src={samaritan1}
+          alt="Samaritan view 1"
+          className="mx-auto w-3/5"
+        ></Image>
+        <p className="font-secondary text-lg font-light text-justify">
+          If they choose to send a custom message, they would have a text box
+          and a 'take photos' button to send to the owner. The 'take photos'
+          button ensures that only photos taken by the bystander through
+          Samaritan Mode are sent through the portal. This allows for
+          minimization of spam.
+        </p>
+        <Image
+          src={samaritan2}
+          alt="Samaritan view 2"
+          className="mx-auto w-3/5"
+        ></Image>
+        <p className="font-secondary text-lg font-light text-justify">
+          Once the Samaritan sends the message, the vehicle owner will receive a
+          push notification from the companion smartphone app on their device.
+        </p>
+        <Image
+          src={samaritan3}
+          alt="Samaritan view 3"
+          className="mx-auto w-3/5"
+        ></Image>
+        <h3 className="font-secondary text-lg my-1 font-medium">
+          Edge Case: Vehicle battery low / battery has run out
+        </h3>
+        <p className="font-secondary text-lg font-light text-justify">
+          Tesla considers a case where the owner enables Dog Mode but their
+          car's battery goes below a threshold. They send a push notification to
+          the owner's smartphone warning them of the vehicle's current battery
+          level and reminding them to check on their pets. <br></br> We
+          incorporated this and an additional case of the vehicle's battery
+          completely running out, where the windows will be slightly opened
+          prior to battery drain to provide for ventilation for any pets inside
+          of the vehicle at the time.
+        </p>
+        <Image
+          src={batteryLow}
+          alt="Low vehicle battery notification"
+          className="mx-auto w-3/5"
+        ></Image>
         {/* <iframe
           width="100%"
           height="600"
