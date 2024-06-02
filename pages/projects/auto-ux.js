@@ -91,7 +91,7 @@ export default function AutoUX() {
           themselves, and came up with the ideas depicted below.
         </p>
         <h3 className="font-primary text-3xl mb-3 font-medium">Our Ideas</h3>
-        <h3 className="font-primary text-xl mb-1 font-medium">1. Dog Mode</h3>
+        <h3 className="font-secondary text-2xl mb-1 font-semibold">1. Dog Mode</h3>
         <h3 className="font-secondary text-lg mb-1 font-medium">
           Wait, what even <i>is</i> 'Dog Mode'?
         </h3>
@@ -250,7 +250,7 @@ export default function AutoUX() {
           alt="Low vehicle battery notification"
           className="mx-auto w-3/5"
         ></Image>
-        <h3 className="font-primary text-xl mb-1 font-medium">
+        <h3 className="font-secondary text-2xl mb-1 font-semibold">
           2. Visualizing Regenerative Braking
         </h3>
         <p className="font-secondary text-lg font-light text-justify">
@@ -304,7 +304,7 @@ export default function AutoUX() {
         <Image
           src={regenBraking}
           alt="Regenerative Braking Visualization"
-          className="mx-auto w-3/5"
+          className="mx-auto w-3/5 my-8"
         ></Image>
         <p className="font-secondary text-lg font-light my-1 text-justify">
           Through feedback from test users and GM experts, we were able to
@@ -313,7 +313,7 @@ export default function AutoUX() {
           as there is a way to maximize the amount of energy recovered through
           gentle braking, which is an acquired skill.
         </p>
-        <h3 className="font-primary text-xl mt-4 mb-1 font-medium">
+        <h3 className="font-secondary text-2xl mb-1 font-semibold">
           3. Drag Interaction-based Climate Controls
         </h3>
         {/* <iframe
