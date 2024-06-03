@@ -18,6 +18,8 @@ import samaritan2 from "../../public/assets/auto-ux/samaritan-2.png";
 import samaritan3 from "../../public/assets/auto-ux/samaritan-3.png";
 import batteryLow from "../../public/assets/auto-ux/battery-low.png";
 import regenBraking from "../../public/assets/auto-ux/regen-braking.gif";
+import iosDrag from "../../public/assets/auto-ux/ios-drag.gif";
+
 
 import Head from "next/head";
 export default function AutoUX() {
@@ -91,7 +93,9 @@ export default function AutoUX() {
           themselves, and came up with the ideas depicted below.
         </p>
         <h3 className="font-primary text-3xl mb-3 font-medium">Our Ideas</h3>
-        <h3 className="font-secondary text-2xl mb-1 font-semibold">1. Dog Mode</h3>
+        <h3 className="font-secondary text-2xl mb-1 font-semibold">
+          1. Dog Mode
+        </h3>
         <h3 className="font-secondary text-lg mb-1 font-medium">
           Wait, what even <i>is</i> 'Dog Mode'?
         </h3>
@@ -316,6 +320,45 @@ export default function AutoUX() {
         <h3 className="font-secondary text-2xl mb-1 font-semibold">
           3. Drag Interaction-based Climate Controls
         </h3>
+        <h3 className="font-secondary text-lg my-1 font-medium">
+          Why Touch-Drag Stuff in the First Place?
+        </h3>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          GM's Problem statement constrained us to just two screens with
+          specified dimensions: the instrument cluster and the center display.
+          Thus, we had to find a way to ensure that:
+        </p>
+        <ul className="list-disc font-secondary text-lg font-light pl-8 text-justify">
+          <li>
+            Climate controls are persistent throughout the center display menus
+            and states
+          </li>
+          <li>
+            There are separate controls for the driver and front passenger
+          </li>
+          <li>Most controls are only one interaction away</li>
+          <li>
+            Most controls and their states are always visible to the driver and
+            passenger
+          </li>
+        </ul>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          In our pursuit of meeting these goals, we drew some inspiration from
+          iOS's Control Center:
+        </p>
+        <Image
+          src={iosDrag}
+          alt="iOS Control Center UI"
+          className="mx-auto w-1/5 mt-8"
+        ></Image>
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Courtesy: Rhea Mirani
+        </p>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          We also realized that implementing a draggable element that expands when a
+          user interacts would save on space otherwise required for buttons to
+          manipulate said controls.
+        </p>
         {/* <iframe
           width="100%"
           height="600"
