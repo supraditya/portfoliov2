@@ -1,6 +1,9 @@
 import Header from "../../components/ProjectPage/Header";
 import Wrapper from "../../components/ProjectPage/Wrapper";
 import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import ReactPlayer from "react-player/youtube";
 // import fontncolor from "../../public/assets/cryptogods-anubis/font-and-colors.png";
 import projectImg from "../../public/assets/auto-ux/auto-ux.png";
 import Highlights from "../../components/ProjectPage/Highlights";
@@ -12,17 +15,21 @@ import dogmode from "../../public/assets/auto-ux/dog-mode.png";
 import teslaDogMode from "../../public/assets/auto-ux/tesla-dog-mode.gif";
 import rivianDogMode from "../../public/assets/auto-ux/rivian-dog-mode.gif";
 import ourDogMode from "../../public/assets/auto-ux/our-dog-mode.png";
-import ourDogModePrototype from "../../public/assets/auto-ux/our-dog-mode-proto.gif";
 import samaritan1 from "../../public/assets/auto-ux/samaritan-1.png";
 import samaritan2 from "../../public/assets/auto-ux/samaritan-2.png";
 import samaritan3 from "../../public/assets/auto-ux/samaritan-3.png";
 import batteryLow from "../../public/assets/auto-ux/battery-low.png";
 import regenBraking from "../../public/assets/auto-ux/regen-braking.gif";
-import iosDrag from "../../public/assets/auto-ux/ios-drag.gif";
-
 
 import Head from "next/head";
 export default function AutoUX() {
+  // State to render ReactPlayer after window is loaded, to avoid HydrationError
+  const [hasWindow, setHasWindow] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setHasWindow(true);
+    }
+  }, []);
   return (
     <>
       <Head>
@@ -177,11 +184,10 @@ export default function AutoUX() {
           After combining ideas and principles from these implementations (and
           adding an idea of our own) we came up our spin on the feature.
         </p>
-        <Image
-          src={ourDogModePrototype}
-          alt="our dog mode demo"
-          className="mx-auto w-[94%]"
-        ></Image>
+        <video className="mx-auto w-4/5" autoPlay muted loop>
+          <source src="/assets/auto-ux/our-dog-mode-proto.mp4" />
+          Your browser does not support the video tag...
+        </video>
         <Image
           src={ourDogMode}
           alt="our dog mode demo"
@@ -346,18 +352,93 @@ export default function AutoUX() {
           In our pursuit of meeting these goals, we drew some inspiration from
           iOS's Control Center:
         </p>
-        <Image
+        {/* <Image
           src={iosDrag}
           alt="iOS Control Center UI"
           className="mx-auto w-1/5 mt-8"
-        ></Image>
+        ></Image> */}
+        <video className="mx-auto w-1/5" autoPlay muted loop>
+          <source src="/assets/auto-ux/ios-drag.mp4" />
+          Your browser does not support the video tag...
+        </video>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Courtesy: Rhea Mirani
         </p>
         <p className="font-secondary text-lg font-light my-1 text-justify">
-          We also realized that implementing a draggable element that expands when a
-          user interacts would save on space otherwise required for buttons to
-          manipulate said controls.
+          We also realized that implementing a draggable element that expands
+          when a user interacts would save on space otherwise required for
+          buttons to manipulate said controls.
+        </p>
+        <video className="mx-auto w-3/5 my-6" autoPlay muted loop>
+          <source src="/assets/auto-ux/hvac-demo.mp4" />
+          Your browser does not support the video tag...
+        </video>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          We also prototyped draggable components for more discrete values (such
+          as incremental levels and non-numerical inputs)
+        </p>
+        <h3 className="font-secondary text-2xl mb-1 font-semibold">
+          4. Beam to Cluster
+        </h3>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          Picture yourself driving while interacting with a specific menu on the
+          center display, say navigation. Now you think to yourself that it'd be
+          really cool if you could have a 'widget-like' condensed version of the
+          navigation window within the instrument cluster so that you don't have
+          to look away from the road for too long. But the only way you can
+          currently pull the widget up on the cluster is to use the steering
+          wheel controls to navigate through an obscure cross-bar style
+          interface, switching between menus till you hopefully land on the
+          right one? <br></br> We intended for this feature to be able to adopt
+          the gesture-based mental model that our smartphones have taught us,
+          and adapt it to the automotive world.
+        </p>
+        <h3 className="font-secondary text-lg my-1 font-medium">
+          The Inspiration
+        </h3>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          We were inspired by a button we found interesting within the interface
+          of GM's own Chevrolet Blazer EV 2022: the 'Add to Driver Display'
+          button. Here is a demo of that feature:
+        </p>
+        {hasWindow && (
+          <ReactPlayer
+            url="https://www.youtube.com/watch?t=51&v=QXJmoHPj_zo&feature=youtu.be"
+            className="mx-auto w-4/5"
+          />
+        )}
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Video Demonstrating the 'Add to Driver Display' Feature on the Chevy
+          Blazer EV 2022 (Courtesy: GM's YouTube)
+        </p>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          However, we believed that this button:
+        </p>
+        <ul className="list-disc font-secondary text-lg font-light pl-8 text-justify">
+          <li>Lacked discoverability by the user</li>
+          <li>
+            Required the driver to look away from the road and at the center
+            display for longer than what is considered safe (
+            <Link
+              href="https://www.nhtsa.gov/sites/nhtsa.gov/files/distraction_npfg-02162012.pdf"
+              alt="NHTSA guidelines"
+              className="text-figmaBlue underline"
+            >
+              approximately 2 seconds or less according to NHTSA
+            </Link>
+            )
+          </li>
+        </ul>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          This is why we came up with the following flow:
+        </p>
+        <video className="mx-auto w-5/6 my-6" autoPlay muted loop>
+          <source src="/assets/auto-ux/beam-to-cluster.mp4" />
+          Your browser does not support the video tag...
+        </video>
+        <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
+          Scenario: You want to 'beam' the navigation widget to your instrument
+          cluster, followed by music controls.
         </p>
         {/* <iframe
           width="100%"
