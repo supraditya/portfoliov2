@@ -20,6 +20,8 @@ import samaritan2 from "../../public/assets/auto-ux/samaritan-2.png";
 import samaritan3 from "../../public/assets/auto-ux/samaritan-3.png";
 import batteryLow from "../../public/assets/auto-ux/battery-low.png";
 import regenBraking from "../../public/assets/auto-ux/regen-braking.gif";
+import phoneApp1 from "../../public/assets/auto-ux/phone-app-1.png";
+import phoneApp2 from "../../public/assets/auto-ux/phone-app-2.png";
 
 import Head from "next/head";
 export default function AutoUX() {
@@ -440,12 +442,63 @@ export default function AutoUX() {
           Scenario: You want to 'beam' the navigation widget to your instrument
           cluster, followed by music controls.
         </p>
-        {/* <iframe
+        <h3 className="font-secondary text-2xl mb-1 font-semibold">
+          5. Companion Smartphone App
+        </h3>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          A companion smartphone app is something that GM is currently actively
+          iterating upon. Ever since they announced dropping of support for
+          Apple Carplay and Android Auto, they've been improving their
+          home-grown OnStar OS and companion smartphone applications rapidly.
+          <br></br>
+          Aside from essential glanceable information and vehicle controls, we
+          wanted to dabble in a little bit of aesthetic discoverability with the
+          'half car motif'. By only showing one half of their vehicle, we want
+          the user to indulge in their natural curiosity and attempt to find the
+          other half by swiping, thus being rewarded with even more information,
+          menus and controls. This is what our vision looks like:
+        </p>
+        <div className="my-4 rounded-md text-center flex flex-wrap justify-center">
+          <Image
+            src={phoneApp1}
+            alt="Companion Smartphone app 1"
+            className="w-2/3 sm:w-1/4 mx-8"
+          ></Image>
+          <Image
+            src={phoneApp2}
+            alt="Companion Smartphone app 2"
+            className="w-2/3 sm:w-1/4 mx-8"
+          ></Image>
+        </div>
+        <h3 className="font-secondary text-2xl mb-1 font-semibold">
+          Bonus: Interactive Figma Prototype!
+        </h3>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          This is an interactive mockup of all of our ideas into one
+          consolidated view. You can discover what is interactable by clicking
+          anywhere on the mockup. The areas that flash blue can be interacted
+          with using your mouse pointer. Note that you will have to click and
+          hold for the drag interactions to be successfully executed. You can
+          reset the prototype by pressing 'R' on your keyboard with the Figma
+          window in focus.
+        </p>
+        <iframe
           width="100%"
           height="600"
           src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FMoK7Ok835HMGgh4oLpoNij%2FAssignment-5%3Ftype%3Ddesign%26node-id%3D850-28691%26t%3DRbdWvlCFz3Zv6WvD-1%26scaling%3Dscale-down%26page-id%3D456%253A12040%26starting-point-node-id%3D850%253A28691%26mode%3Ddesign"
           allowFullScreen
-        ></iframe> */}
+        ></iframe>
+        <h3 className="font-primary text-3xl mb-1 font-medium">Reflections</h3>
+        <p className="font-secondary text-lg font-light my-1 text-justify">
+          This project was one of my final deliverables as a graduate student
+          with the MSI program at the University of Michigan, and I believe that
+          I really came into my own as a Designer through this opportunity. I
+          learned a ton about interaction and graphic design (specfically in
+          Figma). I also mastered and employed several Figma concepts as I
+          worked my way toward visualizing these features, including
+          'components', 'variants', 'variables', 'conditional flows' and setting
+          up a consistent style guide.
+        </p>
       </Wrapper>
     </>
   );
