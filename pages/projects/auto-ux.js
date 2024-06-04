@@ -143,15 +143,15 @@ export default function AutoUX() {
           Vehicles, we drew inspiration from some of the biggest current names
           in North American EV manufacturers: Tesla and Rivian.
         </p>
-        <div className="mt-2 font-secondary flex justify-between">
-          <div className="w-1/2 pr-8">
+        <div className="mt-2 font-secondary flex max-xl:flex-col justify-between">
+          <div className="w-1/2 max-xl:w-full pr-8 max-xl:pr-0">
             <h3 className="font-secondary text-lg my-1 font-medium">
               Tesla's Take
             </h3>
             <Image
               src={teslaDogMode}
               alt="tesla dog mode demo"
-              className="h-80 w-auto"
+              className="h-80 max-xl:h-auto w-auto"
             ></Image>
             <p className="font-secondary font-light text-md italic my-3 text-subtitleGray">
               Via Pinterest
@@ -161,14 +161,14 @@ export default function AutoUX() {
               <li>Shows current climate control temperature setting</li>
             </ul>
           </div>
-          <div className="w-1/2 pl-8">
+          <div className="w-1/2 max-xl:w-full pl-8 max-xl:pl-0">
             <h3 className="font-secondary text-lg my-1 font-medium">
               Rivian's Take
             </h3>
             <Image
               src={rivianDogMode}
               alt="rivian dog mode demo"
-              className="h-80 w-auto"
+              className="h-80 max-xl:h-auto max-xl:w-3/4 max-sm:w-full w-auto"
             ></Image>
             <p className="font-secondary font-light text-md italic my-3 text-subtitleGray">
               Via Joshua Bravado Mascarenas on Youtube
@@ -186,7 +186,7 @@ export default function AutoUX() {
           After combining ideas and principles from these implementations (and
           adding an idea of our own) we came up our spin on the feature.
         </p>
-        <video className="mx-auto w-4/5" autoPlay muted loop>
+        <video className="mx-auto w-4/5 max-sm:w-11/12" autoPlay muted loop>
           <source src="/assets/auto-ux/our-dog-mode-proto.mp4" />
           Your browser does not support the video tag...
         </video>
@@ -221,7 +221,7 @@ export default function AutoUX() {
         <Image
           src={samaritan1}
           alt="Samaritan view 1"
-          className="mx-auto w-3/5"
+          className="mx-auto w-3/5 max-sm:w-full"
         ></Image>
         <p className="font-secondary text-lg font-light text-justify">
           If they choose to send a custom message, they would have a text box
@@ -233,7 +233,7 @@ export default function AutoUX() {
         <Image
           src={samaritan2}
           alt="Samaritan view 2"
-          className="mx-auto w-3/5"
+          className="mx-auto w-3/5 max-sm:w-full"
         ></Image>
         <p className="font-secondary text-lg font-light text-justify">
           Once the Samaritan sends the message, the vehicle owner will receive a
@@ -242,7 +242,7 @@ export default function AutoUX() {
         <Image
           src={samaritan3}
           alt="Samaritan view 3"
-          className="mx-auto w-3/5"
+          className="mx-auto w-3/5 max-sm:w-full"
         ></Image>
         <h3 className="font-secondary text-lg my-1 font-medium">
           Edge Case: Vehicle battery low / battery has run out
@@ -260,7 +260,7 @@ export default function AutoUX() {
         <Image
           src={batteryLow}
           alt="Low vehicle battery notification"
-          className="mx-auto w-3/5"
+          className="mx-auto w-3/5 max-sm:w-full"
         ></Image>
         <h3 className="font-secondary text-2xl mb-1 font-semibold">
           2. Visualizing Regenerative Braking
@@ -316,7 +316,7 @@ export default function AutoUX() {
         <Image
           src={regenBraking}
           alt="Regenerative Braking Visualization"
-          className="mx-auto w-3/5 my-8"
+          className="mx-auto w-3/5 max-sm:w-full my-8"
         ></Image>
         <p className="font-secondary text-lg font-light my-1 text-justify">
           Through feedback from test users and GM experts, we were able to
@@ -354,12 +354,7 @@ export default function AutoUX() {
           In our pursuit of meeting these goals, we drew some inspiration from
           iOS's Control Center:
         </p>
-        {/* <Image
-          src={iosDrag}
-          alt="iOS Control Center UI"
-          className="mx-auto w-1/5 mt-8"
-        ></Image> */}
-        <video className="mx-auto w-1/5" autoPlay muted loop>
+        <video className="mx-auto w-1/5 max-sm:w-3/5" autoPlay muted loop>
           <source src="/assets/auto-ux/ios-drag.mp4" />
           Your browser does not support the video tag...
         </video>
@@ -371,7 +366,7 @@ export default function AutoUX() {
           when a user interacts would save on space otherwise required for
           buttons to manipulate said controls.
         </p>
-        <video className="mx-auto w-3/5 my-6" autoPlay muted loop>
+        <video className="mx-auto w-3/5 my-6 max-sm:w-full" autoPlay muted loop>
           <source src="/assets/auto-ux/hvac-demo.mp4" />
           Your browser does not support the video tag...
         </video>
@@ -404,11 +399,11 @@ export default function AutoUX() {
           button. Here is a demo of that feature:
         </p>
         {hasWindow && (
-          <ReactPlayer
-            url="https://www.youtube.com/watch?t=51&v=QXJmoHPj_zo&feature=youtu.be"
-            className="mx-auto w-4/5"
-          />
+          <div className="mx-auto w-3/5 max-sm:w-full">
+            <ReactPlayer width="100%" url="https://www.youtube.com/watch?t=51&v=QXJmoHPj_zo&feature=youtu.be" />
+          </div>
         )}
+        
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Video Demonstrating the 'Add to Driver Display' Feature on the Chevy
           Blazer EV 2022 (Courtesy: GM's YouTube)
@@ -434,7 +429,7 @@ export default function AutoUX() {
         <p className="font-secondary text-lg font-light my-1 text-justify">
           This is why we came up with the following flow:
         </p>
-        <video className="mx-auto w-5/6 my-6" autoPlay muted loop>
+        <video className="mx-auto w-5/6 my-6 max-sm:w-full" autoPlay muted loop>
           <source src="/assets/auto-ux/beam-to-cluster.mp4" />
           Your browser does not support the video tag...
         </video>
@@ -462,15 +457,15 @@ export default function AutoUX() {
           <Image
             src={phoneApp1}
             alt="Companion Smartphone app 1"
-            className="w-2/3 sm:w-1/4 mx-8"
+            className="w-2/3 sm:w-1/4 mx-8 max-sm:my-4"
           ></Image>
           <Image
             src={phoneApp2}
             alt="Companion Smartphone app 2"
-            className="w-2/3 sm:w-1/4 mx-8"
+            className="w-2/3 sm:w-1/4 mx-8 max-sm:my-4"
           ></Image>
         </div>
-        <h3 className="font-secondary text-2xl mb-1 font-semibold">
+        {/* <h3 className="font-secondary text-2xl mb-1 font-semibold">
           Bonus: Interactive Figma Prototype!
         </h3>
         <p className="font-secondary text-lg font-light my-1 text-justify">
@@ -487,7 +482,7 @@ export default function AutoUX() {
           height="600"
           src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FMoK7Ok835HMGgh4oLpoNij%2FAssignment-5%3Ftype%3Ddesign%26node-id%3D850-28691%26t%3DRbdWvlCFz3Zv6WvD-1%26scaling%3Dscale-down%26page-id%3D456%253A12040%26starting-point-node-id%3D850%253A28691%26mode%3Ddesign"
           allowFullScreen
-        ></iframe>
+        ></iframe> */}
         <h3 className="font-primary text-3xl mb-1 font-medium">Reflections</h3>
         <p className="font-secondary text-lg font-light my-1 text-justify">
           This project was one of my final deliverables as a graduate student
