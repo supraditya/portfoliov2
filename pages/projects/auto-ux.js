@@ -12,14 +12,11 @@ import { BsGlobe2 } from "react-icons/bs";
 import { FaFigma } from "react-icons/fa";
 import problem from "../../public/assets/auto-ux/problem.png";
 import dogmode from "../../public/assets/auto-ux/dog-mode.png";
-import teslaDogMode from "../../public/assets/auto-ux/tesla-dog-mode.gif";
-import rivianDogMode from "../../public/assets/auto-ux/rivian-dog-mode.gif";
 import ourDogMode from "../../public/assets/auto-ux/our-dog-mode.png";
 import samaritan1 from "../../public/assets/auto-ux/samaritan-1.png";
 import samaritan2 from "../../public/assets/auto-ux/samaritan-2.png";
 import samaritan3 from "../../public/assets/auto-ux/samaritan-3.png";
 import batteryLow from "../../public/assets/auto-ux/battery-low.png";
-import regenBraking from "../../public/assets/auto-ux/regen-braking.gif";
 import phoneApp1 from "../../public/assets/auto-ux/phone-app-1.png";
 import phoneApp2 from "../../public/assets/auto-ux/phone-app-2.png";
 
@@ -148,11 +145,10 @@ export default function AutoUX() {
             <h3 className="font-secondary text-lg my-1 font-medium">
               Tesla's Take
             </h3>
-            <Image
-              src={teslaDogMode}
-              alt="tesla dog mode demo"
-              className="h-80 max-xl:h-auto w-auto"
-            ></Image>
+            <video className="h-80 max-xl:h-auto w-auto" autoPlay muted loop>
+              <source src="/assets/auto-ux/tesla-dog-mode.mp4" />
+              Your browser does not support the video tag...
+            </video>
             <p className="font-secondary font-light text-md italic my-3 text-subtitleGray">
               Via Pinterest
             </p>
@@ -165,11 +161,15 @@ export default function AutoUX() {
             <h3 className="font-secondary text-lg my-1 font-medium">
               Rivian's Take
             </h3>
-            <Image
-              src={rivianDogMode}
-              alt="rivian dog mode demo"
+            <video
               className="h-80 max-xl:h-auto max-xl:w-3/4 max-sm:w-full w-auto"
-            ></Image>
+              autoPlay
+              muted
+              loop
+            >
+              <source src="/assets/auto-ux/rivian-dog-mode.mp4" />
+              Your browser does not support the video tag...
+            </video>
             <p className="font-secondary font-light text-md italic my-3 text-subtitleGray">
               Via Joshua Bravado Mascarenas on Youtube
             </p>
@@ -313,11 +313,10 @@ export default function AutoUX() {
           This is what it would look like if someone applied brakes while
           driving our concept EV:
         </p>
-        <Image
-          src={regenBraking}
-          alt="Regenerative Braking Visualization"
-          className="mx-auto w-3/5 max-sm:w-full my-8"
-        ></Image>
+        <video className="mx-auto w-4/5 max-sm:w-full my-8" autoPlay muted loop>
+          <source src="/assets/auto-ux/regen-braking.mp4" />
+          Your browser does not support the video tag...
+        </video>
         <p className="font-secondary text-lg font-light my-1 text-justify">
           Through feedback from test users and GM experts, we were able to
           validate that this visualization was at least somewhat intuitive. We
@@ -400,10 +399,13 @@ export default function AutoUX() {
         </p>
         {hasWindow && (
           <div className="mx-auto w-3/5 max-sm:w-full">
-            <ReactPlayer width="100%" url="https://www.youtube.com/watch?t=51&v=QXJmoHPj_zo&feature=youtu.be" />
+            <ReactPlayer
+              width="100%"
+              url="https://www.youtube.com/watch?t=51&v=QXJmoHPj_zo&feature=youtu.be"
+            />
           </div>
         )}
-        
+
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Video Demonstrating the 'Add to Driver Display' Feature on the Chevy
           Blazer EV 2022 (Courtesy: GM's YouTube)
