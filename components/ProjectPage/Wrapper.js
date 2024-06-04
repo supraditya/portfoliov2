@@ -26,7 +26,7 @@ export default function Wrapper({ children }) {
   return (
     <>
       <Navbar />
-      <div className="px-10 md:px-32 leading-snug">{children}</div>
+      <div className="px-10 md:px-32 lg:px-72 leading-snug">{children}</div>
       <div className="flex justify-center py-4">
         <button
           className={`${

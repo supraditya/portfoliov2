@@ -3,6 +3,8 @@ import Wrapper from "../../components/ProjectPage/Wrapper";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import ReactPlayer from "react-player/youtube";
 // import fontncolor from "../../public/assets/cryptogods-anubis/font-and-colors.png";
 import projectImg from "../../public/assets/auto-ux/auto-ux.png";
@@ -56,11 +58,13 @@ export default function AutoUX() {
           label="Presentation"
         />
         <div className="py-4 my-2 md:my-4 rounded-md text-center flex flex-col max-md:items-center md:flex-row justify-around">
-          <Image
-            src={projectImg}
-            alt="auto ux header"
-            className="w-11/12 mt-5"
-          ></Image>
+          <Zoom>
+            <Image
+              src={projectImg}
+              alt="auto ux header"
+              className="w-11/12 mt-5"
+            ></Image>
+          </Zoom>
           {/* <Image
             src={fontncolor}
             alt="font and colors used"
@@ -83,11 +87,13 @@ export default function AutoUX() {
           new feature?”
         </p>
         <div className="w-11/12 mx-auto my-4 rounded-md text-center">
-          <Image
-            src={problem}
-            alt="problem statement slide"
-            className="mx-auto"
-          ></Image>
+          <Zoom>
+            <Image
+              src={problem}
+              alt="problem statement slide"
+              className="mx-auto"
+            ></Image>
+          </Zoom>
         </div>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Problem Statement for Mass-Market Vehicle Segment. Courtesy: General
@@ -98,7 +104,7 @@ export default function AutoUX() {
           solutions devised by tech giants such as Apple and Google, and GM
           themselves, and came up with the ideas depicted below.
         </p>
-        <h3 className="font-primary text-3xl mb-3 font-medium">Our Ideas</h3>
+        <h3 className="font-primary text-3xl my-3 font-medium">Our Ideas</h3>
         <h3 className="font-secondary text-2xl mb-1 font-semibold">
           1. Dog Mode
         </h3>
@@ -111,7 +117,13 @@ export default function AutoUX() {
           comfortably in a car, Dog Mode essentially does the following:
         </p>
         <div className="w-11/12 mx-auto my-4 rounded-md text-center">
-          <Image src={dogmode} alt="dog mode slide" className="mx-auto"></Image>
+          <Zoom>
+            <Image
+              src={dogmode}
+              alt="dog mode slide"
+              className="mx-auto"
+            ></Image>
+          </Zoom>
         </div>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           What is Dog Mode? Courtesy: General Motors
@@ -190,11 +202,13 @@ export default function AutoUX() {
           <source src="/assets/auto-ux/our-dog-mode-proto.mp4" />
           Your browser does not support the video tag...
         </video>
-        <Image
-          src={ourDogMode}
-          alt="our dog mode demo"
-          className="mx-auto"
-        ></Image>
+        <Zoom>
+          <Image
+            src={ourDogMode}
+            alt="our dog mode demo"
+            className="mx-auto"
+          ></Image>
+        </Zoom>
         <ul className="list-disc my-4 font-secondary text-lg font-light pl-8 text-justify">
           <li>
             In addition to the reassuring message, graphics and climate control
@@ -218,11 +232,13 @@ export default function AutoUX() {
           and are redirected to a web application. They can either send an
           anonymous 'nudge', or a custom message with photos.
         </p>
-        <Image
-          src={samaritan1}
-          alt="Samaritan view 1"
-          className="mx-auto w-3/5 max-sm:w-full"
-        ></Image>
+        <Zoom>
+          <Image
+            src={samaritan1}
+            alt="Samaritan view 1"
+            className="mx-auto w-3/5 max-sm:w-full"
+          ></Image>
+        </Zoom>
         <p className="font-secondary text-lg font-light text-justify">
           If they choose to send a custom message, they would have a text box
           and a 'take photos' button to send to the owner. The 'take photos'
@@ -230,20 +246,24 @@ export default function AutoUX() {
           Samaritan Mode are sent through the portal. This allows for
           minimization of spam.
         </p>
-        <Image
-          src={samaritan2}
-          alt="Samaritan view 2"
-          className="mx-auto w-3/5 max-sm:w-full"
-        ></Image>
+        <Zoom>
+          <Image
+            src={samaritan2}
+            alt="Samaritan view 2"
+            className="mx-auto w-3/5 max-sm:w-full"
+          ></Image>
+        </Zoom>
         <p className="font-secondary text-lg font-light text-justify">
           Once the Samaritan sends the message, the vehicle owner will receive a
           push notification from the companion smartphone app on their device.
         </p>
-        <Image
-          src={samaritan3}
-          alt="Samaritan view 3"
-          className="mx-auto w-3/5 max-sm:w-full"
-        ></Image>
+        <Zoom>
+          <Image
+            src={samaritan3}
+            alt="Samaritan view 3"
+            className="mx-auto w-3/5 max-sm:w-full"
+          ></Image>
+        </Zoom>
         <h3 className="font-secondary text-lg my-1 font-medium">
           Edge Case: Vehicle battery low / battery has run out
         </h3>
@@ -257,11 +277,13 @@ export default function AutoUX() {
           prior to battery drain to provide for ventilation for any pets inside
           of the vehicle at the time.
         </p>
-        <Image
-          src={batteryLow}
-          alt="Low vehicle battery notification"
-          className="mx-auto w-3/5 max-sm:w-full"
-        ></Image>
+        <Zoom>
+          <Image
+            src={batteryLow}
+            alt="Low vehicle battery notification"
+            className="mx-auto w-3/5 max-sm:w-full"
+          ></Image>
+        </Zoom>
         <h3 className="font-secondary text-2xl mb-1 font-semibold">
           2. Visualizing Regenerative Braking
         </h3>
@@ -456,16 +478,22 @@ export default function AutoUX() {
           menus and controls. This is what our vision looks like:
         </p>
         <div className="my-4 rounded-md text-center flex flex-wrap justify-center">
-          <Image
-            src={phoneApp1}
-            alt="Companion Smartphone app 1"
-            className="w-2/3 sm:w-1/4 mx-8 max-sm:my-4"
-          ></Image>
-          <Image
-            src={phoneApp2}
-            alt="Companion Smartphone app 2"
-            className="w-2/3 sm:w-1/4 mx-8 max-sm:my-4"
-          ></Image>
+          <div className="w-2/3 sm:w-1/4 mx-8 max-sm:my-4">
+            <Zoom>
+              <Image
+                src={phoneApp1}
+                alt="Companion Smartphone app 1"
+              ></Image>
+            </Zoom>
+          </div>
+          <div className="w-2/3 sm:w-1/4 mx-8 max-sm:my-4">
+            <Zoom>
+              <Image
+                src={phoneApp2}
+                alt="Companion Smartphone app 2"
+              ></Image>
+            </Zoom>
+          </div>
         </div>
         {/* <h3 className="font-secondary text-2xl mb-1 font-semibold">
           Bonus: Interactive Figma Prototype!
