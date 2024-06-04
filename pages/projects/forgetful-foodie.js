@@ -4,6 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import { useState, useEffect } from "react";
+import Zoom from "react-medium-image-zoom";
+// import ZoomVideo from "../../components/ProjectPage/ZoomVideo";
+import "react-medium-image-zoom/dist/styles.css";
+
 import ReactPlayer from "react-player/vimeo";
 import projectImg from "../../public/assets/forgetful-foodie/forgetful-foodie.png";
 import fontncolor from "../../public/assets/forgetful-foodie/font-and-colors.png";
@@ -64,17 +68,17 @@ export default function forgetfulFoodie() {
           icon={<FaFigma />}
           label="Prototype"
         />
-        <div className="py-4 my-2 md:my-4 rounded-md text-center bg-blue-200 flex flex-col max-md:items-center md:flex-row justify-around">
-          <Image
-            src={projectImg}
-            alt="forgetful foodie header"
-            className="w-4/5 md:w-2/5 mt-5"
-          ></Image>
-          <Image
-            src={fontncolor}
-            alt="font and colors used"
-            className="w-4/5 md:w-1/3 object-contain mt-5"
-          ></Image>
+        <div className="py-4 my-2 md:my-4 rounded-md text-center bg-blue-200 flex flex-col items-center md:flex-row justify-around">
+          <div className="w-4/5 md:w-2/5 mt-5">
+            <Zoom>
+              <Image src={projectImg} alt="forgetful foodie header"></Image>
+            </Zoom>
+          </div>
+          <div className="w-4/5 md:w-1/3 h-min mt-5">
+            <Zoom>
+              <Image src={fontncolor} alt="font and colors used"></Image>
+            </Zoom>
+          </div>
         </div>
         <Highlights
           summary="Forgetful Foodie was ideated and designed as part of our coursework with the Master of Science in Information (MSI) program at the University of Michigan, for the course “Introduction to Interaction Design”. I collaborated with two fellow graduate students to ideate and design a smartphone application to reduce food wastage by streamlining pantry and inventory management for the average household owner."
@@ -114,7 +118,9 @@ export default function forgetfulFoodie() {
           </li>
         </ul>
         <div className=" my-4 rounded-md text-center">
-          <Image src={poster} alt="poster" className="mx-auto"></Image>
+          <Zoom>
+            <Image src={poster} alt="poster" className="mx-auto"></Image>
+          </Zoom>
         </div>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Promotional Poster for Forgetful Foodie
@@ -213,19 +219,23 @@ export default function forgetfulFoodie() {
           our fast-paced daily lives. We began sketching out our findings, and
           ended up with the following scenarios:
         </p>
-        <div className=" my-4 rounded-md text-center ">
-          <Image src={storyboard1} alt="poster" className="mx-auto"></Image>
-        </div>
+        <Zoom>
+          <Image
+            src={storyboard1}
+            alt="poster"
+            className="mx-auto my-4 rounded-md text-center"
+          ></Image>
+        </Zoom>
         <p className="font-secondary font-light text-md text-center italic mb-6 text-subtitleGray">
           Scenario 1: Abby's Bananas
         </p>
-        <div className=" my-4 rounded-md text-center ">
+        <Zoom>
           <Image
             src={storyboard2}
             alt="poster"
-            className="mx-auto w-5/6"
+            className="mx-auto w-5/6 my-4 rounded-md text-center"
           ></Image>
-        </div>
+        </Zoom>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Scenario 2: Nathan's Dilemma
         </p>
@@ -319,38 +329,38 @@ export default function forgetfulFoodie() {
           </li>
         </ul>
         <h3 className="font-primary text-xl mb-1">Paper Prototypes</h3>
-        <div className=" my-4 rounded-md text-center flex flex-wrap justify-around">
-          <Image
-            src={paperproto1}
-            alt="paper prototype 1"
-            className="mx-auto w-2/3 sm:w-1/4"
-          ></Image>
-          <Image
-            src={paperproto2}
-            alt="paper prototype 2"
-            className="mx-auto w-2/3 sm:w-1/4"
-          ></Image>
+        <div className=" my-4 rounded-md text-center flex items-center flex-wrap justify-around">
+          <div className="w-2/3 sm:w-1/4">
+            <Zoom>
+              <Image src={paperproto1} alt="paper prototype 1"></Image>
+            </Zoom>
+          </div>
+          <div className="w-2/3 sm:w-1/4">
+            <Zoom>
+              <Image src={paperproto2} alt="paper prototype 2"></Image>
+            </Zoom>
+          </div>
         </div>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Flow 1: Pantry Health
         </p>
-        <div className="  my-4 rounded-md text-center ">
+        <Zoom>
           <Image
             src={paperproto3}
             alt="paper prototype 3"
-            className="mx-auto sm:w-3/5"
+            className="mx-auto sm:w-3/5 my-4 rounded-md"
           ></Image>
-        </div>
+        </Zoom>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Flow 2: Receipt Scanning
         </p>
-        <div className="  my-4 rounded-md text-center ">
+        <Zoom>
           <Image
             src={paperproto4}
             alt="paper prototype 4"
-            className="mx-auto sm:w-3/5"
+            className="mx-auto sm:w-3/5 my-4 rounded-md"
           ></Image>
-        </div>
+        </Zoom>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Flow 3: "Try a Recipe!"
         </p>
@@ -366,27 +376,27 @@ export default function forgetfulFoodie() {
           edit/delete options.
         </p>
         <div className="  my-4 rounded-md text-center  flex justify-around">
-          <Image
-            src={proto1}
-            alt="prototype 1"
-            className="mx-auto w-1/4"
-          ></Image>
-          <Image
-            src={proto2}
-            alt="prototype 2"
-            className="mx-auto w-1/4"
-          ></Image>
+          <div className="mx-auto w-1/4">
+            <Zoom>
+              <Image src={proto1} alt="prototype 1"></Image>
+            </Zoom>
+          </div>
+          <div className="mx-auto w-1/4">
+            <Zoom>
+              <Image src={proto2} alt="prototype 2"></Image>
+            </Zoom>
+          </div>
         </div>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Flow 1: Pantry Health
         </p>
-        <div className="  my-4 rounded-md text-center ">
+        <Zoom>
           <Image
             src={proto3}
             alt="prototype 3"
-            className="mx-auto w-4/5"
+            className="mx-auto w-4/5 my-4 rounded-md"
           ></Image>
-        </div>
+        </Zoom>
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Flow 2: Receipt Scanning
         </p>
@@ -407,31 +417,31 @@ export default function forgetfulFoodie() {
           Barcode Scanning
         </p>
         <div className="  my-4 rounded-md text-center  flex justify-around">
-          <Image
-            src={barcode1}
-            alt="barcode 1"
-            className="mx-auto w-1/4"
-          ></Image>
-          <Image
-            src={barcode2}
-            alt="barcode 2"
-            className="mx-auto w-1/4"
-          ></Image>
+          <div className="mx-auto w-1/4">
+            <Zoom>
+              <Image src={barcode1} alt="barcode 1"></Image>
+            </Zoom>
+          </div>
+          <div className="mx-auto w-1/4">
+            <Zoom>
+              <Image src={barcode2} alt="barcode 2"></Image>
+            </Zoom>
+          </div>
         </div>
         <p className="font-secondary font-light text-lg text-justify">
           and Item Recognition
         </p>
         <div className="  my-4 rounded-md text-center  flex justify-around">
-          <Image
-            src={itemRecog1}
-            alt="item recognition 1"
-            className="mx-auto w-1/4"
-          ></Image>
-          <Image
-            src={itemRecog2}
-            alt="item recognition 2"
-            className="mx-auto w-1/4"
-          ></Image>
+          <div className="mx-auto w-1/4">
+            <Zoom>
+              <Image src={itemRecog1} alt="item recognition 1"></Image>
+            </Zoom>
+          </div>
+          <div className="mx-auto w-1/4">
+            <Zoom>
+              <Image src={itemRecog2} alt="item recognition 2"></Image>
+            </Zoom>
+          </div>
         </div>
         <p className="font-secondary font-light text-lg text-justify">
           and finally, we also fleshed out the "Try a Recipe!" flow, providing
@@ -439,22 +449,22 @@ export default function forgetfulFoodie() {
           just look up 'All Recipes.' As the name suggests, will allow the user
           to create, share and browse through user-recipes from the community.
         </p>
-        <div className="  my-4 rounded-md text-center  flex justify-around">
-          <Image
-            src={recipe1}
-            alt="recipe prototype 1"
-            className="mx-auto w-1/4"
-          ></Image>
-          <Image
-            src={recipe2}
-            alt="recipe prototype 2"
-            className="mx-auto w-1/4"
-          ></Image>
-          <Image
-            src={recipe3}
-            alt="recipe prototype 3"
-            className="mx-auto w-1/4"
-          ></Image>
+        <div className="my-4 rounded-md text-center  flex justify-around">
+          <div className="mx-auto w-1/4">
+            <Zoom>
+              <Image src={recipe1} alt="recipe prototype 1"></Image>
+            </Zoom>
+          </div>
+          <div className="mx-auto w-1/4">
+            <Zoom>
+              <Image src={recipe2} alt="recipe prototype 2"></Image>
+            </Zoom>
+          </div>
+          <div className="mx-auto w-1/4">
+            <Zoom>
+              <Image src={recipe3} alt="recipe prototype 3"></Image>
+            </Zoom>
+          </div>
         </div>
         <p className="font-secondary font-light text-lg text-justify">
           These lofi frames were then given a splash of color, which gave us the
@@ -537,17 +547,17 @@ export default function forgetfulFoodie() {
               and secondary colors at most. Graph bar colors were switched out
               for more subtle and color blind-friendly alternatives.
             </li>
-            <div className="py-4 px-4 my-4 rounded-md text-center ">
-              <Image
-                src={revision1}
-                alt="revision 1"
-                className="mx-auto w-1/2 my-4"
-              ></Image>
-              <Image
-                src={revision2}
-                alt="revision 2"
-                className="mx-auto w-1/2 my-4"
-              ></Image>
+            <div className="py-4 px-4 my-4 rounded-md text-center">
+              <div className="mx-auto w-1/2 my-4">
+                <Zoom>
+                  <Image src={revision1} alt="revision 1"></Image>
+                </Zoom>
+              </div>
+              <div className="mx-auto w-1/2 my-4">
+                <Zoom>
+                  <Image src={revision2} alt="revision 2"></Image>
+                </Zoom>
+              </div>
             </div>
             <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
               Revision 1: Home Screen and Pantry Health Visualization
@@ -563,16 +573,16 @@ export default function forgetfulFoodie() {
               judgment, and made our visualization more intuitive.
             </li>
             <div className="py-4 px-4 my-4 rounded-md text-center ">
-              <Image
-                src={revision3}
-                alt="revision 3"
-                className="mx-auto w-1/2 my-4"
-              ></Image>
-              <Image
-                src={revision4}
-                alt="revision 4"
-                className="mx-auto w-1/2 my-4"
-              ></Image>
+              <div className="mx-auto w-1/2 my-4">
+                <Zoom>
+                  <Image src={revision3} alt="revision 3"></Image>
+                </Zoom>
+              </div>
+              <div className="mx-auto w-1/2 my-4">
+                <Zoom>
+                  <Image src={revision4} alt="revision 4"></Image>
+                </Zoom>
+              </div>
             </div>
             <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
               Revision 2: Home Screen and Pantry Health Visualization
@@ -586,12 +596,14 @@ export default function forgetfulFoodie() {
             seemed to clear up any ambiguity experienced by users during tests
             after the change.
           </li>
-          <div className="  my-4 rounded-md text-center ">
-            <Image
-              src={revision5}
-              alt="revision 5"
-              className="mx-auto h-2/4 w-auto"
-            ></Image>
+          <div className="my-4 rounded-md text-center ">
+            <Zoom>
+              <Image
+                src={revision5}
+                alt="revision 5"
+                className="mx-auto h-2/4 w-auto"
+              ></Image>
+            </Zoom>
           </div>
         </ul>
         <h3 className="font-primary text-3xl mb-1 font-medium">

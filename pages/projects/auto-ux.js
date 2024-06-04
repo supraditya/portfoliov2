@@ -7,7 +7,6 @@ import Zoom from "react-medium-image-zoom";
 import ZoomVideo from "../../components/ProjectPage/ZoomVideo";
 import "react-medium-image-zoom/dist/styles.css";
 import ReactPlayer from "react-player/youtube";
-// import fontncolor from "../../public/assets/cryptogods-anubis/font-and-colors.png";
 import projectImg from "../../public/assets/auto-ux/auto-ux.png";
 import Highlights from "../../components/ProjectPage/Highlights";
 import ActionButton from "../../components/ActionButton";
@@ -27,6 +26,7 @@ import Head from "next/head";
 export default function AutoUX() {
   // State to render ReactPlayer after window is loaded, to avoid HydrationError
   const [hasWindow, setHasWindow] = useState(false);
+  // States for custom ZoomVideo Component
   const [isZoomed, setIsZoomed] = useState(false);
   const [zoomVideoSrc, setZoomVideoSrc] = useState("");
   useEffect(() => {
@@ -88,7 +88,7 @@ export default function AutoUX() {
           summary="General Motors approached our cohort with a problem statement for each of their 3 vehicle segments: Mass-Market, Performance and Luxury. We picked the first one, met the stated requirements and then added a few ideas of our own, including intuitive gestures, visualizations to better convey EV-specific concepts, reimagined space-efficient climate controls and a twist on the traditional Dog/Pet Mode. We used advanced Figma prototyping techniques including component variants, variables and conditional flows."
           roles={["Interaction Designer", "Graphic Designer", "UX Designer"]}
           team={["Vivek Selvaraj"]}
-          timeline="Feb 2024 - Apr 2022"
+          timeline="Feb 2024 - Apr 2024"
           tools={["Figma"]}
         />
         <h3 className="font-primary text-3xl mb-1 font-medium">The Problem</h3>
@@ -170,10 +170,17 @@ export default function AutoUX() {
             <h3 className="font-secondary text-lg my-1 font-medium">
               Tesla's Take
             </h3>
-            <video className="h-80 max-xl:h-auto w-auto" autoPlay muted loop>
-              <source src="/assets/auto-ux/tesla-dog-mode.mp4" />
-              Your browser does not support the video tag...
-            </video>
+            <div
+              className="h-80 max-xl:h-auto w-auto cursor-zoom-in"
+              onClick={() =>
+                videoZoomHandler("/assets/auto-ux/tesla-dog-mode.mp4")
+              }
+            >
+              <video autoPlay muted loop>
+                <source src="/assets/auto-ux/tesla-dog-mode.mp4" />
+                Your browser does not support the video tag...
+              </video>
+            </div>
             <p className="font-secondary font-light text-md italic my-3 text-subtitleGray">
               Via Pinterest
             </p>
@@ -186,15 +193,18 @@ export default function AutoUX() {
             <h3 className="font-secondary text-lg my-1 font-medium">
               Rivian's Take
             </h3>
-            <video
-              className="h-80 max-xl:h-auto max-xl:w-3/4 max-sm:w-full w-auto"
-              autoPlay
-              muted
-              loop
+            <div
+              className="h-80 max-xl:h-auto max-xl:w-3/4 max-sm:w-full w-auto cursor-zoom-in"
+              onClick={() =>
+                videoZoomHandler("/assets/auto-ux/rivian-dog-mode.mp4")
+              }
             >
-              <source src="/assets/auto-ux/rivian-dog-mode.mp4" />
-              Your browser does not support the video tag...
-            </video>
+              <video autoPlay muted loop>
+                <source src="/assets/auto-ux/rivian-dog-mode.mp4" />
+                Your browser does not support the video tag...
+              </video>
+            </div>
+
             <p className="font-secondary font-light text-md italic my-3 text-subtitleGray">
               Via Joshua Bravado Mascarenas on Youtube
             </p>
@@ -494,7 +504,9 @@ export default function AutoUX() {
         </p>
         <div
           className="mx-auto w-5/6 my-6 max-sm:w-full cursor-zoom-in"
-          onClick={() => videoZoomHandler("/assets/auto-ux/beam-to-cluster.mp4")}
+          onClick={() =>
+            videoZoomHandler("/assets/auto-ux/beam-to-cluster.mp4")
+          }
         >
           <video autoPlay muted loop>
             <source src="/assets/auto-ux/beam-to-cluster.mp4" />
