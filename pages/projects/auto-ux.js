@@ -2,8 +2,9 @@ import Header from "../../components/ProjectPage/Header";
 import Wrapper from "../../components/ProjectPage/Wrapper";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Children } from "react";
 import Zoom from "react-medium-image-zoom";
+import ZoomVideo from "../../components/ProjectPage/ZoomVideo";
 import "react-medium-image-zoom/dist/styles.css";
 import ReactPlayer from "react-player/youtube";
 // import fontncolor from "../../public/assets/cryptogods-anubis/font-and-colors.png";
@@ -26,11 +27,17 @@ import Head from "next/head";
 export default function AutoUX() {
   // State to render ReactPlayer after window is loaded, to avoid HydrationError
   const [hasWindow, setHasWindow] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [zoomVideoSrc, setZoomVideoSrc] = useState("");
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHasWindow(true);
     }
   }, []);
+  const videoZoomHandler = (videoSrc) => {
+    setIsZoomed(true);
+    setZoomVideoSrc(videoSrc);
+  };
   return (
     <>
       <Head>
@@ -42,7 +49,13 @@ export default function AutoUX() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
       </Head>
+
       <Wrapper>
+        <ZoomVideo
+          src={zoomVideoSrc}
+          isZoomed={isZoomed}
+          setIsZoomed={setIsZoomed}
+        />
         <Header
           title="Auto UX Concept for General Motors"
           subtitle="Making mass-market Electric Vehicles (EVs) more approachable through intuitive animations, considerate interactions and a reimagined 'Dog Mode'"
@@ -198,10 +211,18 @@ export default function AutoUX() {
           After combining ideas and principles from these implementations (and
           adding an idea of our own) we came up our spin on the feature.
         </p>
-        <video className="mx-auto w-4/5 max-sm:w-11/12" autoPlay muted loop>
-          <source src="/assets/auto-ux/our-dog-mode-proto.mp4" />
-          Your browser does not support the video tag...
-        </video>
+        <div
+          className="mx-auto w-4/5 max-sm:w-11/12 cursor-zoom-in"
+          onClick={() =>
+            videoZoomHandler("/assets/auto-ux/our-dog-mode-proto.mp4")
+          }
+        >
+          <video autoPlay muted loop>
+            <source src="/assets/auto-ux/our-dog-mode-proto.mp4" />
+            Your browser does not support the video tag...
+          </video>
+        </div>
+
         <Zoom>
           <Image
             src={ourDogMode}
@@ -335,10 +356,16 @@ export default function AutoUX() {
           This is what it would look like if someone applied brakes while
           driving our concept EV:
         </p>
-        <video className="mx-auto w-4/5 max-sm:w-full my-8" autoPlay muted loop>
-          <source src="/assets/auto-ux/regen-braking.mp4" />
-          Your browser does not support the video tag...
-        </video>
+        <div
+          className="mx-auto w-4/5 max-sm:w-full my-8 cursor-zoom-in"
+          onClick={() => videoZoomHandler("/assets/auto-ux/regen-braking.mp4")}
+        >
+          <video autoPlay muted loop>
+            <source src="/assets/auto-ux/regen-braking.mp4" />
+            Your browser does not support the video tag...
+          </video>
+        </div>
+
         <p className="font-secondary text-lg font-light my-1 text-justify">
           Through feedback from test users and GM experts, we were able to
           validate that this visualization was at least somewhat intuitive. We
@@ -375,10 +402,16 @@ export default function AutoUX() {
           In our pursuit of meeting these goals, we drew some inspiration from
           iOS's Control Center:
         </p>
-        <video className="mx-auto w-1/5 max-sm:w-3/5" autoPlay muted loop>
-          <source src="/assets/auto-ux/ios-drag.mp4" />
-          Your browser does not support the video tag...
-        </video>
+        <div
+          className="mx-auto w-1/5 max-sm:w-3/5 cursor-zoom-in"
+          onClick={() => videoZoomHandler("/assets/auto-ux/ios-drag.mp4")}
+        >
+          <video autoPlay muted loop>
+            <source src="/assets/auto-ux/ios-drag.mp4" />
+            Your browser does not support the video tag...
+          </video>
+        </div>
+
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Courtesy: Rhea Mirani
         </p>
@@ -387,10 +420,16 @@ export default function AutoUX() {
           when a user interacts would save on space otherwise required for
           buttons to manipulate said controls.
         </p>
-        <video className="mx-auto w-3/5 my-6 max-sm:w-full" autoPlay muted loop>
-          <source src="/assets/auto-ux/hvac-demo.mp4" />
-          Your browser does not support the video tag...
-        </video>
+        <div
+          className="mx-auto w-3/5 my-6 max-sm:w-full cursor-zoom-in"
+          onClick={() => videoZoomHandler("/assets/auto-ux/hvac-demo.mp4")}
+        >
+          <video autoPlay muted loop>
+            <source src="/assets/auto-ux/hvac-demo.mp4" />
+            Your browser does not support the video tag...
+          </video>
+        </div>
+
         <p className="font-secondary text-lg font-light my-1 text-justify">
           We also prototyped draggable components for more discrete values (such
           as incremental levels and non-numerical inputs)
@@ -453,10 +492,16 @@ export default function AutoUX() {
         <p className="font-secondary text-lg font-light my-1 text-justify">
           This is why we came up with the following flow:
         </p>
-        <video className="mx-auto w-5/6 my-6 max-sm:w-full" autoPlay muted loop>
-          <source src="/assets/auto-ux/beam-to-cluster.mp4" />
-          Your browser does not support the video tag...
-        </video>
+        <div
+          className="mx-auto w-5/6 my-6 max-sm:w-full cursor-zoom-in"
+          onClick={() => videoZoomHandler("/assets/auto-ux/beam-to-cluster.mp4")}
+        >
+          <video autoPlay muted loop>
+            <source src="/assets/auto-ux/beam-to-cluster.mp4" />
+            Your browser does not support the video tag...
+          </video>
+        </div>
+
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Scenario: You want to 'beam' the navigation widget to your instrument
           cluster, followed by music controls.
@@ -480,18 +525,12 @@ export default function AutoUX() {
         <div className="my-4 rounded-md text-center flex flex-wrap justify-center">
           <div className="w-2/3 sm:w-1/4 mx-8 max-sm:my-4">
             <Zoom>
-              <Image
-                src={phoneApp1}
-                alt="Companion Smartphone app 1"
-              ></Image>
+              <Image src={phoneApp1} alt="Companion Smartphone app 1"></Image>
             </Zoom>
           </div>
           <div className="w-2/3 sm:w-1/4 mx-8 max-sm:my-4">
             <Zoom>
-              <Image
-                src={phoneApp2}
-                alt="Companion Smartphone app 2"
-              ></Image>
+              <Image src={phoneApp2} alt="Companion Smartphone app 2"></Image>
             </Zoom>
           </div>
         </div>

@@ -22,8 +22,15 @@ module.exports = {
       code: ["Inconsolata", "monospace"],
     },
     extend: {
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
       animation:{
-        'bounce-slow':'bounce 3s linear 3s infinite'
+        'bounce-slow':'bounce 3s linear 3s infinite',
+        'fade-in': 'fadeIn 0.5s ease-out forwards'
       },
     },
   },
