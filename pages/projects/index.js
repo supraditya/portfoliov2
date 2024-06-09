@@ -100,6 +100,13 @@ export default function Projects() {
           />
           <ProjectCard
             currentTab={projectTab}
+            title="R.E.T.A On-the-Go!"
+            image="reta"
+            link="reta"
+            domains={["All", "Case Study", "Design", "Development"]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
             title="UpTap"
             image="uptap"
             link="uptap"
@@ -118,6 +125,7 @@ export default function Projects() {
               "Augmented Reality",
             ]}
           />
+
           <ProjectCard
             currentTab={projectTab}
             title="LinkSpace"
@@ -168,7 +176,7 @@ export default function Projects() {
             title="The Portfolio Journey"
             image="portfolio-website"
             link="portfolio-website"
-            domains={["Featured", "All", "Case Study", "Design", "Development"]}
+            domains={["All", "Case Study", "Design", "Development"]}
           />
         </div>
       </div>
