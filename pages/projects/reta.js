@@ -43,7 +43,7 @@ export default function Reta() {
           link="https://quartz-vibraphone-0f2.notion.site/RETA-On-The-Go-The-future-of-effort-tracking-for-Michigan-Medicine-s-clinical-staff-147f2b0843a84ea58b3cccc1479f5d3b"
           label="Link to Complete Case Study"
         />
-        <div className="py-4 my-2 pr-10 md:my-4 rounded-md text-center bg-blue-200 flex flex-col items-center md:flex-row justify-between">
+        <div className="py-4 my-2 md:pr-10 md:my-4 rounded-md text-center bg-blue-200 flex flex-col items-center md:flex-row justify-between">
           <div className="w-4/5 md:w-1/2 mt-5">
             <Zoom>
               <Image src={projectImg} alt="RETA header"></Image>

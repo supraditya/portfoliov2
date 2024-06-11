@@ -68,7 +68,7 @@ export default function forgetfulFoodie() {
           icon={<FaFigma />}
           label="Prototype"
         />
-        <div className="py-4 my-2 md:my-4 pr-10 rounded-md text-center bg-blue-200 flex flex-col items-center md:flex-row justify-between">
+        <div className="py-4 my-2 md:my-4 md:pr-12 rounded-md text-center bg-blue-200 flex flex-col items-center md:flex-row justify-between">
           <div className="w-4/5 md:w-1/2 mt-5">
             <Zoom>
               <Image src={projectImg} alt="forgetful foodie header"></Image>
