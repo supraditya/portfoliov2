@@ -6,13 +6,11 @@ import { useState } from "react";
 export default function ProjectCard(props) {
   const [hover, setHover] = useState(false);
   return (
-    <Link
-      href={`projects/${props.link}`}
-      alt="Link to project"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      <div
+      <Link
+        href={`projects/${props.link}`}
+        alt="Link to project"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
         className={`min-w-sm min-h-[400px] flex flex-col justify-between rounded-md shadow-xl p-4 w-full md:max-w-lg mt-4 ${
           props.domains.includes(props.currentTab) ? "" : "hidden"
         }`}
@@ -38,7 +36,6 @@ export default function ProjectCard(props) {
             View
           </button>
         </div>
-      </div>
-    </Link>
+      </Link>
   );
 }
