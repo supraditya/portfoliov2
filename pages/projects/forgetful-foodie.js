@@ -482,7 +482,7 @@ export default function forgetfulFoodie() {
             />
           </div>
         )}
-        <h3 className="font-primary font-medium text-3xl mb-1 font-medium">
+        <h3 className="font-primary text-3xl mb-1 font-medium">
           Phase 3: Feedback and Revisions
         </h3>
         <h3 className="font-primary font-medium text-xl mb-1">
