@@ -16,7 +16,7 @@ module.exports = {
       subtitleGray: '#686767',
     },
     fontFamily:{
-      primary: ["Orbitron", "sans-serif"],
+      primary: ["Montserrat"],
       secondary: ["Nunito Sans", "sans-serif"],
       writing: ["Shadows Into Light Two", "cursive"],
       code: ["Inconsolata", "monospace"],

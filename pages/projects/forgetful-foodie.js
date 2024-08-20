@@ -87,7 +87,7 @@ export default function forgetfulFoodie() {
           timeline="Aug 2022 - Dec 2022"
           tools={["Figma", "Adobe Illustrator"]}
         />
-        <h3 className="font-primary text-xl mb-1">The Problem</h3>
+        <h3 className="font-primary font-medium text-xl mb-1">The Problem</h3>
         <p className="font-secondary text-lg font-light text-justify">
           Household food wastage has been a significant problem globally.
           According to the American Journal of Agricultural Economics, the
@@ -104,7 +104,7 @@ export default function forgetfulFoodie() {
           foods in their pantry without wastage, while simultaneously
           alleviating some of the mental burden of managing a household?
         </p>
-        <h3 className="font-primary text-xl mb-1">Our Initial Solution</h3>
+        <h3 className="font-primary font-medium text-xl mb-1">Our Initial Solution</h3>
         <p className="font-secondary text-lg font-light text-justify">
           This conundrum led us to come up with Forgetful Foodie: a smartphone
           application designed to help users consume all their perishable food
@@ -174,7 +174,7 @@ export default function forgetfulFoodie() {
             </p>
           </li>
         </ul>
-        <h3 className="font-primary text-xl mb-1">Insights Gathered</h3>
+        <h3 className="font-primary font-medium text-xl mb-1">Insights Gathered</h3>
         <p className="font-secondary text-lg font-light text-justify">
           All in all, people rarely used dedicated applications to manage their
           pantry. They either took notes, or kept a mental note of what they had
@@ -212,7 +212,7 @@ export default function forgetfulFoodie() {
           user scenarios, finalizing application features and flow, and
           collecting and reviewing peer and user feedback.
         </p>
-        <h3 className="font-primary text-xl mb-1">Storyboards</h3>
+        <h3 className="font-primary font-medium text-xl mb-1">Storyboards</h3>
         <p className="font-secondary font-light text-lg">
           After interviewing our target demographic, we were able to get a
           better picture of why it tended to be so hard to avoid food wastage in
@@ -257,7 +257,7 @@ export default function forgetfulFoodie() {
             waste!
           </li>
         </ul>
-        <h3 className="font-primary text-xl mb-1">Pain Points</h3>
+        <h3 className="font-primary font-medium text-xl mt-5 mb-1">Pain Points</h3>
         <p className="font-secondary font-light text-lg">
           Based on the feedback we had received from the initial target users,
           we were determined to make forgetful foodie as convenient to use and
@@ -284,8 +284,8 @@ export default function forgetfulFoodie() {
           We attempted to solve these problems through brainstorming appropriate
           features, which led to coming up with:
         </p>
-        <ul className="font-secondary text-lg font-light  text-justify mt-1">
-          <li>
+        <ol className="font-secondary text-lg font-light  text-justify mt-1 list-decimal pl-8">
+          <li className="my-2">
             <p className="italic mb-2 font-secondary font-medium">
               Alternative methods to update inventory such as receipt scanning,
               barcode scanning, item recognition
@@ -297,7 +297,7 @@ export default function forgetfulFoodie() {
               into forgetful foodie before they even get to stocking it.
             </p>
           </li>
-          <li className="mt-2">
+          <li className="my-2">
             <p className="italic mb-2 font-secondary font-medium">
               User-curated recipes that only display recipes to a user if they
               have most or all of the ingredients listed
@@ -327,8 +327,8 @@ export default function forgetfulFoodie() {
               the a lofi prototype of the UI through paper prototyping.
             </p>
           </li>
-        </ul>
-        <h3 className="font-primary text-xl mb-1">Paper Prototypes</h3>
+        </ol>
+        <h3 className="font-primary font-medium text-xl mt-5 mb-1">Paper Prototypes</h3>
         <div className=" my-4 rounded-md text-center flex items-center flex-wrap justify-around">
           <div className="w-2/3 sm:w-1/4">
             <Zoom>
@@ -364,18 +364,18 @@ export default function forgetfulFoodie() {
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Flow 3: "Try a Recipe!"
         </p>
-        <p className="mb-2 font-secondary text-lg">
+        <p className="mt-8 font-secondary text-lg">
           We used these sketches as a guideline to base our digital wireframes'
           layout on.
         </p>
-        <p className="font-secondary text-lg text-justify">
+        <p className="font-secondary mb-8 text-lg text-justify">
           We decided that showing the quantity of a pantry item left, along with
           a countdown to its expiration date would require at least two graphs
           side-by-side. <br></br> Additionally, clicking on a particular item
           should let the user fetch detailed information about it, along with
           edit/delete options.
         </p>
-        <div className="  my-4 rounded-md text-center  flex justify-around">
+        <div className="my-8 rounded-md text-center flex justify-around">
           <div className="mx-auto w-1/4">
             <Zoom>
               <Image src={proto1} alt="prototype 1"></Image>
@@ -400,7 +400,7 @@ export default function forgetfulFoodie() {
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           Flow 2: Receipt Scanning
         </p>
-        <p className="font-secondary font-light text-lg text-justify">
+        <p className="font-secondary mt-8 font-light text-lg text-justify">
           We decided that the application would have 3 menus:
         </p>
         <ul className="pl-8 list-disc text-lg font-secondary font-light text-justify">
@@ -413,7 +413,7 @@ export default function forgetfulFoodie() {
             update their pantry items, such as:
           </li>
         </ul>
-        <p className="font-secondary font-light text-lg text-justify">
+        <p className="font-secondary font-medium text-lg text-justify">
           Barcode Scanning
         </p>
         <div className="  my-4 rounded-md text-center  flex justify-around">
@@ -428,10 +428,10 @@ export default function forgetfulFoodie() {
             </Zoom>
           </div>
         </div>
-        <p className="font-secondary font-light text-lg text-justify">
-          and Item Recognition
+        <p className="font-secondary font-medium text-lg text-justify">
+          <span className="font-light">and</span> Item Recognition
         </p>
-        <div className="  my-4 rounded-md text-center  flex justify-around">
+        <div className=" mt-4 mb-8 rounded-md text-center flex justify-around">
           <div className="mx-auto w-1/4">
             <Zoom>
               <Image src={itemRecog1} alt="item recognition 1"></Image>
@@ -443,13 +443,13 @@ export default function forgetfulFoodie() {
             </Zoom>
           </div>
         </div>
-        <p className="font-secondary font-light text-lg text-justify">
+        <p className="font-secondary my-8 font-light text-lg text-justify">
           and finally, we also fleshed out the "Try a Recipe!" flow, providing
           the user the option to browse recipes based on their inventory, or
           just look up 'All Recipes.' As the name suggests, will allow the user
           to create, share and browse through user-recipes from the community.
         </p>
-        <div className="my-4 rounded-md text-center  flex justify-around">
+        <div className="my-8 rounded-md text-center  flex justify-around">
           <div className="mx-auto w-1/4">
             <Zoom>
               <Image src={recipe1} alt="recipe prototype 1"></Image>
@@ -472,7 +472,7 @@ export default function forgetfulFoodie() {
           what works best, which resulted in the following prototype
         </p>
         {hasWindow && (
-          <div className="py-2  my-4 rounded-md text-center  flex justify-around">
+          <div className="py-2 my-8 rounded-md text-center  flex justify-around">
             <ReactPlayer
               url="https://vimeo.com/772048766"
               loop={true}
@@ -482,10 +482,10 @@ export default function forgetfulFoodie() {
             />
           </div>
         )}
-        <h3 className="font-primary text-3xl mb-1 font-medium">
+        <h3 className="font-primary font-medium text-3xl mb-1 font-medium">
           Phase 3: Feedback and Revisions
         </h3>
-        <h3 className="font-primary text-xl mb-1">
+        <h3 className="font-primary font-medium text-xl mb-1">
           Feedback on Initial Prototype
         </h3>
         <p className="font-secondary font-light text-lg text-justify">
@@ -535,8 +535,8 @@ export default function forgetfulFoodie() {
             followed by different elements underneath that.
           </p>
         </ul>
-        <h3 className="font-primary text-xl mb-1">Revisions</h3>
-        <ul className="pl-8 list-disc text-lg font-secondary font-light text-justify">
+        <h3 className="font-primary font-medium text-xl my-4">Revisions</h3>
+        <ul className="pl-8 list-decimal text-lg font-secondary font-light text-justify">
           <li>
             To address the problem 1, we went through two iterations to reach a
             solution:
@@ -548,12 +548,12 @@ export default function forgetfulFoodie() {
               for more subtle and color blind-friendly alternatives.
             </li>
             <div className="py-4 px-4 my-4 rounded-md text-center">
-              <div className="mx-auto w-1/2 my-4">
+              <div className="mx-auto w-1/2 mt-4">
                 <Zoom>
                   <Image src={revision1} alt="revision 1"></Image>
                 </Zoom>
               </div>
-              <div className="mx-auto w-1/2 my-4">
+              <div className="mx-auto w-1/2 mt-8 mb-4">
                 <Zoom>
                   <Image src={revision2} alt="revision 2"></Image>
                 </Zoom>
@@ -596,7 +596,7 @@ export default function forgetfulFoodie() {
             seemed to clear up any ambiguity experienced by users during tests
             after the change.
           </li>
-          <div className="my-4 rounded-md text-center ">
+          <div className="my-8 rounded-md text-center">
             <Zoom>
               <Image
                 src={revision5}
@@ -632,14 +632,14 @@ export default function forgetfulFoodie() {
             />
           </div>
         )}
-        <h3 className="font-primary text-xl mb-1">Future Scope</h3>
+        <h3 className="font-primary font-medium text-xl mb-1">Future Scope</h3>
         <p className="font-secondary font-light text-lg text-justify mb-1.5">
           If we get the opportunity to further develop this prototype, we would
           love to focus more on the specifics of recipe submission and curation,
           and any new features that could improve the user's experience in that
           sphere.
         </p>
-        <h3 className="font-primary text-xl mb-1">Reflections</h3>
+        <h3 className="font-primary font-medium text-xl mb-1">Reflections</h3>
         <p className="font-secondary font-light text-lg text-justify mb-1.5">
           This is one of my first complete Interaction Design projects, and
           thanks to the course structure, we were able to delve into the entire

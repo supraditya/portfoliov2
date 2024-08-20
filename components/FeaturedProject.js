@@ -27,7 +27,7 @@ export default function FeaturedProject(props) {
               props.flow === "right" ? "md:float-right" : ""
             }`}
           >
-            <p className="font-primary text-2xl md:text-5xl mb-0.5 md:mb-2">
+            <p className="font-primary font-light text-2xl md:text-5xl mb-0.5 md:mb-2">
               {props.title}
             </p>
             <div className="font-secondary font-medium text-lg md:text-xl">
