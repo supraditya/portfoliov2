@@ -60,7 +60,7 @@ export default function Home() {
         <div className="px-8 md:px-32 flex flex-col max-md:justify-center pt-2 items-start relative">
           <div className="h-[67vh] md:h-[62vh] my-auto pt-16 flex flex-col justify-center">
             <Slide triggerOnce>
-              <div className="hidden md:block h-[600px] w-[600px] w-100 -translate-x-[82.5%] -translate-y-[80.5%] md:-translate-x-[70%] md:-translate-y-[66%] border-r-2 border-b-2 border-figmaBlue border-dotted absolute"></div>
+              <div className="hidden md:block h-[600px] w-[600px] w-100 -translate-x-[82.5%] -translate-y-[80.5%] md:-translate-x-[73%] md:-translate-y-[66%] border-r-2 border-b-2 border-figmaBlue border-dotted absolute"></div>
             </Slide>
 
             <p className="font-secondary text-2xl md:text-4xl ml-0.5 md:ml-1 mb-2 md:mb-4">
