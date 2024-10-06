@@ -57,6 +57,12 @@ export default function forgetfulFoodie() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
+        <meta property="og:url" content="https://www.supraditya.com/projects/forgetful-foodie" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://www.supraditya.com/assets/forgetful-foodie/forgetful-foodie.png"
+        />
       </Head>
       <Wrapper>
         <Header

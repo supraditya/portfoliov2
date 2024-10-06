@@ -88,9 +88,8 @@ export default function About() {
             </a>
           </div>
           <p className="text-base font-secondary text-justify mb-1.5">
-            Heyyo! My name's Aditya Menon, and I'm currently a{" "}
-            <strong> second-year grad student </strong> at the University of
-            Michigan, studying UX and User-Centered Agile Development.
+            Heyyo! My name's Aditya Menon, and I recently graduated from the University of
+            Michigan with a Master's in Information Science, where I focused on <strong>User Experience (UX) Research and User-Centered Agile Development</strong>.
           </p>
           <p className="text-base font-secondary text-justify mb-1.5">
             I <strong> majored in Computer Science </strong> back in my

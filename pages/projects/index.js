@@ -47,18 +47,6 @@ export default function Projects() {
           >
             Featured
           </button>
-
-          <button
-            aria-label="Filter and only show design projects"
-            className={`${
-              projectTab === "Design" ? "bg-black text-white" : ""
-            } mx-2 px-1.5 py-1 rounded-md`}
-            onClick={() => {
-              handleTabChange("Design");
-            }}
-          >
-            Design
-          </button>
           <button
             aria-label="Filter and only show development projects"
             className={`${
@@ -69,6 +57,17 @@ export default function Projects() {
             }}
           >
             Development
+          </button>
+          <button
+            aria-label="Filter and only show design projects"
+            className={`${
+              projectTab === "Design" ? "bg-black text-white" : ""
+            } mx-2 px-1.5 py-1 rounded-md`}
+            onClick={() => {
+              handleTabChange("Design");
+            }}
+          >
+            Design
           </button>
           <button
             aria-label="Filter and only show case studies"
@@ -86,6 +85,29 @@ export default function Projects() {
         <div className="mt-4 sm:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 justify-start">
           <ProjectCard
             currentTab={projectTab}
+            title="UpTap"
+            image="uptap"
+            link="uptap"
+            domains={["All", "Development"]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
+            title="R.E.T.A On-the-Go!"
+            image="reta"
+            link="reta"
+            domains={["Featured", "All", "Case Study", "Design", "Development"]}
+          />
+
+          <ProjectCard
+            currentTab={projectTab}
+            title="LinkSpace"
+            image="linkspace"
+            link="linkspace"
+            domains={["All", "Development"]}
+          />
+
+          <ProjectCard
+            currentTab={projectTab}
             title="Auto UX - General Motors"
             image="auto-ux"
             link="auto-ux"
@@ -100,38 +122,10 @@ export default function Projects() {
           />
           <ProjectCard
             currentTab={projectTab}
-            title="R.E.T.A On-the-Go!"
-            image="reta"
-            link="reta"
-            domains={["All", "Case Study", "Design", "Development"]}
-          />
-          <ProjectCard
-            currentTab={projectTab}
-            title="UpTap"
-            image="uptap"
-            link="uptap"
-            domains={["All", "Development"]}
-          />
-          <ProjectCard
-            currentTab={projectTab}
             title="ARiadne"
             image="ariadne"
             link="ariadne"
-            domains={[
-              "Featured",
-              "All",
-              "Case Study",
-              "Design",
-              "Augmented Reality",
-            ]}
-          />
-
-          <ProjectCard
-            currentTab={projectTab}
-            title="LinkSpace"
-            image="linkspace"
-            link="linkspace"
-            domains={["All", "Development"]}
+            domains={["All", "Case Study", "Design", "Augmented Reality"]}
           />
 
           <ProjectCard

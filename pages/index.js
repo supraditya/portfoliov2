@@ -118,25 +118,25 @@ export default function Home() {
               description="A full-fledged UI for Mass-Market Automobiles with humble peripherals."
             />
             <FeaturedProject
-              title="Forgetful Foodie"
-              domains={["All", "Case Study", "Design"]}
-              flow="right"
-              link="forgetful-foodie"
-              image="forgetful-foodie"
-              description="A kitchen pantry tracking and recipe-curation solution for the household."
-            />
-            <FeaturedProject
-              title="ARiadne"
+              title="R.E.T.A On-The-Go!"
               domains={[
                 "All",
                 "Case Study",
-                "Interaction Design",
-                "Augmented Reality",
+                "UX Research",
+                "User-Centered Agile Development",
               ]}
+              flow="right"
+              link="reta"
+              image="reta"
+              description="Streamlining the 'administrative' part of Healthcare for Individuals pushing the boundaries of Modern Medicine."
+            />
+            <FeaturedProject
+              title="Forgetful Foodie"
+              domains={["All", "Case Study", "Design"]}
               flow="left"
-              link="ariadne"
-              image="ariadne"
-              description="An Augmented Reality system to navigate even the most labyrinthine libraries."
+              link="forgetful-foodie"
+              image="forgetful-foodie"
+              description="A kitchen pantry tracking and recipe-curation solution for the household."
             />
 
             <p className="font-secondary text-center mx-auto text-lg">

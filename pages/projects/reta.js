@@ -33,11 +33,17 @@ export default function Reta() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
+        <meta property="og:url" content="https://www.supraditya.com/projects/reta" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://www.supraditya.com/assets/reta/reta.png"
+        />
       </Head>
       <Wrapper>
         <Header
           title="R.E.T.A On-the-Go!"
-          subtitle="A mobile solution to streamline the 'administrative' part of Healthcare."
+          subtitle="Streamlining the 'administrative' part of Healthcare for Individuals pushing the boundaries of Modern Medicine."
         />
         <ActionButton
           link="https://quartz-vibraphone-0f2.notion.site/RETA-On-The-Go-The-future-of-effort-tracking-for-Michigan-Medicine-s-clinical-staff-147f2b0843a84ea58b3cccc1479f5d3b"

@@ -18,6 +18,12 @@ export default function IeeeCsVit() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
+        <meta property="og:url" content="https://www.supraditya.com/projects/ieee-cs-vit" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://www.supraditya.com/assets/ieee-cs-vit/ieee-cs-vit.png"
+        />
       </Head>
       <Wrapper>
         <Header
