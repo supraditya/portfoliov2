@@ -27,10 +27,33 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        commentExpandText:{
+          '0%':{ width: '0',},
+          '100%':{ width: '100%'},
+        },
+        commentExpandImageMargin: {
+          '0%':{ marginRight: '0'},
+          '100%':{ marginRight: '0.625rem'},
+        },
+        commentExpandBubblePadding:{
+          '0%':{ padding: '0.25rem', width: '2.75rem', height: "2.75rem"},
+          '100%':{ padding: '1.5rem', width: '24rem', height: "8rem"},
+        },
+        commentExpandBubblePaddingMobile:{
+          '0%':{ padding: '0.25rem', width: '2.75rem', height: "2.75rem"},
+          '100%':{ padding: '1.5rem', width: '21rem', height: "8rem"},
+        }
       },
       animation:{
         'bounce-slow':'bounce 3s linear 3s infinite',
-        'fade-in': 'fadeIn 0.5s ease-out forwards'
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'comment-text-fade-in': 'commentExpandText 0.3s ease-in forwards',
+        'comment-expand-image': 'commentExpandImageMargin 0.3s linear forwards',
+        'comment-expand-bubble': 'commentExpandBubblePadding 0.3s ease-in forwards',
+        'comment-expand-bubble-mobile': 'commentExpandBubblePaddingMobile 0.3s ease-in forwards'
+      },
+      animationDelay: {
+        '2s': '2s', // Add a 2-second delay
       },
     },
   },
