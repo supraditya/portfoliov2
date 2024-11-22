@@ -97,6 +97,22 @@ export default function Navbar() {
         >
           About
         </Link>
+        {/* <Link
+          href="https://medium.com/@aditya300100"
+          target="_blank"
+          rel="noreferrer"
+          className="mx-4 text-lg flex items-center hover:border-b-2 border-black"
+        >
+          Articles <BiLinkExternal className="mt-0.5 ml-1" />
+        </Link>
+        <Link
+          href="https://www.npmjs.com/~supraditya"
+          target="_blank"
+          rel="noreferrer"
+          className="mx-4 text-lg flex items-center hover:border-b-2 border-black"
+        >
+          Open-Source <BiLinkExternal className="mt-0.5 ml-1" />
+        </Link> */}
         <Link
           href={RESUME_LINK}
           target="_blank"

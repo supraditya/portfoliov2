@@ -4,10 +4,11 @@ import Link from "next/link";
 import {
   FaLinkedin,
   FaGithub,
-  FaInstagram,
-  FaYoutube,
-  FaSoundcloud,
+  // FaYoutube,
+  // FaSoundcloud,
+  FaMediumM,
 } from "react-icons/fa";
+import { SiNpm } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
 import { BiLinkExternal } from "react-icons/bi";
 import { RESUME_LINK } from "../ResumeLink";
@@ -62,16 +63,26 @@ export default function Footer() {
             </span>
           </a>
           <a
-            href="https://instagram.com/menon_chala_gaya"
+            href="https://npmjs.com/~supraditya"
             target="_blank"
             rel="noreferrer"
-            aria-label="Link to Aditya Menon's instagram"
+            aria-label="Link to Aditya Menon's npm profile"
           >
             <span className="text-3xl text-white">
-              <FaInstagram />
+              <SiNpm />
             </span>
           </a>
           <a
+            href="https://medium.com/@aditya300100"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Link to Aditya Menon's Medium Blog"
+          >
+            <span className="text-3xl text-white">
+              <FaMediumM />
+            </span>
+          </a>
+          {/* <a
             href="https://www.youtube.com/channel/UC4J1TSccU4G_CriLC9eoAQw"
             target="_blank"
             rel="noreferrer"
@@ -90,7 +101,7 @@ export default function Footer() {
             <span className="text-3xl text-white">
               <FaSoundcloud />
             </span>
-          </a>
+          </a> */}
         </div>
       </div>
       <div className="w-1/3 hidden lg:flex items-center justify-end">

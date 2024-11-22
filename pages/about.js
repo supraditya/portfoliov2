@@ -4,16 +4,19 @@ import Image from "next/image";
 import me from "../public/me.jpg";
 import Link from "next/link";
 import { Slide } from "react-awesome-reveal";
+
 import { RESUME_LINK } from "../ResumeLink";
 import { BiLinkExternal } from "react-icons/bi";
 
 import {
   FaLinkedin,
   FaGithub,
-  FaInstagram,
   FaYoutube,
   FaSoundcloud,
+  FaMediumM,
 } from "react-icons/fa";
+import { SiNpm } from "react-icons/si";
+
 import { MdEmail } from "react-icons/md";
 import Footer from "../components/Footer";
 
@@ -60,12 +63,21 @@ export default function About() {
               </span>
             </a>
             <a
-              href="https://instagram.com/menon_chala_gaya"
+              href="https://npmjs.com/~supraditya"
               target="_blank"
               rel="noreferrer"
             >
               <span className="text-3xl">
-                <FaInstagram />
+                <SiNpm />
+              </span>
+            </a>
+            <a
+              href="https://medium.com/@aditya300100"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="text-3xl">
+                <FaMediumM />
               </span>
             </a>
             <a
@@ -88,8 +100,13 @@ export default function About() {
             </a>
           </div>
           <p className="text-base font-secondary text-justify mb-1.5">
-            Heyyo! My name's Aditya Menon, and I recently graduated from the University of
-            Michigan with a Master's in Information Science, where I focused on <strong>User Experience (UX) Research and User-Centered Agile Development</strong>.
+            Heyyo! My name's Aditya Menon, and I recently graduated from the
+            University of Michigan with a Master's in Information Science, where
+            I focused on{" "}
+            <strong>
+              User Experience (UX) Research and User-Centered Agile Development
+            </strong>
+            .
           </p>
           <p className="text-base font-secondary text-justify mb-1.5">
             I <strong> majored in Computer Science </strong> back in my

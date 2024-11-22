@@ -7,6 +7,8 @@ import Link from "next/link";
 import ctaArrow from "../public/cta.svg";
 import Footer from "../components/Footer";
 import FeaturedProject from "../components/FeaturedProject";
+import { BiLinkExternal } from "react-icons/bi";
+import FigmaCommentDialog from "../components/FigmaCommentDialog";
 
 export default function Home() {
   const prototypeBox = useRef();
@@ -57,47 +59,70 @@ export default function Home() {
       <Navbar />
 
       <main className="relative">
-        <div className="px-8 md:px-32 flex flex-col max-md:justify-center pt-2 items-start relative">
-          <div className="h-[67vh] md:h-[62vh] my-auto pt-16 flex flex-col justify-center">
-            <Slide triggerOnce>
-              <div className="hidden md:block h-[600px] w-[600px] w-100 -translate-x-[82.5%] -translate-y-[80.5%] md:-translate-x-[73%] md:-translate-y-[66%] border-r-2 border-b-2 border-figmaBlue border-dotted absolute"></div>
-            </Slide>
+        <div className="px-8 md:px-32 flex flex-col flex-wrap max-md:justify-center pt-2 items-start relative">
+          <div className="flex justify-between w-full max-md:flex-col">
+            <div className="h-[55vh] md:h-[62vh] my-auto pt-16 flex flex-col justify-center">
+              <Slide triggerOnce>
+                <div className="hidden md:block h-[600px] w-[600px] w-100 -translate-x-[82.5%] -translate-y-[80.5%] md:-translate-x-[73%] md:-translate-y-[66%] border-r-2 border-b-2 border-figmaBlue border-dotted absolute"></div>
+              </Slide>
 
-            <p className="font-secondary text-2xl md:text-4xl ml-0.5 md:ml-1 mb-2 md:mb-4">
-              I realise ideas from
-            </p>
-            <div className="mb-2 md:my-4">
-              <span className="font-writing text-4xl md:text-6xl">
-                Pen and Paper
-              </span>
-              <span className="font-secondary text-2xl md:text-4xl">
-                &nbsp;to
-              </span>
-            </div>
-            <Slide triggerOnce>
-              <div className="p-1 md:p-2 w-fit relative">
-                <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute -ml-1 -mt-1 z-20"></div>
-                <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
-                <p
-                  ref={prototypeBox}
-                  className="font-primary text-4xl md:text-6xl border-2 md:leading-snug border-figmaBlue z-10 bg-white pb-1"
-                >
-                  Prototype
-                </p>
-                <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
-                <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute -ml-1 -mt-1 z-20"></div>
-                <div className="bg-figmaBlue rounded-md py-0.5 px-2 text-white w-fit z-20 top-full text-[0.5rem] md:text-sm mt-1.5 mx-auto">
-                  {dimensions.width} x {dimensions.height}
-                </div>
+              <p className="font-secondary text-2xl md:text-4xl ml-0.5 md:ml-1 mb-2 md:mb-4">
+                I realise ideas from
+              </p>
+              <div className="mb-2 md:my-4">
+                <span className="font-writing text-4xl md:text-6xl">
+                  Pen and Paper
+                </span>
+                <span className="font-secondary text-2xl md:text-4xl">
+                  &nbsp;to
+                </span>
               </div>
-            </Slide>
-            <div className=" blink pb-2">
-              <span className="font-secondary text-2xl leading-snug md:leading-tight md:text-4xl -mt-6">
-                and&nbsp;
-              </span>
-              <span className="font-coding text-3xl leading-snug md:leading-tight md:text-6xl">
-                &lt;p&gt;Product&lt;/p&gt;
-              </span>
+              <Slide triggerOnce>
+                <div className="p-1 md:p-2 w-fit relative">
+                  <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute -ml-1 -mt-1 z-20"></div>
+                  <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
+                  <p
+                    ref={prototypeBox}
+                    className="font-primary text-4xl md:text-6xl border-2 md:leading-snug border-figmaBlue z-10 bg-white pb-1"
+                  >
+                    Prototype
+                  </p>
+                  <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute md:mr-1 -mt-1 z-20 right-0"></div>
+                  <div className="border border-figmaBlue bg-white h-2 w-2 md:h-3 md:w-3 absolute -ml-1 -mt-1 z-20"></div>
+                  <div className="bg-figmaBlue rounded-md py-0.5 px-2 text-white w-fit z-20 top-full text-[0.5rem] md:text-sm mt-1.5 mx-auto">
+                    {dimensions.width} x {dimensions.height}
+                  </div>
+                </div>
+              </Slide>
+              <div>
+                <span className="font-secondary text-2xl leading-snug md:leading-tight md:text-4xl -mt-6">
+                  and&nbsp;
+                </span>
+                <span className="font-coding text-3xl leading-snug md:leading-tight md:text-6xl blink pb-2">
+                  &lt;p&gt;Product&lt;/p&gt;
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-col items-end max-md:items-center justify-center w-1/2 max-md:w-full">
+              <FigmaCommentDialog>
+                <Link
+                  href="https://medium.com/@aditya300100"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-lg max-md:text-base flex items-center hover:underline"
+                >
+                  My Medium Articles <BiLinkExternal className="mt-0.5 ml-1" />
+                </Link>
+                <Link
+                  href="https://www.npmjs.com/~supraditya"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-lg max-md:text-base flex items-center hover:underline"
+                >
+                  My Open-Source Contributions
+                  <BiLinkExternal className="mt-0.5 ml-1" />
+                </Link>
+              </FigmaCommentDialog>
             </div>
           </div>
           <Image
