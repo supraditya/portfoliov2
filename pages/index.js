@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import FeaturedProject from "../components/FeaturedProject";
 import { BiLinkExternal } from "react-icons/bi";
 import FigmaCommentDialog from "../components/FigmaCommentDialog";
+import me from "../public/me.jpg";
 
 export default function Home() {
   const prototypeBox = useRef();
@@ -16,6 +17,9 @@ export default function Home() {
     width: 0,
     height: 0,
   });
+
+  const [showAnimatedElement, setShowAnimatedElement] = useState(false);
+
   useEffect(() => {
     if (prototypeBox.current) {
       setdimensions({
@@ -23,6 +27,23 @@ export default function Home() {
         height: prototypeBox.current.offsetHeight,
       });
     }
+
+    //Listener that fires when the page is scrolled to about 200px from the absolute bottom
+    const handleScroll = () => {
+      const isBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
+
+      if (isBottom) {
+        setShowAnimatedElement(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -61,7 +82,7 @@ export default function Home() {
       <main className="relative">
         <div className="px-8 md:px-32 flex flex-col flex-wrap max-md:justify-center pt-2 items-start relative">
           <div className="flex justify-between w-full max-md:flex-col">
-            <div className="h-[55vh] md:h-[62vh] my-auto pt-16 flex flex-col justify-center">
+            <div className="h-[55vh] md:h-[62vh] my-auto pt-16 flex flex-col justify-center lg:w-2/3">
               <Slide triggerOnce>
                 <div className="hidden md:block h-[600px] w-[600px] w-100 -translate-x-[82.5%] -translate-y-[80.5%] md:-translate-x-[73%] md:-translate-y-[66%] border-r-2 border-b-2 border-figmaBlue border-dotted absolute"></div>
               </Slide>
@@ -103,13 +124,13 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col items-end max-md:items-center justify-center w-1/2 max-md:w-full">
+            <div className="max-lg:hidden lg:flex flex-col items-end justify-center w-1/3 ">
               <FigmaCommentDialog>
                 <Link
                   href="https://medium.com/@aditya300100"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-lg max-md:text-base flex items-center hover:underline"
+                  className="text-lg flex items-center hover:underline"
                 >
                   My Medium Articles <BiLinkExternal className="mt-0.5 ml-1" />
                 </Link>
@@ -117,7 +138,7 @@ export default function Home() {
                   href="https://www.npmjs.com/~supraditya"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-lg max-md:text-base flex items-center hover:underline"
+                  className="text-lg flex items-center hover:underline"
                 >
                   My Open-Source Contributions
                   <BiLinkExternal className="mt-0.5 ml-1" />
@@ -130,7 +151,7 @@ export default function Home() {
             alt="Call to action arrow"
             className="w-30 mx-auto mt-14 md:mt-8 slow-bounce mb-20 md:mb-28"
           ></Image>
-          <p className="text-4xl md:text-7xl font-primary mb-5">
+          <p className="text-3xl md:text-7xl font-primary mb-5">
             Featured Projects
           </p>
           <div className="flex flex-col w-fit md:w-full mb-2">
@@ -180,6 +201,37 @@ export default function Home() {
               </button>
             </Link>
           </div>
+          {showAnimatedElement ? (
+            <div className="lg:hidden max-lg:flex flex-col items-center justify-center w-full mb-6">
+              <FigmaCommentDialog>
+                <Link
+                  href="https://medium.com/@aditya300100"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-base flex items-center hover:underline"
+                >
+                  My Medium Articles <BiLinkExternal className="mt-0.5 ml-1" />
+                </Link>
+                <Link
+                  href="https://www.npmjs.com/~supraditya"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-base flex items-center hover:underline"
+                >
+                  My Open-Source Contributions
+                  <BiLinkExternal className="mt-0.5 ml-1" />
+                </Link>
+              </FigmaCommentDialog>
+            </div>
+          ) : (
+            <div className="bg-[#2C2C2C] p-1 mx-auto mb-6 border text-white rounded-t-3xl rounded-bl-sm rounded-br-3xl shadow-xl">
+              <Image
+                src={me}
+                className="rounded-full h-10 w-10"
+                alt="AM"
+              ></Image>
+            </div>
+          )}
         </div>
         <Footer />
       </main>
