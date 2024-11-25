@@ -106,7 +106,7 @@ export default function forgetfulFoodie() {
           <br></br> Thus, we wondered:
         </p>
         <p className="font-secondary text-xl text-yellow-600 font-base px-10 md:px-20 py-4 text-center italic">
-          How we might help people to safely consume all the highly perishable
+          How might we help people to safely consume all the highly perishable
           foods in their pantry without wastage, while simultaneously
           alleviating some of the mental burden of managing a household?
         </p>
