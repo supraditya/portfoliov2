@@ -224,7 +224,7 @@ export default function Home() {
               </FigmaCommentDialog>
             </div>
           ) : (
-            <div className="bg-[#2C2C2C] p-1 mx-auto mb-6 border text-white rounded-t-3xl rounded-bl-sm rounded-br-3xl shadow-xl">
+            <div className="bg-[#2C2C2C] lg:hidden p-1 mx-auto mb-6 border text-white rounded-t-3xl rounded-bl-sm rounded-br-3xl shadow-xl">
               <Image
                 src={me}
                 className="rounded-full h-10 w-10"
