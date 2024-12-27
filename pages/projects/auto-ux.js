@@ -48,7 +48,10 @@ export default function AutoUX() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
-        <meta property="og:url" content="https://www.supraditya.com/projects/auto-ux" />
+        <meta
+          property="og:url"
+          content="https://www.supraditya.com/projects/auto-ux"
+        />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
@@ -552,24 +555,37 @@ export default function AutoUX() {
             </Zoom>
           </div>
         </div>
-        {/* <h3 className="font-secondary text-2xl mb-1 font-semibold">
+        <h3 className="font-secondary text-2xl mb-1 mt-8 font-semibold">
           Bonus: Interactive Figma Prototype!
         </h3>
-        <p className="font-secondary text-lg font-light my-1 text-justify">
-          This is an interactive mockup of all of our ideas into one
-          consolidated view. You can discover what is interactable by clicking
-          anywhere on the mockup. The areas that flash blue can be interacted
-          with using your mouse pointer. Note that you will have to click and
-          hold for the drag interactions to be successfully executed. You can
-          reset the prototype by pressing 'R' on your keyboard with the Figma
-          window in focus.
-        </p>
+        <ul className="list-disc font-secondary text-lg font-light pl-4 mt-1 mb-4 text-justify">
+          <li>
+            This is an interactive mockup of all of our ideas into one
+            consolidated view.
+          </li>
+          <li>
+            You can discover what is interactable by clicking anywhere on the
+            mockup.
+          </li>
+          <li>
+            The areas that flash blue can be interacted with using your mouse
+            pointer.
+          </li>
+          <li>
+            Note that you will have to click and hold for the drag interactions
+            to be successfully executed.
+          </li>
+          <li>
+            You can reset the prototype by pressing 'R' on your keyboard with
+            the Figma window in focus.
+          </li>
+        </ul>
         <iframe
           width="100%"
           height="600"
           src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FMoK7Ok835HMGgh4oLpoNij%2FAssignment-5%3Ftype%3Ddesign%26node-id%3D850-28691%26t%3DRbdWvlCFz3Zv6WvD-1%26scaling%3Dscale-down%26page-id%3D456%253A12040%26starting-point-node-id%3D850%253A28691%26mode%3Ddesign"
           allowFullScreen
-        ></iframe> */}
+        ></iframe>
         <h3 className="font-primary text-3xl mb-1 font-medium">Reflections</h3>
         <p className="font-secondary text-lg font-light my-1 text-justify">
           This project was one of my final deliverables as a graduate student

@@ -24,7 +24,7 @@ export default function Projects() {
       <Navbar />
       <div className="px-10 md:px-32 mb-10">
         <p className="text-4xl md:text-7xl font-primary mb-5">My Projects</p>
-        <div className="flex-wrap lg:w-4/5 xl:w-1/2 flex justify-start md:justify-between font-secondary text-xl">
+        <div className="flex-wrap lg:w-4/5 xl:w-2/3 flex justify-start md:justify-between font-secondary text-xl">
           <button
             aria-label="Show all projects"
             className={`${

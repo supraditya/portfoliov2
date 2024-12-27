@@ -1,7 +1,7 @@
 export default function ZoomVideo({ src, isZoomed, setIsZoomed }) {
   return (
     <div
-      isZoomed={isZoomed}
+      // iszoomed={isZoomed}
       onClick={() => setIsZoomed(false)}
       className={`fixed cursor-zoom-out w-full h-full inset-0 z-50 flex flex-col justify-center items-center bg-white ${
         isZoomed
