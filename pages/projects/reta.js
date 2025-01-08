@@ -11,6 +11,7 @@ import beforeAfter1 from "../../public/assets/reta/before-after-1.png"
 import beforeAfter2 from "../../public/assets/reta/before-after-2.png"
 import beforeAfter3 from "../../public/assets/reta/before-after-3.png"
 import beforeAfter4 from "../../public/assets/reta/before-after-4.png"
+import { FaYoutube, FaGlobe } from "react-icons/fa";
 
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
@@ -46,8 +47,14 @@ export default function Reta() {
           subtitle="Streamlining the 'administrative' part of Healthcare for Individuals pushing the boundaries of Modern Medicine."
         />
         <ActionButton
+          link="https://youtu.be/I99bimhBpoQ"
+          label="Product Demo"
+          icon={<FaYoutube/>}
+        />
+        <ActionButton
           link="https://quartz-vibraphone-0f2.notion.site/RETA-On-The-Go-The-future-of-effort-tracking-for-Michigan-Medicine-s-clinical-staff-147f2b0843a84ea58b3cccc1479f5d3b"
-          label="Link to Complete Case Study"
+          label="Detailed Case Study"
+          icon={<FaGlobe/>}
         />
         <div className="py-4 my-2 md:pr-10 md:my-4 rounded-md text-center bg-blue-200 flex flex-col items-center md:flex-row justify-between">
           <div className="w-4/5 md:w-1/2 mt-5">
@@ -108,7 +115,7 @@ export default function Reta() {
         {hasWindow && (
           <div className="py-2  my-4 rounded-md text-center flex justify-around">
             <ReactPlayer
-              url="https://youtu.be/36HEMiO3dzw?si=wpDmNsveIlttMBW3"
+              url="https://youtu.be/I99bimhBpoQ"
               playing={false}
               controls={true}
               className="mx-auto rounded-md"
