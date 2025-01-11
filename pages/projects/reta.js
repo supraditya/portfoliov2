@@ -82,7 +82,7 @@ export default function Reta() {
             "Siting Xing",
             "Yihao Shi",
           ]}
-          timeline="Jan 2024 - Apr 2024"
+          timeline="Jan 2024 - Present"
           tools={[
             "React",
             "TailwindCSS",
