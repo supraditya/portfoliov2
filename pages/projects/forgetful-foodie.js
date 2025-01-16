@@ -607,7 +607,7 @@ export default function forgetfulFoodie() {
               <Image
                 src={revision5}
                 alt="revision 5"
-                className="mx-auto h-2/4 w-auto"
+                className="mx-auto h-2/4 max-md:h-auto w-auto"
               ></Image>
             </Zoom>
           </div>
