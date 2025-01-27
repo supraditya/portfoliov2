@@ -7,16 +7,17 @@ import Highlights from "../../components/ProjectPage/Highlights";
 import ActionButton from "../../components/ActionButton";
 import { useState, useEffect } from "react";
 import fontncolor from "../../public/assets/reta/font-and-colors.png";
-import beforeAfter1 from "../../public/assets/reta/before-after-1.png"
-import beforeAfter2 from "../../public/assets/reta/before-after-2.png"
-import beforeAfter3 from "../../public/assets/reta/before-after-3.png"
-import beforeAfter4 from "../../public/assets/reta/before-after-4.png"
+import beforeAfter1 from "../../public/assets/reta/before-after-1.png";
+import beforeAfter2 from "../../public/assets/reta/before-after-2.png";
+import beforeAfter3 from "../../public/assets/reta/before-after-3.png";
+import beforeAfter4 from "../../public/assets/reta/before-after-4.png";
 import { FaYoutube, FaGlobe } from "react-icons/fa";
 
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 import Head from "next/head";
+
 export default function Reta() {
   const [hasWindow, setHasWindow] = useState(false);
   useEffect(() => {
@@ -24,6 +25,13 @@ export default function Reta() {
       setHasWindow(true);
     }
   }, []);
+
+  //QuickLinks Object
+  const retaHeaders = [
+    { name: "Before and After" },
+    { name: "Final Demo" },
+  ];
+
   return (
     <>
       <Head>
@@ -34,7 +42,10 @@ export default function Reta() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
-        <meta property="og:url" content="https://www.supraditya.com/projects/reta" />
+        <meta
+          property="og:url"
+          content="https://www.supraditya.com/projects/reta"
+        />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
@@ -49,12 +60,12 @@ export default function Reta() {
         <ActionButton
           link="https://youtu.be/I99bimhBpoQ"
           label="Product Demo"
-          icon={<FaYoutube/>}
+          icon={<FaYoutube />}
         />
         <ActionButton
           link="https://quartz-vibraphone-0f2.notion.site/RETA-On-The-Go-The-future-of-effort-tracking-for-Michigan-Medicine-s-clinical-staff-147f2b0843a84ea58b3cccc1479f5d3b"
           label="Detailed Case Study"
-          icon={<FaGlobe/>}
+          icon={<FaGlobe />}
         />
         <div className="py-4 my-2 md:pr-10 md:my-4 rounded-md text-center bg-blue-200 flex flex-col items-center md:flex-row justify-between">
           <div className="w-4/5 md:w-1/2 mt-5">
@@ -97,16 +108,32 @@ export default function Reta() {
         </h3>
         <div className="bg-[#F0F0F0] p-4 my-4 rounded-md text-center">
           <Zoom>
-            <Image src={beforeAfter1} alt="RETA Before and After 1" className="mx-auto my-4"></Image>
+            <Image
+              src={beforeAfter1}
+              alt="RETA Before and After 1"
+              className="mx-auto my-4"
+            ></Image>
           </Zoom>
           <Zoom>
-            <Image src={beforeAfter2} alt="RETA Before and After 2" className="mx-auto my-4"></Image>
+            <Image
+              src={beforeAfter2}
+              alt="RETA Before and After 2"
+              className="mx-auto my-4"
+            ></Image>
           </Zoom>
           <Zoom>
-            <Image src={beforeAfter3} alt="RETA Before and After 3" className="mx-auto my-4"></Image>
+            <Image
+              src={beforeAfter3}
+              alt="RETA Before and After 3"
+              className="mx-auto my-4"
+            ></Image>
           </Zoom>
           <Zoom>
-            <Image src={beforeAfter4} alt="RETA Before and After 4" className="mx-auto my-4"></Image>
+            <Image
+              src={beforeAfter4}
+              alt="RETA Before and After 4"
+              className="mx-auto my-4"
+            ></Image>
           </Zoom>
         </div>
         <h3 className="font-primary text-3xl mt-3 mb-2 font-medium">
