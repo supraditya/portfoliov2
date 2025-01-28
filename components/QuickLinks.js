@@ -12,15 +12,15 @@ import { useState } from "react";
 const QuickLinks = ({ quickLinks, onLinkClick }) => {
   const [clickedLink, setclickedLink] = useState(-1);
   return (
-    <div className="w-44 fixed md:ml-32 mt-8">
-      <p className="font-primary text-lg font-semibold pb-2">Quick Links</p>
-      <ul className="list-none">
+    <div className="w-44 fixed md:mr-24 max-lg:hidden right-0">
+      <p className="font-primary text-lg font-semibold text-right mr-4 pb-2">Quick Links</p>
+      <ul className="list-none h-[22rem] overflow-y-scroll">
         {quickLinks.map((link, index) => {
           if (link.name !== "") {
             return (
               <li
                 key={index}
-                className={`font-secondary pl-4 border-l-2 py-1  cursor-pointer ${
+                className={`font-secondary pr-4 border-r-2 py-1 text-right mr-4 cursor-pointer ${
                   clickedLink === index ? "border-black font-semibold" : ""
                 }`}
                 onClick={() => {

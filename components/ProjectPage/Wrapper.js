@@ -50,22 +50,27 @@ export default function Wrapper({ children, headers }) {
     });
   };
 
+  const renderChildren = () => {
+    return React.Children.map(children, (child, index) => {
+      if (React.isValidElement(child)) {
+        // Only clone and add ref if it's an h3 element
+        if (child.type === "h3") {
+          return React.cloneElement(child, {
+            ref: (el) => (headerRefs.current[index] = el),
+          });
+        }
+      }
+      // Return the original child for everything else
+      return child;
+    });
+  };
+
   return (
-    <>
+    <div className="relative">
       <Navbar />
       <QuickLinks quickLinks={quickLinks} onLinkClick={scrollToSection} />
       <div className="px-10 md:px-32 lg:px-72 xl:px-80 leading-snug">
-        {React.Children.toArray(children).map((child, index) =>
-          React.cloneElement(child, {
-            ref: (el) => {
-              if (child.type === "h3") {
-                // Conditionally apply ref to h3 elements
-                headerRefs.current[index] = el;
-              }
-              return null; // Return null for non-h3 elements
-            },
-          })
-        )}
+        {renderChildren()}
       </div>
       <div className="flex justify-center py-4">
         <button
@@ -79,6 +84,6 @@ export default function Wrapper({ children, headers }) {
         </button>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
