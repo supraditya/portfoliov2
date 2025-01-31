@@ -110,7 +110,7 @@ export default function forgetfulFoodie() {
           foods in their pantry without wastage, while simultaneously
           alleviating some of the mental burden of managing a household?
         </p>
-        <h3 className="font-primary font-medium text-xl mb-1">Our Initial Solution</h3>
+        <h3 className="subheader font-primary font-medium text-xl mb-1">Our Initial Solution</h3>
         <p className="font-secondary text-lg font-light text-justify">
           This conundrum led us to come up with Forgetful Foodie: a smartphone
           application designed to help users consume all their perishable food
@@ -180,7 +180,7 @@ export default function forgetfulFoodie() {
             </p>
           </li>
         </ul>
-        <h3 className="font-primary font-medium text-xl mb-1">Insights Gathered</h3>
+        <h4 className="subheader font-primary font-medium text-xl mb-1">Insights Gathered</h4>
         <p className="font-secondary text-lg font-light text-justify">
           All in all, people rarely used dedicated applications to manage their
           pantry. They either took notes, or kept a mental note of what they had
@@ -218,7 +218,7 @@ export default function forgetfulFoodie() {
           user scenarios, finalizing application features and flow, and
           collecting and reviewing peer and user feedback.
         </p>
-        <h3 className="font-primary font-medium text-xl mb-1">Storyboards</h3>
+        <h4 className="subheader font-primary font-medium text-xl mb-1">Storyboards</h4>
         <p className="font-secondary font-light text-lg">
           After interviewing our target demographic, we were able to get a
           better picture of why it tended to be so hard to avoid food wastage in
@@ -263,7 +263,7 @@ export default function forgetfulFoodie() {
             waste!
           </li>
         </ul>
-        <h3 className="font-primary font-medium text-xl mt-5 mb-1">Pain Points</h3>
+        <h4 className="subheader font-primary font-medium text-xl mt-5 mb-1">Pain Points</h4>
         <p className="font-secondary font-light text-lg">
           Based on the feedback we had received from the initial target users,
           we were determined to make forgetful foodie as convenient to use and
@@ -334,7 +334,7 @@ export default function forgetfulFoodie() {
             </p>
           </li>
         </ol>
-        <h3 className="font-primary font-medium text-xl mt-5 mb-1">Paper Prototypes</h3>
+        <h3 className="subheader font-primary font-medium text-xl mt-5 mb-1">Paper Prototypes</h3>
         <div className=" my-4 rounded-md text-center flex items-center flex-wrap justify-around">
           <div className="w-2/3 sm:w-1/4">
             <Zoom>
@@ -491,9 +491,9 @@ export default function forgetfulFoodie() {
         <h3 className="font-primary text-3xl mb-1 font-medium">
           Phase 3: Feedback and Revisions
         </h3>
-        <h3 className="font-primary font-medium text-xl mb-1">
+        <h4 className="subheader font-primary font-medium text-xl mb-1">
           Feedback on Initial Prototype
-        </h3>
+        </h4>
         <p className="font-secondary font-light text-lg text-justify">
           Upon subjecting the above-developed prototypes to peer evaluation, we
           received a tremendous amount of insight:
@@ -541,7 +541,7 @@ export default function forgetfulFoodie() {
             followed by different elements underneath that.
           </p>
         </ul>
-        <h3 className="font-primary font-medium text-xl my-4">Revisions</h3>
+        <h4 className="subheader font-primary font-medium text-xl my-4">Revisions</h4>
         <ul className="pl-8 list-decimal text-lg font-secondary font-light text-justify">
           <li>
             To address the problem 1, we went through two iterations to reach a

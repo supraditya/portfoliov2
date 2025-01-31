@@ -27,7 +27,15 @@ export default function Wrapper({ children, headers }) {
       const offsets = headerRefs.current.map((ref) => {
         if (ref) {
           const rect = ref.getBoundingClientRect();
-          return { name: ref.textContent, yOffset: rect.top + window.scrollY };
+          // console.log(ref.classList.contains("subheader"))
+          // console.log(ref)
+          return {
+            name: ref.textContent,
+            yOffset: rect.top + window.scrollY,
+            headerType: ref.classList.contains("subheader")
+              ? "subheader"
+              : "header",
+          };
         }
         return null;
       });
@@ -54,7 +62,7 @@ export default function Wrapper({ children, headers }) {
     return React.Children.map(children, (child, index) => {
       if (React.isValidElement(child)) {
         // Only clone and add ref if it's an h3 element
-        if (child.type === "h3") {
+        if (child.type === "h3" || child.type === "h4") {
           return React.cloneElement(child, {
             ref: (el) => (headerRefs.current[index] = el),
           });
