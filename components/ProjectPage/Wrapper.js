@@ -75,7 +75,7 @@ export default function Wrapper({ children, headers }) {
   return (
     <div className="relative">
       <Navbar />
-      <QuickLinks quickLinks={quickLinks} onLinkClick={scrollToSection} />
+      {Object.keys(quickLinks).length !== 0 && <QuickLinks quickLinks={quickLinks} onLinkClick={scrollToSection} />}
       <div className="px-10 md:px-32 lg:px-72 xl:px-80 leading-snug">
         {renderChildren()}
       </div>
