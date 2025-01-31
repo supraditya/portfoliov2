@@ -130,7 +130,7 @@ export default function AutoUX() {
         <h3 className="font-secondary text-2xl mb-1 font-semibold">
           1. Dog Mode
         </h3>
-        <h3 className="font-secondary text-lg mb-1 font-medium">
+        <h3 className="subheader font-secondary text-lg mb-1 font-medium">
           Wait, what even <i>is</i> 'Dog Mode'?
         </h3>
         <p className="font-secondary text-lg font-light text-justify">
@@ -150,7 +150,7 @@ export default function AutoUX() {
         <p className="font-secondary font-light text-md text-center italic my-3 text-subtitleGray">
           What is Dog Mode? Courtesy: General Motors
         </p>
-        <h3 className="font-secondary text-lg my-1 font-medium">Our Goals</h3>
+        <h3 className="subheader font-secondary text-lg my-1 font-medium">Our Goals</h3>
         <p className="font-secondary text-lg font-light text-justify">
           Through Dog Mode, we intended to:
         </p>
@@ -166,7 +166,7 @@ export default function AutoUX() {
             harm to the car, the pet or the bystander.
           </li>
         </ul>
-        <h3 className="font-secondary text-lg my-1 font-medium">
+        <h3 className="subheader font-secondary text-lg my-1 font-medium">
           Competitive Analysis
         </h3>
         <p className="font-secondary text-lg font-light text-justify">
@@ -263,7 +263,7 @@ export default function AutoUX() {
             <strong>'Samaritan Mode'</strong>
           </li>
         </ul>
-        <h3 className="font-secondary text-xl my-1 font-medium">
+        <h3 className="subheader font-secondary text-xl my-1 font-medium">
           Introducing: Samaritan Mode
         </h3>
         <p className="font-secondary text-lg font-light text-justify">
@@ -304,7 +304,7 @@ export default function AutoUX() {
             className="mx-auto w-3/5 max-sm:w-full"
           ></Image>
         </Zoom>
-        <h3 className="font-secondary text-lg my-1 font-medium">
+        <h3 className="subheader font-secondary text-lg my-1 font-medium">
           Edge Case: Vehicle battery low / battery has run out
         </h3>
         <p className="font-secondary text-lg font-light text-justify">
@@ -341,7 +341,7 @@ export default function AutoUX() {
           obtuse concepts to grasp for traditional drivers, and aimed to make it
           more visually intuitive through the vehicle's instrument cluster.
         </p>
-        <h3 className="font-secondary text-lg my-1 font-medium">
+        <h3 className="subheader font-secondary text-lg my-1 font-medium">
           What is Regenerative Braking?
         </h3>
         <p className="font-secondary text-lg font-light text-justify">
@@ -358,7 +358,7 @@ export default function AutoUX() {
           So how do we visualize such a complex idea without words on an
           instrument cluster?
         </p>
-        <h3 className="font-secondary text-lg my-1 font-medium">
+        <h3 className="subheader font-secondary text-lg my-1 font-medium">
           Our Solution
         </h3>
         <p className="font-secondary text-lg font-light my-1 text-justify">
@@ -395,7 +395,7 @@ export default function AutoUX() {
         <h3 className="font-secondary text-2xl mb-1 font-semibold">
           3. Drag Interaction-based Climate Controls
         </h3>
-        <h3 className="font-secondary text-lg my-1 font-medium">
+        <h3 className="subheader font-secondary text-lg my-1 font-medium">
           Why Touch-Drag Stuff in the First Place?
         </h3>
         <p className="font-secondary text-lg font-light my-1 text-justify">
@@ -469,7 +469,7 @@ export default function AutoUX() {
           the gesture-based mental model that our smartphones have taught us,
           and adapt it to the automotive world.
         </p>
-        <h3 className="font-secondary text-lg my-1 font-medium">
+        <h3 className="subheader font-secondary text-lg my-1 font-medium">
           The Inspiration
         </h3>
         <p className="font-secondary text-lg font-light my-1 text-justify">

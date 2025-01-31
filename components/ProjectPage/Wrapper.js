@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect, useRef } from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import { BsArrowUp } from "react-icons/bs";
+import QuickLinks from "../QuickLinks";
 
-export default function Wrapper({ children }) {
+export default function Wrapper({ children, headers }) {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -16,6 +18,30 @@ export default function Wrapper({ children }) {
     });
   }, []);
 
+  const [quickLinks, setQuickLinks] = useState([]);
+  const headerRefs = useRef([]); // Store refs for headers
+
+  useEffect(() => {
+    // Calculate header offsets dynamically
+    if (headerRefs.current.length > 0) {
+      const offsets = headerRefs.current.map((ref) => {
+        if (ref) {
+          const rect = ref.getBoundingClientRect();
+          //If element has 'subheader' in its class list, mark is as subheader for quicklinks to conditionally style
+          return {
+            name: ref.textContent,
+            yOffset: rect.top + window.scrollY,
+            headerType: ref.classList.contains("subheader")
+              ? "subheader"
+              : "header",
+          };
+        }
+        return null;
+      });
+      setQuickLinks(offsets.filter(Boolean)); // Remove null values
+    }
+  }, [children]); // Recalculate whenever children change
+
   // Scroll to the top when the button is clicked
   const scrollToTop = () => {
     window.scrollTo({
@@ -23,10 +49,36 @@ export default function Wrapper({ children }) {
       behavior: "smooth", // Smooth scrolling animation
     });
   };
+
+  const scrollToSection = (yOffset) => {
+    window.scrollTo({
+      top: yOffset,
+      behavior: "smooth",
+    });
+  };
+
+  const renderChildren = () => {
+    return React.Children.map(children, (child, index) => {
+      if (React.isValidElement(child)) {
+        // Only clone and add ref if it's an h3 element
+        if (child.type === "h3" || child.type === "h4") {
+          return React.cloneElement(child, {
+            ref: (el) => (headerRefs.current[index] = el),
+          });
+        }
+      }
+      // Return the original child for everything else
+      return child;
+    });
+  };
+
   return (
-    <>
+    <div className="relative">
       <Navbar />
-      <div className="px-10 md:px-32 lg:px-72 leading-snug">{children}</div>
+      <QuickLinks quickLinks={quickLinks} onLinkClick={scrollToSection} />
+      <div className="px-10 md:px-32 lg:px-72 xl:px-80 leading-snug">
+        {renderChildren()}
+      </div>
       <div className="flex justify-center py-4">
         <button
           className={`${
@@ -39,6 +91,6 @@ export default function Wrapper({ children }) {
         </button>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
