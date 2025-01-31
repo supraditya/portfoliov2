@@ -27,8 +27,7 @@ export default function Wrapper({ children, headers }) {
       const offsets = headerRefs.current.map((ref) => {
         if (ref) {
           const rect = ref.getBoundingClientRect();
-          // console.log(ref.classList.contains("subheader"))
-          // console.log(ref)
+          //If element has 'subheader' in its class list, mark is as subheader for quicklinks to conditionally style
           return {
             name: ref.textContent,
             yOffset: rect.top + window.scrollY,
