@@ -156,14 +156,6 @@ export default function Home() {
           </p>
           <div className="flex flex-col w-fit md:w-full mb-2">
             <FeaturedProject
-              title="Auto UX Concept for General Motors"
-              domains={["All", "Case Study", "Design"]}
-              flow="left"
-              link="auto-ux"
-              image="auto-ux"
-              description="A full-fledged UI for Mass-Market Automobiles with humble peripherals."
-            />
-            <FeaturedProject
               title="R.E.T.A On-The-Go!"
               domains={[
                 "All",
@@ -178,11 +170,19 @@ export default function Home() {
             />
             <FeaturedProject
               title="Forgetful Foodie"
-              domains={["All", "Case Study", "Design"]}
+              domains={["All", "Case Study", "Design", "Development"]}
               flow="left"
               link="forgetful-foodie"
               image="forgetful-foodie"
               description="A kitchen pantry tracking and recipe-curation solution for the household."
+            />
+            <FeaturedProject
+              title="Auto UX Concept for General Motors"
+              domains={["All", "Case Study", "Design"]}
+              flow="right"
+              link="auto-ux"
+              image="auto-ux"
+              description="A full-fledged UI for Mass-Market Automobiles with humble peripherals."
             />
 
             <p className="font-secondary text-center mx-auto text-lg">
