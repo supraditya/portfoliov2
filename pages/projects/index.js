@@ -85,19 +85,18 @@ export default function Projects() {
         <div className="mt-4 sm:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 justify-start">
           <ProjectCard
             currentTab={projectTab}
-            title="UpTap"
-            image="uptap"
-            link="uptap"
-            domains={["All", "Development"]}
-          />
-          <ProjectCard
-            currentTab={projectTab}
             title="R.E.T.A On-the-Go!"
             image="reta"
             link="reta"
             domains={["Featured", "All", "Case Study", "Design", "Development"]}
           />
-
+          <ProjectCard
+            currentTab={projectTab}
+            title="Forgetful Foodie"
+            image="forgetful-foodie"
+            link="forgetful-foodie"
+            domains={["Featured", "All", "Case Study", "Design", "Development"]}
+          />
           <ProjectCard
             currentTab={projectTab}
             title="LinkSpace"
@@ -115,13 +114,6 @@ export default function Projects() {
           />
           <ProjectCard
             currentTab={projectTab}
-            title="Forgetful Foodie"
-            image="forgetful-foodie"
-            link="forgetful-foodie"
-            domains={["Featured", "All", "Case Study", "Design"]}
-          />
-          <ProjectCard
-            currentTab={projectTab}
             title="ARiadne"
             image="ariadne"
             link="ariadne"
@@ -134,6 +126,13 @@ export default function Projects() {
             image="cryptogods-anubis"
             link="cryptogods-anubis"
             domains={["All", "Development", "Web3"]}
+          />
+          <ProjectCard
+            currentTab={projectTab}
+            title="UpTap"
+            image="uptap"
+            link="uptap"
+            domains={["All", "Development"]}
           />
           <ProjectCard
             currentTab={projectTab}

@@ -8,7 +8,8 @@ import Zoom from "react-medium-image-zoom";
 // import ZoomVideo from "../../components/ProjectPage/ZoomVideo";
 import "react-medium-image-zoom/dist/styles.css";
 
-import ReactPlayer from "react-player/vimeo";
+import ReactPlayerVimeo from "react-player/vimeo";
+import ReactPlayerYoutube from "react-player/youtube";
 import projectImg from "../../public/assets/forgetful-foodie/forgetful-foodie.png";
 import fontncolor from "../../public/assets/forgetful-foodie/font-and-colors.png";
 import poster from "../../public/assets/forgetful-foodie/poster.png";
@@ -35,7 +36,7 @@ import revision4 from "../../public/assets/forgetful-foodie/revision-4.png";
 import revision5 from "../../public/assets/forgetful-foodie/revision-5.png";
 import Highlights from "../../components/ProjectPage/Highlights";
 import ActionButton from "../../components/ActionButton";
-import { FaFigma } from "react-icons/fa";
+import { FaFigma, FaYoutube } from "react-icons/fa";
 // import {BsArrowUp} from "react-icons/bs";
 
 export default function forgetfulFoodie() {
@@ -57,7 +58,10 @@ export default function forgetfulFoodie() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
-        <meta property="og:url" content="https://www.supraditya.com/projects/forgetful-foodie" />
+        <meta
+          property="og:url"
+          content="https://www.supraditya.com/projects/forgetful-foodie"
+        />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
@@ -73,6 +77,11 @@ export default function forgetfulFoodie() {
           link="https://www.figma.com/proto/HUxf0bhkT3OOsViPuXPg1J/SI-582%3A-Forgetful-Foodie?node-id=133-21"
           icon={<FaFigma />}
           label="Prototype"
+        />
+        <ActionButton
+          link="https://youtu.be/j7gjYZUBELQ"
+          icon={<FaYoutube />}
+          label="DevLog"
         />
         <div className="py-4 my-2 md:my-4 md:pr-12 rounded-md text-center bg-blue-200 flex flex-col items-center md:flex-row justify-between">
           <div className="w-4/5 md:w-1/2 mt-5">
@@ -93,6 +102,27 @@ export default function forgetfulFoodie() {
           timeline="Aug 2022 - Dec 2022"
           tools={["Figma", "Adobe Illustrator"]}
         />
+        <div className="p-8 my-6 rounded-md bg-gradient-to-br from-[#DB4C40] to-[#C92C5B]">
+          <h3 className="font-primary font-semibold text-white text-xl">
+            Forgetful Foodie is under Active Development!
+          </h3>
+
+          <p className="font-secondary text-lg font-base py-4 text-left text-white">
+            It's official: I'm personally developing and planning to publish
+            Forgetful Foodie to iOS and Android using React Native! Here's the
+            very first DevLog explaining my plans and motivation:
+          </p>
+          {hasWindow && (
+            <div className="my-2 rounded-md flex justify-around">
+              <ReactPlayerYoutube
+                url="https://youtu.be/j7gjYZUBELQ"
+                playing={false}
+                controls={true}
+                className="mx-auto rounded-md"
+              />
+            </div>
+          )}
+        </div>
         <h3 className="font-primary font-medium text-xl mb-1">The Problem</h3>
         <p className="font-secondary text-lg font-light text-justify">
           Household food wastage has been a significant problem globally.
@@ -110,7 +140,9 @@ export default function forgetfulFoodie() {
           foods in their pantry without wastage, while simultaneously
           alleviating some of the mental burden of managing a household?
         </p>
-        <h3 className="subheader font-primary font-medium text-xl mb-1">Our Initial Solution</h3>
+        <h3 className="subheader font-primary font-medium text-xl mb-1">
+          Our Initial Solution
+        </h3>
         <p className="font-secondary text-lg font-light text-justify">
           This conundrum led us to come up with Forgetful Foodie: a smartphone
           application designed to help users consume all their perishable food
@@ -180,7 +212,9 @@ export default function forgetfulFoodie() {
             </p>
           </li>
         </ul>
-        <h4 className="subheader font-primary font-medium text-xl mb-1">Insights Gathered</h4>
+        <h4 className="subheader font-primary font-medium text-xl mb-1">
+          Insights Gathered
+        </h4>
         <p className="font-secondary text-lg font-light text-justify">
           All in all, people rarely used dedicated applications to manage their
           pantry. They either took notes, or kept a mental note of what they had
@@ -218,7 +252,9 @@ export default function forgetfulFoodie() {
           user scenarios, finalizing application features and flow, and
           collecting and reviewing peer and user feedback.
         </p>
-        <h4 className="subheader font-primary font-medium text-xl mb-1">Storyboards</h4>
+        <h4 className="subheader font-primary font-medium text-xl mb-1">
+          Storyboards
+        </h4>
         <p className="font-secondary font-light text-lg">
           After interviewing our target demographic, we were able to get a
           better picture of why it tended to be so hard to avoid food wastage in
@@ -263,7 +299,9 @@ export default function forgetfulFoodie() {
             waste!
           </li>
         </ul>
-        <h4 className="subheader font-primary font-medium text-xl mt-5 mb-1">Pain Points</h4>
+        <h4 className="subheader font-primary font-medium text-xl mt-5 mb-1">
+          Pain Points
+        </h4>
         <p className="font-secondary font-light text-lg">
           Based on the feedback we had received from the initial target users,
           we were determined to make forgetful foodie as convenient to use and
@@ -334,7 +372,9 @@ export default function forgetfulFoodie() {
             </p>
           </li>
         </ol>
-        <h3 className="subheader font-primary font-medium text-xl mt-5 mb-1">Paper Prototypes</h3>
+        <h3 className="subheader font-primary font-medium text-xl mt-5 mb-1">
+          Paper Prototypes
+        </h3>
         <div className=" my-4 rounded-md text-center flex items-center flex-wrap justify-around">
           <div className="w-2/3 sm:w-1/4">
             <Zoom>
@@ -479,7 +519,7 @@ export default function forgetfulFoodie() {
         </p>
         {hasWindow && (
           <div className="py-2 my-8 rounded-md text-center  flex justify-around">
-            <ReactPlayer
+            <ReactPlayerVimeo
               url="https://vimeo.com/772048766"
               loop={true}
               playing={true}
@@ -541,7 +581,9 @@ export default function forgetfulFoodie() {
             followed by different elements underneath that.
           </p>
         </ul>
-        <h4 className="subheader font-primary font-medium text-xl my-4">Revisions</h4>
+        <h4 className="subheader font-primary font-medium text-xl my-4">
+          Revisions
+        </h4>
         <ul className="pl-8 list-decimal text-lg font-secondary font-light text-justify">
           <li>
             To address the problem 1, we went through two iterations to reach a
@@ -629,7 +671,7 @@ export default function forgetfulFoodie() {
         </Link>
         {hasWindow && (
           <div className="py-2  my-4 rounded-md text-center  flex justify-around">
-            <ReactPlayer
+            <ReactPlayerVimeo
               url="https://vimeo.com/851012658"
               loop={true}
               playing={true}
