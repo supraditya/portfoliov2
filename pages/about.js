@@ -100,28 +100,29 @@ export default function About() {
             </a>
           </div>
           <p className="text-base font-secondary text-justify mb-1.5">
-            Heyyo! My name's Aditya Menon, and I recently graduated from the
-            University of Michigan with a Master's in Information Science, where
-            I focused on{" "}
+            Heyyo! My name's Aditya Menon, and I'm currently a <strong>UI Developer at
+            LTIMindtree</strong>.
+            I also have a Master's from the University of Michigan
+            in Information Science, where I focused on {" "}
             <strong>
               User Experience (UX) Research and User-Centered Agile Development
             </strong>
             .
           </p>
           <p className="text-base font-secondary text-justify mb-1.5">
-            I <strong> majored in Computer Science </strong> back in my
-            undergrad in India, and I've been self-learning web development for
-            over 5 years now!
+            I <strong> majored in Computer Science </strong> back in
+            undergrad in India, and I've been a developer for
+            over 6 years now.
           </p>
           <p className="text-base font-secondary text-justify mb-1.5">
-            I'm a problem solver at heart, and I love picking up new skills, be
-            it technical, managerial, communicative etc. as I work towards
-            finding solutions! Owing to my background (and some wonderful
+            I'm a problem solver at heart, and I love picking up new skills, 
+            be it domain-specific or something new entirely, as I work towards
+            finding solutions. Owing to my background (and some wonderful
             teachers and friends along the way), I find my strongest ability to
-            be able to{" "}
+            be able to {" "}
             <strong>
-              execute my vision and turn it into something tangible{" "}
-            </strong>{" "}
+              execute my vision and turn it into something tangible {" "}
+            </strong>
             (like this website, which I designed and developed from scratch over
             the past year!)
           </p>
