@@ -33,23 +33,23 @@ export default function About() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <Navbar />
-      <div className="px-10 md:px-32 max-lg:mb-4 min-h-[80vh] flex justify-between items-start flex-wrap max-lg:flex-col-reverse max-lg:justify-center max-lg:items-center">
+      <div className="px-10 md:px-32 max-lg:mb-4 min-h-[80vh] flex justify-between items-center flex-wrap max-lg:flex-col-reverse max-lg:justify-center max-lg:items-center">
         <div className="lg:w-2/5 flex flex-col justify-between">
-          <p className="text-center mt-4 md:mt-0 md:text-left text-4xl md:text-7xl font-primary mb-4">
+          <p className="text-center mt-4 md:mt-0 md:text-left text-4xl md:text-7xl font-primary mb-4 2xl:mb-10 2xl:text-[5rem]">
             About Me
           </p>
-          <div className="flex justify-between mb-4">
+          <div className="flex justify-between mb-4 2xl:mb-10">
             <a
               href="https://linkedin.com/in/supraditya"
               target="_blank"
               rel="noreferrer"
             >
-              <span className="text-3xl">
+              <span className="text-3xl 2xl:text-5xl">
                 <FaLinkedin />
               </span>
             </a>
             <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=adityame@umich.edu&tf=1">
-              <span className="text-3xl">
+              <span className="text-3xl 2xl:text-5xl">
                 <MdEmail />
               </span>
             </a>
@@ -58,7 +58,7 @@ export default function About() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="text-3xl">
+              <span className="text-3xl 2xl:text-5xl">
                 <FaGithub />
               </span>
             </a>
@@ -67,7 +67,7 @@ export default function About() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="text-3xl">
+              <span className="text-3xl 2xl:text-5xl">
                 <SiNpm />
               </span>
             </a>
@@ -76,7 +76,7 @@ export default function About() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="text-3xl">
+              <span className="text-3xl 2xl:text-5xl">
                 <FaMediumM />
               </span>
             </a>
@@ -85,7 +85,7 @@ export default function About() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="text-3xl">
+              <span className="text-3xl 2xl:text-5xl">
                 <FaYoutube />
               </span>
             </a>
@@ -94,12 +94,12 @@ export default function About() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="text-3xl">
+              <span className="text-3xl 2xl:text-5xl">
                 <FaSoundcloud />
               </span>
             </a>
           </div>
-          <p className="text-base font-secondary text-justify mb-1.5">
+          <p className="text-base 2xl:text-xl font-secondary text-justify mb-1.5">
             Heyyo! My name's Aditya Menon, and I'm currently a <strong>UI Developer at
             LTIMindtree</strong>.
             I also have a Master's from the University of Michigan
@@ -109,12 +109,12 @@ export default function About() {
             </strong>
             .
           </p>
-          <p className="text-base font-secondary text-justify mb-1.5">
+          <p className="text-base 2xl:text-xl font-secondary text-justify mb-1.5">
             I <strong> majored in Computer Science </strong> back in
             undergrad in India, and I've been a developer for
             over 6 years now.
           </p>
-          <p className="text-base font-secondary text-justify mb-1.5">
+          <p className="text-base 2xl:text-xl font-secondary text-justify mb-1.5">
             I'm a problem solver at heart, and I love picking up new skills, 
             be it domain-specific or something new entirely, as I work towards
             finding solutions. Owing to my background (and some wonderful
@@ -126,14 +126,14 @@ export default function About() {
             (like this website, which I designed and developed from scratch over
             the past year!)
           </p>
-          <p className="text-base font-secondary text-justify">
+          <p className="text-base 2xl:text-xl font-secondary text-justify">
             Outside of work and school, I like to occasionally produce music,
             make sketch comedy, cook or just mindlessly binge YouTube ¯\_(ツ)_/¯
           </p>
         </div>
         <Slide triggerOnce direction="right">
-          <div className="relative w-2/5 mt-1 min-w-[250px] max-lg:mx-auto md:min-w-[300px] lg:w-[400px] xl:w-[500px]">
-            <div className="hidden z-10 lg:block h-[500px] w-[400px] w-100 lg:translate-x-[50%] lg:-translate-y-[60.5%] xl:translate-x-[62.5%] xl:-translate-y-[48%] border-l-2 border-b-2 border-figmaBlue border-dotted absolute"></div>
+          <div className="relative w-2/5 mt-1 min-w-[250px] max-lg:mx-auto md:min-w-[300px] lg:w-[400px] xl:w-[500px] 2xl:w-[600px]">
+            <div className="hidden z-10 lg:block h-[500px] 2xl:h-[1000px] 2xl:w-[800px] w-[400px] w-100 lg:translate-x-[50%] lg:-translate-y-[60.5%] xl:translate-x-[62.5%] xl:-translate-y-[48%] 2xl:-translate-y-[69%] 2xl:translate-x-[38%] border-l-2 border-b-2 border-figmaBlue border-dotted absolute"></div>
 
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -ml-1 -mt-1 z-30"></div>
             <div className="border border-figmaBlue bg-white h-3 w-3 absolute -mr-1 -mt-1 z-30 right-0"></div>

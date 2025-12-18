@@ -16,11 +16,13 @@ import { RESUME_LINK } from "../ResumeLink";
 export default function Footer() {
   return (
     <footer className="bg-footerBlack h-52 text-white m-0 font-primary flex justify-between lg:px-32">
-      <Image
-        src={footerLogo}
-        className="hidden lg:block w-1/3 xl:pr-24"
-        alt="Footer logo"
-      ></Image>
+      <div className="hidden lg:flex w-1/3 h-full justify-start items-center">
+        <Image
+          src={footerLogo}
+          className="md:w-full md:pr-24 2xl:w-3/5 2xl:pr-0 max-w-screen-sm"
+          alt="Footer logo"
+        ></Image>
+      </div>
       <div className="flex flex-col justify-center items-center w-full lg:w-1/3">
         <Link
           href={RESUME_LINK}

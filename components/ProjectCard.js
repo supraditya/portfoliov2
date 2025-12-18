@@ -11,19 +11,19 @@ export default function ProjectCard(props) {
         alt="Link to project"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        className={`min-w-sm min-h-[400px] flex flex-col justify-between rounded-md shadow-xl p-4 w-full md:max-w-lg mt-4 ${
+        className={`min-w-sm min-h-[400px] flex flex-col justify-between rounded-md shadow-xl p-4 w-full mt-4 ${
           props.domains.includes(props.currentTab) ? "" : "hidden"
         }`}
       >
         <Image
           src={require(`../public/assets/${props.image}/${props.image}.png`)}
           alt="project image"
-          className="md:w-fit rounded-sm m-auto"
+          className="md:w-fit rounded-sm m-auto mb-4"
         />
         <div className="flex justify-between items-center">
           <div className="rounded-sm mr-2">
-            <p className="font-primary font-semibold text-xl">{props.title}</p>
-            <div className="font-secondary text-base">
+            <p className="font-primary font-semibold text-xl 2xl:text-2xl">{props.title}</p>
+            <div className="font-secondary text-base 2xl:text-lg">
               <ListRenderer list={props.domains} removeEnds={true} />
             </div>
           </div>
