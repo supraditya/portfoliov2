@@ -10,10 +10,7 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito+Sans:wght@300;400&family=Orbitron:wght@400;600;800&family=Shadows+Into+Light+Two&display=swap"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet"></link>
       </Head>
       <body>
         <Main />
