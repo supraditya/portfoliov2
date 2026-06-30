@@ -207,19 +207,19 @@ export default function forgetfulFoodie() {
           various age demographics, cultures, and ethnicities. Here are some
           interesting excerpts from the process:
         </p>
-        <ul className="font-secondary text-lg font-light flex flex-col md:flex-row items-baseline text-justify justify-between mt-4">
-          <li className="md:w-1/3 md:pr-10">
-            <p className="italic mb-2">
-              Q. How do you keep track of your groceries?
+        <ul className="font-secondary text-lg font-light items-baseline text-justify justify-between my-4">
+          <li>
+            <p className="italic mb-2 font-semibold">
+              Q1. How do you keep track of your groceries?
             </p>
             <p>
               "I visually inspect my pantry and fridge, and make mental notes of
               what I have and what I might soon run out of."
             </p>
           </li>
-          <li className="md:w-1/3 md:px-10">
-            <p className="italic mb-2">
-              Q. Have you ever used technology to manage your pantry inventory
+          <li>
+            <p className="italic mb-2 font-semibold">
+              Q2. Have you ever used technology to manage your pantry inventory
               or eating habits?
             </p>
             <p className="mb-3">
@@ -235,9 +235,9 @@ export default function forgetfulFoodie() {
               item I eat throughout the day is too much of a chore for me."
             </p>
           </li>
-          <li className="md:w-1/3 md:pl-10">
-            <p className="italic mb-2">
-              Q. How do you feel about personal food wastage?
+          <li>
+            <p className="italic mb-2 font-semibold">
+              Q3. How do you feel about personal food wastage?
             </p>
             <p>
               "I feel extremely guilty. I hate wasting leftovers, so having to
