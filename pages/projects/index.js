@@ -23,7 +23,9 @@ export default function Projects() {
       </Head>
       <Navbar />
       <div className="px-10 md:px-32 mb-10">
-        <p className="text-4xl md:text-7xl 2xl:text-[5rem] font-primary mb-5 2xl:mt-10 2xl:mb-16">My Projects</p>
+        <p className="text-4xl md:text-7xl 2xl:text-[5rem] font-primary mb-5 2xl:mt-10 2xl:mb-16">
+          My Projects
+        </p>
         <div className="flex-wrap lg:w-4/5 xl:w-2/3 flex justify-start md:justify-between font-secondary text-xl 2xl:text-3xl">
           <button
             aria-label="Show all projects"
@@ -85,16 +87,16 @@ export default function Projects() {
         <div className="mt-4 sm:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 justify-start">
           <ProjectCard
             currentTab={projectTab}
-            title="R.E.T.A On-the-Go!"
-            image="reta"
-            link="reta"
+            title="Forgetful Foodie"
+            image="forgetful-foodie"
+            link="forgetful-foodie"
             domains={["Featured", "All", "Case Study", "Design", "Development"]}
           />
           <ProjectCard
             currentTab={projectTab}
-            title="Forgetful Foodie"
-            image="forgetful-foodie"
-            link="forgetful-foodie"
+            title="R.E.T.A On-the-Go!"
+            image="reta"
+            link="reta"
             domains={["Featured", "All", "Case Study", "Design", "Development"]}
           />
           <ProjectCard

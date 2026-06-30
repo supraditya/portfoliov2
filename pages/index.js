@@ -127,21 +127,21 @@ export default function Home() {
             <div className="max-lg:hidden lg:flex flex-col items-end justify-center w-1/3 ">
               <FigmaCommentDialog>
                 <Link
+                  href="https://www.youtube.com/watch?v=sJOn30xOick"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-lg flex items-center hover:underline"
+                >
+                  [New!] Forgetful Foodie DevLog 1{" "}
+                  <BiLinkExternal className="mt-0.5 ml-1" />
+                </Link>
+                <Link
                   href="https://medium.com/@aditya300100"
                   target="_blank"
                   rel="noreferrer"
                   className="text-lg flex items-center hover:underline"
                 >
                   My Medium Articles <BiLinkExternal className="mt-0.5 ml-1" />
-                </Link>
-                <Link
-                  href="https://www.npmjs.com/~supraditya"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-lg flex items-center hover:underline"
-                >
-                  My Open-Source Contributions
-                  <BiLinkExternal className="mt-0.5 ml-1" />
                 </Link>
               </FigmaCommentDialog>
             </div>
@@ -156,6 +156,15 @@ export default function Home() {
           </p>
           <div className="flex flex-col w-fit md:w-full mb-2">
             <FeaturedProject
+              title="Forgetful Foodie"
+              domains={["All", "Development", "Case Study", "Design"]}
+              flow="right"
+              link="forgetful-foodie"
+              image="forgetful-foodie"
+              description="A kitchen pantry tracking and recipe-curation solution for the household."
+              inActiveDev={true}
+            />
+            <FeaturedProject
               title="R.E.T.A On-The-Go!"
               domains={[
                 "All",
@@ -163,18 +172,11 @@ export default function Home() {
                 "UX Research",
                 "User-Centered Agile Development",
               ]}
-              flow="right"
+              flow="left"
               link="reta"
               image="reta"
               description="Streamlining the 'administrative' part of Healthcare for Individuals pushing the boundaries of Modern Medicine."
-            />
-            <FeaturedProject
-              title="Forgetful Foodie"
-              domains={["All", "Case Study", "Design", "Development"]}
-              flow="left"
-              link="forgetful-foodie"
-              image="forgetful-foodie"
-              description="A kitchen pantry tracking and recipe-curation solution for the household."
+              inActiveDev={false}
             />
             <FeaturedProject
               title="Auto UX Concept for General Motors"
@@ -183,6 +185,7 @@ export default function Home() {
               link="auto-ux"
               image="auto-ux"
               description="A full-fledged UI for Mass-Market Automobiles with humble peripherals."
+              inActiveDev={false}
             />
 
             <p className="font-secondary text-center mx-auto text-lg">

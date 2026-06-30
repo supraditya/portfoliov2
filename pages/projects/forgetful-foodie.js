@@ -37,7 +37,10 @@ import revision5 from "../../public/assets/forgetful-foodie/revision-5.png";
 import Highlights from "../../components/ProjectPage/Highlights";
 import ActionButton from "../../components/ActionButton";
 import { FaFigma, FaYoutube } from "react-icons/fa";
-// import {BsArrowUp} from "react-icons/bs";
+import poster1 from "../../public/assets/forgetful-foodie/poster-1.png";
+import poster2 from "../../public/assets/forgetful-foodie/poster-2.png";
+import poster3 from "../../public/assets/forgetful-foodie/poster-3.png";
+import poster4 from "../../public/assets/forgetful-foodie/poster-4.png";
 
 export default function forgetfulFoodie() {
   // State to render ReactPlayer after window is loaded, to avoid HydrationError
@@ -79,9 +82,9 @@ export default function forgetfulFoodie() {
           label="Prototype"
         />
         <ActionButton
-          link="https://youtu.be/j7gjYZUBELQ"
+          link="https://www.youtube.com/watch?v=sJOn30xOick"
           icon={<FaYoutube />}
-          label="DevLog"
+          label="DevLog 1"
         />
         <div className="py-4 my-2 md:my-4 md:pr-12 rounded-md text-center bg-blue-200 flex flex-col items-center md:flex-row justify-between">
           <div className="w-4/5 md:w-1/2 mt-5">
@@ -97,25 +100,25 @@ export default function forgetfulFoodie() {
         </div>
         <Highlights
           summary="Forgetful Foodie was ideated and designed as part of our coursework with the Master of Science in Information (MSI) program at the University of Michigan, for the course “Introduction to Interaction Design”. I collaborated with two fellow graduate students to ideate and design a smartphone application to reduce food wastage by streamlining pantry and inventory management for the average household owner."
-          roles={["UX Designer", "UX Researcher"]}
+          roles={["Fullstack Developer", "UX Designer", "UX Researcher"]}
           team={["Saumya Bora", "Coulton Theuer"]}
           timeline="Aug 2022 - Dec 2022"
-          tools={["Figma", "Adobe Illustrator"]}
+          tools={["React Native", "Supabase", "Figma", "Adobe Illustrator"]}
         />
         <div className="p-8 my-6 rounded-md bg-gradient-to-br from-[#DB4C40] to-[#C92C5B]">
           <h3 className="font-primary font-semibold text-white text-xl">
-            Forgetful Foodie is under Active Development!
+            Forgetful Foodie is in Active Development!
           </h3>
 
           <p className="font-secondary text-lg font-base py-4 text-left text-white">
-            It's official: I'm personally developing and planning to publish
-            Forgetful Foodie to iOS and Android using React Native! Here's the
-            very first DevLog explaining my plans and motivation:
+            It's official: Forgetful Foodie is currently in Alpha, and is
+            available on Android and Web (PWA), with iOS support coming soon!
+            Here's my latest DevLog that'll walk you through the app features:
           </p>
           {hasWindow && (
             <div className="my-2 rounded-md flex justify-around">
               <ReactPlayerYoutube
-                url="https://youtu.be/j7gjYZUBELQ"
+                url="https://www.youtube.com/watch?v=sJOn30xOick"
                 playing={false}
                 controls={true}
                 className="mx-auto rounded-md"
@@ -123,6 +126,37 @@ export default function forgetfulFoodie() {
             </div>
           )}
         </div>
+        <h3 className="font-primary font-medium text-xl mb-1">
+          Forgetful Foodie Alpha: Features Overview
+        </h3>
+        <Zoom>
+          <Image
+            src={poster1}
+            alt="Forgetful Foodie Alpha: Pantry overview"
+            className="mx-auto my-4 rounded-md"
+          ></Image>
+        </Zoom>
+        <Zoom>
+          <Image
+            src={poster2}
+            alt="Forgetful Foodie Alpha: Pantry input"
+            className="mx-auto my-4 rounded-md"
+          ></Image>
+        </Zoom>
+        <Zoom>
+          <Image
+            src={poster3}
+            alt="Forgetful Foodie Alpha: Recipes"
+            className="mx-auto my-4 rounded-md"
+          ></Image>
+        </Zoom>
+        <Zoom>
+          <Image
+            src={poster4}
+            alt="Forgetful Foodie Alpha: Recipe Generation"
+            className="mx-auto my-4 rounded-md"
+          ></Image>
+        </Zoom>
         <h3 className="font-primary font-medium text-xl mb-1">The Problem</h3>
         <p className="font-secondary text-lg font-light text-justify">
           Household food wastage has been a significant problem globally.
